@@ -13,7 +13,8 @@ INTEGRANTES DO GRUPO
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entre em contato com a equipe do projeto Turma do Bem.">
+    <meta name="description"
+        content="Faça o login do comerciante para cadastrar e gerenciar seus produtos para doação ou desconto.">
     <title>Login do Comerciante | ReTaste </title>
 
     <!-- Ícone da aba e fontes Google fonts -->
@@ -26,4 +27,93 @@ INTEGRANTES DO GRUPO
 
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="script" href="js/script.js">
 </head>
+
+<body>
+    <header>
+        <div class="cabecalho-container">
+            <img class="logo" src="img/logo.svg" alt="">
+            <strong>Re<span>Taste</span></strong>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="login-container">
+                <h1 id="titulo-doador">Tornar-se um<br><span class="destaque">doador</span></h1>
+                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
+                <!-- Formulário de login do comerciante.
+             action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
+                <div action="#" method="post">
+
+                    <br>
+                    <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
+
+                </div>
+                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
+                     required: exige o preenchimento antes do envio.
+                     autocomplete="postal-code" sujere o CEP ou preenche o camp -->
+
+                <div class="botao-login">
+                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento" autocomplete="name"
+                        aria-label="Nome do estabelecimento" required>
+                </div>
+
+                <div class="botao-login">
+                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                        autocomplete="street-address" aria-label="Endereço" required>
+                </div>
+
+                <div class="botao-login">
+                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off" aria-label="CNPJ"
+                        maxlength="18" required>
+                </div>
+
+                <div class="botao-login">
+                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
+                        aria-label="Email" required>
+                </div>
+                <div class="botao-login">
+                    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="current-password"
+                        aria-label="Senha" required>
+                </div>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="manter_logado" value="logado" checked>
+                            <span class="texto-checkbox">Manter logado</span>
+                            
+                        </label>
+                    </div>
+                <div>
+                    <a href="perfil.html" class="termos">Ja tenho uma conta</a>
+                </div>
+
+                <div class="entrar-login">
+                    <button type="submit" class="btn-arrow" aria-label="Continuar">Entrar</button>
+                </div>
+                <p class="termos">Ao continuar, você concorda com <a href="#">nossos termos</a>.</p>
+            </div>
+
+        </section>
+
+        <section>
+
+                </form>
+            </div>
+        <!-- Disparador da ação do formulário -->
+        </form>
+        <!-- <form action="perfil.html" method="post">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <button type="submit">Entrar</button>
+                </form> -->
+        </div>
+    </main>
+
+</body>
+
+</html>
