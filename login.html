@@ -77,19 +77,19 @@ INTEGRANTES DO GRUPO
                     <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="current-password"
                         aria-label="Senha" required>
                 </div>
-                    <div class="checkbox-group">
-                        <label class="custom-checkbox">
-                            <input type="checkbox" name="manter_logado" value="logado" checked>
-                            <span class="texto-checkbox">Manter logado</span>
-                            
-                        </label>
-                    </div>
-                <div>
-                    <a href="perfil.html" class="termos">Ja tenho uma conta</a>
+                <div class="checkbox-group">
+                    <label class="checkbox">
+                        <input type="checkbox" name="manter_logado" value="logado" checked>
+                        <span class="texto">Manter logado</span>
+
+                    </label>
+                </div>
+                <div class="termos-tenhoConta">
+                    <a href="perfil.html" class="texto">Ja tenho uma conta</a>
                 </div>
 
                 <div class="entrar-login">
-                    <button type="submit" class="btn-arrow" aria-label="Continuar">Entrar</button>
+                    <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
                 </div>
                 <p class="termos">Ao continuar, você concorda com <a href="#">nossos termos</a>.</p>
             </div>
@@ -98,26 +98,19 @@ INTEGRANTES DO GRUPO
 
         <section>
 
+            <form>
+            <fieldset id="rodape-Home">
+                <legend>Menu</legend>
+                <div class="rodape-container">
+                    <a href="index.html" class="home-rodape"><img src="img/home.svg" alt=""><br><span
+                            class="texto">Home</span></a>
+                </div>
+                <div id="rodape-Estabelecimento">
+                    <a href="estabelecimentos.html" class="estabelecimentos-rodape"><img src="img/estabelecimento.svg"
+                            alt=""><br><span class="texto">Estabelecimentos</span></a>
+                </div>
+            </fieldset>
                 </form>
-                <fieldset class="rodape-container">
-                    <div class="rodape-container">
-                        <a href="index.html" class="home-rodape"><img src="img/google.svg" alt=""><br><span>Home</span></a>
-                        <a href="index.html" class="link-rodape"><img src="img/facebook.svg" alt="Login com Facebook"><br><span>Login com Facebook</span></a>
-                        <a href="index.html" class="link-rodape"><img src="img/apple.svg" alt="Login com Apple"><br><span>Login com Apple</span></a>
-                    </div>
-            </div>
-        <!-- Disparador da ação do formulário -->
-        </form>
-        <!-- <form action="perfil.html" method="post">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" required>
-
-                    <button type="submit">Entrar</button>
-                </form> -->
-        </div>
     </main>
 
 </body>
