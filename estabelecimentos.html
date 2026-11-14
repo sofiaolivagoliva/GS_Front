@@ -79,27 +79,52 @@ INTEGRANTES DO GRUPO
                         <th>Estabelecimento</th>
                         <th>Endereço</th>
                         <th>Contato</th>
-                        <th>Ofertas</th>
+                        <th>Descrição</th>
+                        <th id="ofertas">Ofertas</th>
                     </tr>
-                    <tr>
+                    <tr id="padaria">
                         <td>Padaria Pão Quente</td>
                         <td>Rua das Flores, 123</td>
                         <td>(11) 1234-5678</td>
+                        <td>Caseiros e industriais. Contém glúten, lactose e alguns contém nozes</td>
                         <td>Descontos em pães e bolos frescos</td>
                     </tr>
-                    <tr>
+                    <tr id="restaurante">
                         <td>Restaurante Sabor Caseiro</td>
                         <td>Avenida Central, 456</td>
                         <td>(11) 9876-5432</td>
+                        <td>Pratos variádos, veganos e não veganos</td>
                         <td>Promoções em pratos do dia</td>
                     </tr>
-                    <tr>
+                    <tr id="mercado">
                         <td>Mercado Verde</td>
                         <td>Rua das Palmeiras, 789</td>
                         <td>(11) 2468-1357</td>
-                        <td>Descontos em frutas e verduras frescas</td>
+                        <td>Temos pães industriais com e sem glúten, com e sem lactose, leite sem e com lactose, achocolatado com lactose e glúten</td>
+                        <td>Doações de pães, bananas, amendoins, achocolatado e leites</td>
+                    </tr>
+                    <tr id="silmara">
+                        <td>Dona Silmara</td>
+                        <td>Rua das Flores, 123</td>
+                        <td>(11) 1244-5557</td>
+                        <td>Caseiro. Não contém glúten, lactose, frutas e alguns contém nozes</td>
+                        <td>Descontos em bolos de pote (não contém leite e glúten)</td>
                     </tr>
             </table>
+        </section>
+
+        <!--FIltro estados-->
+        <section id="filtro">
+            <div class="filtro-estados">
+                <label for="estados">Filtrar por estado:</label>
+                <!--Select é o botão, o formato que usei para criar um menu suspenso-->
+                <select id="estados" name="estados">
+                    <option value="">Todos</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </div>
         </section>
     </main>
     <form>
