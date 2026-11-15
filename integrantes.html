@@ -26,8 +26,8 @@
 
     <!-- CABEÇALHO -->
     <header class="cabecalho">
-        <div class="cabecalho-esquerda">
-            <nav class="menu-principal" aria-label="Navegação principal">
+        <div class="cabecalho-esquerda" aria-label="Navegação principal">
+            <nav class="menu-principal" >
                 <ul>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contato.html">Contato</a></li>
@@ -70,7 +70,13 @@
 
             <div class="cartao-integrantes">
 
-                <!-- ABAS COM OS NOMES -->
+                <!-- ABAS COM OS NOMES selecionaveis para cada tabela de cada integrate.
+                 role="tablist", para acessibilidade. O role é um elemento que informa através de um valor o que aquela parte representa, caso não seja semântico igual "header=cabeçalho ou footer=rodapé"
+                 role="tablist"= lista com abas
+                 role="tab"= uma aba individual
+                 aria-selected="false"= aba não selecionada. "true"= aba selecionada.
+                 data-integrante="0"= atributo personalizado, que não é padrão do HTML, mas que serve para identificar o integrante selecionado. O valor "0" indica que é o primeiro integrante da lista.
+                -->
                 <div class="lista-integrantes" role="tablist" aria-label="Selecionar integrante">
 
                     <button class="integrante-btn ativo" type="button" role="tab" aria-selected="true"
@@ -146,11 +152,6 @@
 
                 </div>
 
-                <!-- DECORAÇÃO -->
-                <div class="decoracao-flor" aria-hidden="true">
-                    ❀
-                </div>
-
             </div>
 
         </section>
@@ -178,13 +179,22 @@
                 <p>Compartilhar alimentos é multiplicar possibilidades.</p>
             </div>
 
-            <div>
-                <h3>Navegação</h3>
-                <a href="index.html">Home</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contato.html">Contato</a>
-            </div>
+            <nav>
+                <div class="informacoes-rodape">
+                    <h3>Informações</h3>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </div>
+                <br>
+                <div class="usuario-rodape">
+                    <h3>Usuário</h3>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                </div>
+            </nav>
 
             <div>
                 <h3>Projeto</h3>
