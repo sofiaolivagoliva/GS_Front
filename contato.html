@@ -6,3 +6,154 @@ INTEGRANTES DO GRUPO
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe da resposável pela ReTaste.">
+    <title>Contato | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="script" href="js/script.js">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="body">
+    <header id="hero-cabecalho" aria-label="Navegação principal">
+        <div class="cabecalho-esquerda">
+            <nav>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="integrantes.html">Integrantes</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="cabecalho-direita">
+            <nav>
+                <ul>
+                    <li><a href="sobre.html"><img class="logo" src="img/logo.svg" alt="Início"></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="perfil.html"><img class="logo-perfil" src="img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Moldura azul com a abertura da página -->
+        <div class="moldura">
+            <div class="brilho" aria-hidden="true"></div>
+            <img class="sol-fundo" src="imagens/sol-fino.svg" alt="">
+            <section class="abertura abertura-simples container">
+                <span class="selo">Contato</span>
+                <h1>Fale com a <span class="destaque">nossa equipe.</span></h1>
+                <p>Tem uma dúvida, sugestão ou quer conversar sobre o projeto? Envie uma mensagem.</p>
+            </section>
+        </div>
+
+        <!-- Informações + formulário -->
+        <section class="secao">
+            <div class="container contato revelar">
+                <div class="contato-info">
+                    <article class="cartao">
+                        <h3>Email</h3>
+                        <p>contatoretaste@outlook.com</p>
+                    </article>
+                    <article class="cartao">
+                        <h3>Endereço</h3>
+                        <p>FIAP - Av. Paulista, 1106 - São Paulo/SP</p>
+                    </article>
+                    <article class="cartao">
+                        <h3>Projeto</h3>
+                        <p>ReTaste - 2026</p>
+                        <a href="integrantes.html">integrantes</a>
+                    </article>
+                </div>
+
+                <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
+                <form class="contato-form campos" method="POST" novalidate data-validar
+                    data-sucesso="Mensagem enviada! Responderemos em breve.">
+                    <input type="text" name="nome" placeholder="Nome Completo" aria-label="Nome completo"
+                        autocomplete="name" required>
+                    <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email"
+                        required>
+                    <select name="assunto" aria-label="Assunto" required>
+                        <option value="" disabled selected>Assunto</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="parceria">Parceria ou doação</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
+
+                    <button class="botao" type="submit">Enviar mensagem</button>
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape-grade">
+                <div>
+                    <a class="marca" href="index.html">
+                        <img src="img/imagens/logo.svg" alt="">
+                        <strong>Turma <span>do Bem</span></strong>
+                    </a>
+                    <p>Plataforma de gestão de doadores e parceiros pensada para apoiar a Turma do Bem na missão de
+                        gerar inclusão social através do sorriso.</p>
+                </div>
+
+                <nav aria-label="Links do rodapé">
+                    <h2>Navegação</h2>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre o projeto</a></li>
+                        <li><a href="integrantes.html">Integrantes</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Links da solução">
+                    <h2>Solução</h2>
+                    <ul>
+                        <li><a href="solucao.html">Como funciona</a></li>
+                        <li><a href="painel.html">Painel de indicadores</a></li>
+                        <li><a href="painel.html#doadores">Gestão de doadores</a></li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h2>Contato</h2>
+                    <ul>
+                        <li>FIAP - Av. Paulista, 1106 - São Paulo/SP</li>
+                        <li>ReTaste - 2026</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="rodape-copia">&copy; <span data-ano>2026</span> Turma do Bem - Projeto acadêmico FIAP em parceria
+                com a Turma do Bem.</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
