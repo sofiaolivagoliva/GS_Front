@@ -27,6 +27,7 @@ INTEGRANTES DO GRUPO
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="script" href="js/script.js">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -72,9 +73,13 @@ INTEGRANTES DO GRUPO
                 <img src="img/planta-media.svg" alt="">
             </div>
         </article>
+
+        <!-- TABELA DE ESTABELECIMENTOS -->
         <section>
-            <table>
-                <table class="tabela-estabelecimentos">
+
+            <table class="tabela-estabelecimentos">
+
+                <thead>
                     <tr class="titulos-estabelecimentos">
                         <th>Estabelecimento</th>
                         <th>Endereço</th>
@@ -82,140 +87,130 @@ INTEGRANTES DO GRUPO
                         <th>Descrição</th>
                         <th id="ofertas">Ofertas</th>
                     </tr>
+                </thead>
+
+                <tbody id="lista-estabelecimentos">
+
                     <tr id="padaria">
                         <td>Padaria Pão Quente</td>
                         <td>Rua das Flores, 123</td>
                         <td>(11) 1234-5678</td>
-                        <td>Caseiros e industriais. Contém glúten, lactose e alguns contém nozes</td>
+                        <td>Caseiros e industriais. Contém glúten, lactose e alguns contêm nozes</td>
                         <td>Descontos em pães e bolos frescos</td>
                     </tr>
+
                     <tr id="restaurante">
                         <td>Restaurante Sabor Caseiro</td>
                         <td>Avenida Central, 456</td>
                         <td>(11) 9876-5432</td>
-                        <td>Pratos variádos, veganos e não veganos</td>
+                        <td>Pratos variados, veganos e não veganos</td>
                         <td>Promoções em pratos do dia</td>
                     </tr>
+
                     <tr id="mercado">
                         <td>Mercado Verde</td>
                         <td>Rua das Palmeiras, 789</td>
                         <td>(11) 2468-1357</td>
-                        <td>Temos pães industriais com e sem glúten, com e sem lactose, leite sem e com lactose,
-                            achocolatado com lactose e glúten</td>
-                        <td>Doações de pães, bananas, amendoins, achocolatado e leites</td>
+                        <td>Produtos com e sem glúten e lactose</td>
+                        <td>Doações de alimentos</td>
                     </tr>
+
                     <tr id="silmara">
                         <td>Dona Silmara</td>
                         <td>Rua das Flores, 123</td>
                         <td>(11) 1244-5557</td>
-                        <td>Caseiro. Não contém glúten, lactose, frutas e alguns contém nozes</td>
-                        <td>Descontos em bolos de pote (não contém leite e glúten)</td>
+                        <td>Produtos caseiros</td>
+                        <td>Descontos em bolos de pote</td>
                     </tr>
-                </table>
+
+                </tbody>
+
+            </table>
+
         </section>
 
-        <!--FIltro estados-->
+
+        <!-- FILTRO DE ESTADOS -->
         <section id="filtro">
+
             <div class="filtro-estados">
-                <label for="estados">Filtrar por estado:</label>
-                <!--Select é o botão, o formato que usei para criar um menu suspenso-->
+
+                <label for="estados">Filtro estados:</label>
+
                 <select id="estados" name="estados">
+
                     <option value="">Todos</option>
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
                     <option value="MG">Minas Gerais</option>
+
                 </select>
+
             </div>
+
         </section>
+
     </main>
     <br>
-    <form>
-        <fieldset id="rodape">
-            <nav>
-                <div class="informacoes-rodape">
-                    <h2>Informações</h2>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </div>
-                <div class="usuario-rodape">
-                    <h2>Usuário</h2>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
-                </div>
-            </nav>
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
 
             <div>
-                <h2>Local</h2>
-                <ul>
-                    <li>FIAP - Av. Paulista, 1106 - São Paulo/SP</li>
-                    <li>ReTaste - 1TDSPA - 2026</li>
-                </ul>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Informações</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="faq.html">FAQ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="contato.html">Contato</a></td>
+                    </tr>
+                </tbody>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Usuário</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="login.html">Login</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="perfil.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
+                    </tr>
+                </tbody>
+
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <p>São Paulo - SP</p>
+                </div>
+
             </div>
 
-            <div class="integrantes-rodape">
-                <h2>Integrantes</h2>
-                <li><a href="integrantes.html">Integrantes</a></li>
-                <br>
-                <div class="sofia-rodape" aria-label="SOFIA OLIVEIRA GONÇALVES front-end e design">
-                    <h3>SOFIA OLIVEIRA GONÇALVES front-end e design</h3>
-                    <br>
-                    <p>RM: 576524 - 1 TDSPA</p>
-                </div>
-                <div class="sofia-link">
-                    <a href="https://github.com/sofiaolivagoliva" aria-label="Link do GitHub">GitHub</a>
-                    <br><a href="https://www.linkedin.com/in/sofia-goncalves-272472431/"
-                        aria-label="Link do Linkedin">LinkedIn</a>
-                </div>
-                <!-- INTEGRANTE 2-->
-                <div class="enrique-rodape" aria-label="ENRIQUE TRINDADE FERREIRA SILVA chatbot">
-                    <h3>ENRIQUE TRINDADE FERREIRA SILVA</h3>
-                    <br>
-                    <p>RM: 576314 - 1 TDSPA</p>
-                </div>
-                <div class="enrique-link">
-                    <a href="https://github.com/enriquetrindade" aria-label="Link do GitHub">GitHub</a>
-                    <br><a href="https://www.linkedin.com/in/enrique-trindade-46a0012b4/"
-                        aria-label="Link do Linkedin">LinkedIn</a>
-                </div>
-                <!-- INTEGRANTE 3-->
-                <div class="julio-rodape" aria-label="JÚLIO BERNARDES DA SILVA">
-                    <h3>JÚLIO BERNARDES DA SILVA</h3>
-                    <br>
-                    <p>RM: 575649 - 1 TDSPA</p>
-                </div>
-                <div class="julio-link">
-                    <a href="https://github.com/JulioSilva101" aria-label="Link do GitHub">GitHub</a>
-                    <br><a href="https://www.linkedin.com/in/julio-bernardes-da-silva-40738b431/"
-                        aria-label="Link do Linkedin">LinkedIn</a>
-                </div>
-                <!-- INTEGRANTE 4-->
-                <div class="marina-rodape" aria-label="MARINA SANTANA QUEIROZ organização e apoio">
-                    <h3>MARINA SANTANA QUEIROZ</h3>
-                    <br>
-                    <p>RM:574491 - 1 TDSPA</p>
-                </div>
-                <div class="marina-link">
-                    <a href="https://github.com/marinasantanaq" aria-label="Link do GitHub">GitHub</a>
-                    <br><a href="https://www.linkedin.com/in/marina-santana-queiroz-9baa77241/"
-                        aria-label="Link do Linkedin">LinkedIn</a>
-                </div>
-                <!-- INTEGRANTE 5-->
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
 
-                <div class="rafael-rodape" aria-label="RAFAEL MADEIRA GOMES RIBEIRO">
-                    <h3>RAFAEL MADEIRA GOMES RIBEIRO</h3>
-                    <br>
-                    <p>RM 575635 - 1 TDSPA</p>
-                </div>
-                <div class="rafael-link">
-                    <a href="https://github.com/Ribeir0296" aria-label="Link do GitHub">GitHub</a>
-                    <br><a href="https://www.linkedin.com/in/rafael-madeira-b8545b312/"
-                        aria-label="Link do Linkedin">LinkedIn</a>
-                </div>
-        </fieldset>
-    </form>
+    </footer>
 
 </body>
 

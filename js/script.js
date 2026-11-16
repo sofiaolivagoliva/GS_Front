@@ -105,3 +105,204 @@ botoes.forEach((botao) => {
     });
 
 });
+
+// DADOS DOS ESTABELECIMENTOS POR ESTADO
+//Para cada estado uma tabela difer
+const estabelecimentos = {
+
+    // TODOS - Informações originais
+    "": [
+        {
+            nome: "Padaria Pão Quente",
+            endereco: "Rua das Flores, 123 - São Paulo",
+            contato: "(11) 1234-5678",
+            descricao: "Pães artesanais e industriais",
+            ofertas: "Descontos em pães e bolos"
+        },
+
+        {
+            nome: "Padaria Pão Dourado",
+            endereco: "Rua das Acácias, 250 - Rio de Janeiro",
+            contato: "(21) 2233-4455",
+            descricao: "Pães, bolos e produtos artesanais",
+            ofertas: "Descontos em pães"
+        },
+
+        {
+            nome: "Padaria Mineirinha",
+            endereco: "Rua dos Ipês, 150 - Belo Horizonte",
+            contato: "(31) 3456-7890",
+            descricao: "Pães de queijo e quitandas",
+            ofertas: "Descontos em quitandas"
+        },
+
+        {
+            nome: "Restaurante Sabor de Minas",
+            endereco: "Avenida Brasil, 300 - Belo Horizonte",
+            contato: "(31) 9876-1234",
+            descricao: "Comida mineira e pratos vegetarianos",
+            ofertas: "Promoções em refeições"
+        },
+    
+
+        
+    ],
+
+    // SÃO PAULO
+    "SP": [
+        {
+            nome: "Padaria Pão Quente",
+            endereco: "Rua das Flores, 123 - São Paulo",
+            contato: "(11) 1234-5678",
+            descricao: "Pães artesanais e industriais",
+            ofertas: "Descontos em pães e bolos"
+        },
+
+        {
+            nome: "Restaurante Sabor Caseiro",
+            endereco: "Avenida Central, 456 - São Paulo",
+            contato: "(11) 9876-5432",
+            descricao: "Pratos variados e opções veganas",
+            ofertas: "Promoções em pratos do dia"
+        },
+
+        {
+            nome: "Mercado Verde",
+            endereco: "Rua das Palmeiras, 789 - São Paulo",
+            contato: "(11) 2468-1357",
+            descricao: "Alimentos com e sem lactose",
+            ofertas: "Doações de alimentos"
+        },
+
+        {
+            nome: "Dona Silmara",
+            endereco: "Rua das Flores, 123 - São Paulo",
+            contato: "(11) 1244-5557",
+            descricao: "Produtos caseiros",
+            ofertas: "Descontos em bolos de pote"
+        }
+    ],
+
+    // RIO DE JANEIRO
+    "RJ": [
+        {
+            nome: "Padaria Pão Dourado",
+            endereco: "Rua das Acácias, 250 - Rio de Janeiro",
+            contato: "(21) 2233-4455",
+            descricao: "Pães, bolos e produtos artesanais",
+            ofertas: "Descontos em pães"
+        },
+
+        {
+            nome: "Restaurante Tempero Carioca",
+            endereco: "Avenida Atlântica, 800 - Rio de Janeiro",
+            contato: "(21) 9988-7766",
+            descricao: "Comida caseira e pratos vegetarianos",
+            ofertas: "Promoções no almoço"
+        },
+
+        {
+            nome: "Mercado Boa Colheita",
+            endereco: "Rua das Laranjeiras, 90 - Rio de Janeiro",
+            contato: "(21) 3344-5566",
+            descricao: "Frutas, verduras e produtos variados",
+            ofertas: "Doações de frutas e verduras"
+        },
+
+        {
+            nome: "Dona Helena",
+            endereco: "Rua Copacabana, 120 - Rio de Janeiro",
+            contato: "(21) 2255-6677",
+            descricao: "Doces e receitas caseiras",
+            ofertas: "Descontos em sobremesas"
+        }
+    ],
+
+    // MINAS GERAIS
+    "MG": [
+        {
+            nome: "Padaria Mineirinha",
+            endereco: "Rua dos Ipês, 150 - Belo Horizonte",
+            contato: "(31) 3456-7890",
+            descricao: "Pães de queijo e quitandas",
+            ofertas: "Descontos em quitandas"
+        },
+
+        {
+            nome: "Restaurante Sabor de Minas",
+            endereco: "Avenida Brasil, 300 - Belo Horizonte",
+            contato: "(31) 9876-1234",
+            descricao: "Comida mineira e pratos vegetarianos",
+            ofertas: "Promoções em refeições"
+        },
+
+        {
+            nome: "Mercado Natural",
+            endereco: "Rua das Oliveiras, 450 - Belo Horizonte",
+            contato: "(31) 2233-4455",
+            descricao: "Produtos naturais e alimentos variados",
+            ofertas: "Doações de frutas e legumes"
+        },
+
+        {
+            nome: "Dona Maria",
+            endereco: "Rua das Rosas, 200 - Belo Horizonte",
+            contato: "(31) 9988-1122",
+            descricao: "Bolos e doces artesanais",
+            ofertas: "Descontos em bolos"
+        }
+    ]
+
+};
+
+
+// SELECIONAR ELEMENTOS HTML
+
+const filtroEstados = document.getElementById("estados");
+
+const linhas = document.querySelectorAll(
+    "#lista-estabelecimentos tr"
+);
+
+
+// FUNÇÃO PARA ATUALIZAR A TABELA
+
+function atualizarTabela(estado) {
+
+    // Buscar os estabelecimentos do estado selecionado
+    const dados = estabelecimentos[estado];
+
+    // Percorrer as linhas da tabela
+    linhas.forEach((linha, indice) => {
+
+        // Buscar os dados correspondentes à linha
+        const estabelecimento = dados[indice];
+
+        // Selecionar todas as células da linha
+        const celulas = linha.querySelectorAll("td");
+
+        // Atualizar o conteúdo das células
+        celulas[0].textContent = estabelecimento.nome;
+        celulas[1].textContent = estabelecimento.endereco;
+        celulas[2].textContent = estabelecimento.contato;
+        celulas[3].textContent = estabelecimento.descricao;
+        celulas[4].textContent = estabelecimento.ofertas;
+
+    });
+
+}
+
+
+// EVENTO DE MUDANÇA DO SELECT
+
+filtroEstados.addEventListener("change", function() {
+
+    // Capturar o estado selecionado
+    const estadoSelecionado = filtroEstados.value;
+
+    // Atualizar os dados da tabela
+    atualizarTabela(estadoSelecionado);
+
+});
+
+// PERFIL
