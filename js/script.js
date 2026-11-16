@@ -145,7 +145,7 @@ const estabelecimentos = {
         },
     
 
-        
+
     ],
 
     // SÃO PAULO
@@ -306,3 +306,40 @@ filtroEstados.addEventListener("change", function() {
 });
 
 // PERFIL
+
+// Selecionar todos os botões de excluir
+// const botoesExcluir = document.querySelectorAll(".btn-excluir");
+
+// // Adicionar um evento de clique para cada botão
+// botoesExcluir.forEach((botao) => {
+
+//     botao.addEventListener("click", function() {
+
+//         // Obter o ID do produto
+//         const idProduto = botao.dataset.id;
+
+//         // Localizar o produto na página
+//         const produto = document.getElementById(idProduto);
+
+//         // Solicitar confirmação
+//         const confirmar = confirm(
+//             "Deseja realmente excluir este produto do catálogo?"
+//         );
+
+//         // Excluir o produto se houver confirmação
+//         if (confirmar) {
+//             produto.remove();
+
+//             alert("Produto excluído com sucesso!");
+//         }
+
+//     });
+
+// });
+//EXPLICAÇÃO PERFIL: 1- a constante botoesExcluir pegará todos os seletores da
+//
+//
+//
+//
+//
+//

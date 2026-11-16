@@ -6,3 +6,220 @@ INTEGRANTES DO GRUPO
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
 -->
+
+<!DOCTYPE html>
+<html lang=" pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visualize e gerencie seu perfil como doador no ReTaste.">
+    <title>Perfil | ReTaste </title>
+
+    <!-- Ícone da aba e fontes Google fonts -->
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos do site -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="script" href="js/script.js">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-esquerda" aria-label="Navegação principal">
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="Home"></a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="cabecalho-direita">
+            <nav class="menu-principal">
+                <li><a href="perfil.html"><img class="logo-perfil" src="img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="assets-container">
+                <!--ordem dos assetss de planta-->
+                <img src="img/prato.svg" alt="">
+                <img src="img/plant-escura.svg" alt="">
+                <img src="img/plant-medium.svg" alt="">
+                <img src="img/planta-media.svg" alt="">
+                <img src="img/plant-medium.svg" alt="">
+                <img src="img/planta-clarissima.svg" alt="">
+                <!--comidas rodape-->
+                <img src="img/plant-medium.svg" alt="">
+                <img src="img/ovo.svg" alt="">
+                <img src="img/planta-media.svg" alt="">
+            </div>
+        </article>
+
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Dados do estabelecimento</legend>
+                    <div class="botao-login">
+                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                            autocomplete="name" aria-label="Nome do estabelecimento" required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                            autocomplete="street-address" aria-label="Endereço" required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off" aria-label="CNPJ"
+                            maxlength="18" required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
+                            aria-label="Email" required>
+                    </div>
+                    <div class="entrar-login">
+                        <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Adicionar produto</legend>
+                    <div class="botao-login">
+                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                            autocomplete="name" aria-label="Nome do estabelecimento" required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                            autocomplete="street-address" aria-label="Endereço" required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="text" name="descricao" id="descricao" placeholder="Descrição" autocomplete="off" aria-label="descricao dos produtos"
+                             required>
+                    </div>
+
+                    <div class="botao-login">
+                        <input type="text" name="oferta" id="oferta" placeholder="Ofertas" autocomplete="off"
+                            aria-label="Ofertas de alimentos" required>
+                        <div>
+                            <button type="button" class="btn-excluir" data-id="mercado">Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <form>
+                <fieldset>
+                    <legend>Produtos</legend>
+                    <thead>
+                        <br><h2>Pães e Bolos</h2>
+                    </thead>
+                    <tbody>
+                        <br><tr id="mercado">
+                            <td>Mercado Verde</td>
+                            <br><td>Rua das Palmeiras, 789</td>
+                            <br><td>(11) 2468-1357</td>
+                            <br><td>Produtos com e sem glúten e lactose</td>
+                            <br><td>Doações de alimentos</td>
+                            <br><td>
+                                <button type="button" class="btn-excluir" data-id="mercado">Excluir
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <!-- RODAPÉ -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Informações</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                    <tr>
+                        <td><a href="sobre.html">Sobre</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="faq.html">FAQ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="contato.html">Contato</a></td>
+                    </tr>
+                </tbody>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Usuário</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="login.html">Login</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="perfil.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
+                    </tr>
+                </tbody>
+
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <p>São Paulo - SP</p>
+                </div>
+
+            </div>
+
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
+
+    </footer>
+</body>
+
+</html>
