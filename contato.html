@@ -31,38 +31,32 @@ INTEGRANTES DO GRUPO
 
 <body class="body">
     <header id="hero-cabecalho" aria-label="Navegação principal">
-        <div class="cabecalho-esquerda">
-            <nav>
-                <ul>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="integrantes.html">Integrantes</a></li>
-
-                </ul>
-            </nav>
-        </div>
         <div class="cabecalho-direita">
             <nav>
                 <ul>
-                    <li><a href="sobre.html"><img class="logo" src="img/logo.svg" alt="Início"></a></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="perfil.html"><img class="logo-perfil" src="img/perfil.svg" alt="Perfil"></a></li>
+                    <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="Início">ReTaste</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    
     <main>
+        <div class="cabecalho-esquerda">
+            <nav>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="perfil.html"><img class="logo-perfil" src="img/perfil.svg" alt="Perfil"></a></li>
+                </ul>
+            </nav>
+        </div>
         <!-- Moldura azul com a abertura da página -->
         <div class="moldura">
             <div class="brilho" aria-hidden="true"></div>
             <img class="sol-fundo" src="imagens/sol-fino.svg" alt="">
             <section class="abertura abertura-simples container">
                 <span class="selo">Contato</span>
-                <h1>Fale com a <span class="destaque">nossa equipe.</span></h1>
-                <p>Tem uma dúvida, sugestão ou quer conversar sobre o projeto? Envie uma mensagem.</p>
+                <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
+                <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma mensagem.</p>
             </section>
         </div>
 
@@ -86,7 +80,7 @@ INTEGRANTES DO GRUPO
                 </div>
 
                 <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
-                <form class="contato-form campos" method="POST" novalidate data-validar
+                <form class="contato-container" method="POST" novalidate data-validar
                     data-sucesso="Mensagem enviada! Responderemos em breve.">
                     <input type="text" name="nome" placeholder="Nome Completo" aria-label="Nome completo"
                         autocomplete="name" required>
@@ -96,7 +90,7 @@ INTEGRANTES DO GRUPO
                         <option value="" disabled selected>Assunto</option>
                         <option value="duvida">Dúvida</option>
                         <option value="sugestao">Sugestão</option>
-                        <option value="parceria">Parceria ou doação</option>
+                        <option value="parceria">Parceria</option>
                         <option value="outro">Outro</option>
                     </select>
                     <textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
