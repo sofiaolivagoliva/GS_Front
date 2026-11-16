@@ -39,7 +39,7 @@ INTEGRANTES DO GRUPO
             </nav>
         </div>
     </header>
-    
+
     <main>
         <div class="cabecalho-esquerda">
             <nav>
@@ -56,7 +56,8 @@ INTEGRANTES DO GRUPO
             <section class="abertura abertura-simples container">
                 <span class="selo">Contato</span>
                 <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
-                <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma mensagem.</p>
+                <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma
+                    mensagem.</p>
             </section>
         </div>
 
@@ -80,8 +81,7 @@ INTEGRANTES DO GRUPO
                 </div>
 
                 <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
-                <form class="contato-container" method="POST" novalidate data-validar
-                    data-sucesso="Mensagem enviada! Responderemos em breve.">
+                <form class="contato-container" method="POST">
                     <input type="text" name="nome" placeholder="Nome Completo" aria-label="Nome completo"
                         autocomplete="name" required>
                     <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email"
@@ -96,58 +96,77 @@ INTEGRANTES DO GRUPO
                     <textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
 
                     <button class="botao" type="submit">Enviar mensagem</button>
+                    <!--um parágrafo para classe ser identificada pejo js e ser enviara uma mensagem
+                    role status= aos leitores de tela que aquela área é de status
+                    aria-live="polite"= permite que leitores de terra leiam coisas novas que surgem na tela ou alterações na tela.
+                    polite= permite que o leitor termine o que está lendo para dar as informações.
+                    -->
                     <p class="aviso" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
     </main>
-
+    <br>
+    <!-- RODAPÉ -->
     <footer class="rodape">
-        <div class="container">
-            <div class="rodape-grade">
-                <div>
-                    <a class="marca" href="index.html">
-                        <img src="img/imagens/logo.svg" alt="">
-                        <strong>Turma <span>do Bem</span></strong>
-                    </a>
-                    <p>Plataforma de gestão de doadores e parceiros pensada para apoiar a Turma do Bem na missão de
-                        gerar inclusão social através do sorriso.</p>
+
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Informações</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="faq.html">FAQ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="contato.html">Contato</a></td>
+                    </tr>
+                </tbody>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3>Usuário</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="login.html">Login</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="perfil.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
+                    </tr>
+                </tbody>
+
+
+                <div class="projeto-rodape">
+                    <h3>Projeto</h3>
+                    <p>contatoretaste@outlook.com</p>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>São Paulo - SP</p>
                 </div>
 
-                <nav aria-label="Links do rodapé">
-                    <h2>Navegação</h2>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre o projeto</a></li>
-                        <li><a href="integrantes.html">Integrantes</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
-
-                <nav aria-label="Links da solução">
-                    <h2>Solução</h2>
-                    <ul>
-                        <li><a href="solucao.html">Como funciona</a></li>
-                        <li><a href="painel.html">Painel de indicadores</a></li>
-                        <li><a href="painel.html#doadores">Gestão de doadores</a></li>
-                    </ul>
-                </nav>
-
-                <div>
-                    <h2>Contato</h2>
-                    <ul>
-                        <li>FIAP - Av. Paulista, 1106 - São Paulo/SP</li>
-                        <li>ReTaste - 2026</li>
-                    </ul>
-                </div>
             </div>
 
-            <p class="rodape-copia">&copy; <span data-ano>2026</span> Turma do Bem - Projeto acadêmico FIAP em parceria
-                com a Turma do Bem.</p>
-        </div>
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
+
     </footer>
-    </div>
 </body>
 
 </html>
