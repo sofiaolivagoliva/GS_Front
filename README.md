@@ -7,7 +7,7 @@ Este projeto consiste no desenvolvimento de um website para uma Iniciação Cien
 
 <table>
   <tr>
-    <td align="center" width="180">
+    <td align="center" width="90%">
       <img src="img/clone.png" width="80" height="80" alt="imagem da tela do acesso à URL do repositório"/>
       <br><br>
       <strong>Clone o repositório</strong>
@@ -15,7 +15,7 @@ Este projeto consiste no desenvolvimento de um website para uma Iniciação Cien
       <sub>Copie e cole a URL em usm terminal para obter o repositório no explorer</sub>
     </td>
 
-<td align="center" width="180">
+<td align="center" width="90%">
   <img src="img/path.png" width="80" height="80" alt="Pelo terminal digite cd GS_Front para entrar no repositório e code . para acessar o VS Code."/>
   <br><br>
   <strong>Abrir no VS Code</strong>
@@ -26,7 +26,7 @@ Este projeto consiste no desenvolvimento de um website para uma Iniciação Cien
   <br><br>
 </td>
 
-<td align="center" width="180">
+<td align="center" width="90%">
   <img src="img/live.png" width="80" height="80" alt="localização da opção open with live server."/>
   <br><br>
   <strong>Visualizar no browser</strong>
