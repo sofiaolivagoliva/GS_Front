@@ -4,20 +4,11 @@
 1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
-
+@import url("./break-point-css");
 
 /* ==============================
-   CONFIGURAÇÕES GERAIS
-   ============================== */
-   
-   * {
-       margin: 0;
-       padding: 0;
-       box-sizing: border-box;
-   }
-   /* ==============================
-   FONTES
-   ============================== */
+FONTES
+============================== */
 .inria-serif-light {
     font-family: "Inria Serif", serif;
     font-weight: 300;
@@ -66,6 +57,16 @@
         "wdth" 100;
 }
 
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 
 :root {
     --bege: #D4CDC0;
@@ -80,62 +81,76 @@
     --o-animation: translateY(-2px);
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     min-height: 100vh;
     font-family: serif, sans-serif, serif;
     color: var(--marrom);
-
     background-color: var(--bege);
-
     background-image:
-        repeating-linear-gradient(to bottom,
-            transparent 0,
-            transparent 17px,
-            var(--linha) 18px,
-            transparent 19px);
+    repeating-linear-gradient(to bottom,
+    transparent 0,
+    transparent 17px,
+    var(--linha) 18px,
+    transparent 19px);
 }
+
 
 /* ==============================
    login
 ============================== */
-.body {
+.body-login {
     min-height: 100vh;
     font-family: serif, sans-serif, serif;
     color: var(--marrom);
 
     background-color: var(--bege);
     background-image: none
-
 }
-
-
+/* display: flex; posiciona lado a lado e
+align-items: center; centraliza verticalmente
+transform: translateY(-5px) pra cima e numero positivo p baixo*/
+.cabecalho-esquerda{
+    display: flex;
+    align-items: center;
+    
+}
 /* ==============================
-   CABEÇALHO
+CABEÇALHO
 ============================== */
 
 .cabecalho {
     width: 100%;
     min-height: 65px;
     padding: 15px 7%;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     background: rgba(244, 233, 220, 0.65);
     border-bottom: 1px solid rgba(120, 99, 85, 0.2);
 }
+/* display: flex;
+align-items: center;
+gap: 8px;
+
+text-decoration: none;
+color: var(--marrom);
+
+font-size: 20px;
+font-weight: bold; */
+
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    text-decoration: none;
-    color: var(--marrom);
-
-    font-size: 20px;
-    font-weight: bold;
+    max-height: 3vh;
+    max-width: 3vw;
+    top: -7;
+    transform: translateY(-2px);
+    margin: 5px;
 }
 
 .logo-simbolo {
@@ -433,81 +448,4 @@ body {
 
 .rodape-final p {
     font-size: 11px;
-}
-
-/* ==============================
-   RESPONSIVIDADE
-============================== */
-
-@media (max-width: 700px) {
-
-    .cabecalho {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-principal {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .apresentacao {
-        margin-top: 35px;
-    }
-
-    .cartao-integrantes {
-        padding: 20px;
-        border-radius: 30px;
-    }
-
-    .ficha-integrante {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .foto-container {
-        width: 100%;
-        height: 260px;
-    }
-
-    .foto-container img {
-        height: 260px;
-        min-height: 260px;
-    }
-
-    .campo-titulo {
-        font-size: 17px;
-    }
-
-    .campo-valor,
-    .campo-link {
-        font-size: 12px;
-    }
-
-    .rodape-conteudo {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .campo {
-        gap: 8px;
-    }
-
-    .campo-titulo {
-        font-size: 15px;
-    }
-
-    .campo-valor,
-    .campo-link {
-        font-size: 11px;
-    }
-
-    .integrante-btn {
-        padding: 8px 10px;
-        font-size: 11px;
-    }
 }

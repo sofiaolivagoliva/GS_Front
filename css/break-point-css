@@ -1,0 +1,132 @@
+/* A página começa simples para telas pequenas. */
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (min-width: 48rem) {
+    .marca {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .cabecalho nav {
+        display: inline-block;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin-right: 0.25rem;
+        margin-bottom: 0;
+    }
+
+    .hero {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .cartao {
+        display: inline-block;
+        width: 31.5%;
+        margin-right: 2%;
+        vertical-align: top;
+    }
+
+    .cartao:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .integrante {
+        max-width: 34rem;
+    }
+
+    form {
+        max-width: 46rem;
+    }
+}
+
+@media (min-width: 70rem) {
+    body {
+        font-size: 1.0625rem;
+    }
+
+    .secao {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media (max-width: 700px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-principal {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .apresentacao {
+        margin-top: 35px;
+    }
+
+    .cartao-integrantes {
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .ficha-integrante {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .foto-container {
+        width: 100%;
+        height: 260px;
+    }
+
+    .foto-container img {
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .campo-titulo {
+        font-size: 17px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 12px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .campo {
+        gap: 8px;
+    }
+
+    .campo-titulo {
+        font-size: 15px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 11px;
+    }
+
+    .integrante-btn {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+}
