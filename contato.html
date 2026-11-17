@@ -30,8 +30,8 @@ INTEGRANTES DO GRUPO
 </head>
 
 <body class="body">
-    <header id="hero-cabecalho" aria-label="Navegação principal">
-        <div class="cabecalho-direita">
+    <header class="cabecalho">
+        <div class="cabecalho-direita" aria-label="Navegação principal">
             <nav>
                 <ul>
                     <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="Início">ReTaste</a></li>
@@ -53,31 +53,32 @@ INTEGRANTES DO GRUPO
          aria-hidden="true" diz que o elemento >x< não sera lido  pela assistencia de tela-->
         <div class="moldura">
             <div class="brilho" aria-hidden="true"></div>
-            <img class="sol-fundo" src="img/quadrado-claro.svg" alt="">
-            <section class="titulo-contato-container">
+            <section class="apresentacao">
+                <div class="h1-contato">
                 <span class="selo">Contato</span>
                 <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
                 <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma
                     mensagem.</p>
+                    </div>
                 </section>
             </div>
             
             <!-- Informações + formulário -->
-            <section class="secao">
-                <div class="infos-contato-container">
+            <section class="infos-contato-container" aria-label="email e endereço para localização da equipe fundadora e nome do projeto">
+                <div>
                     <div class="contato-info">
                         <article class="email-contato">
-                            <h3>Email</h3>
+                            <h3 aria-label="email">Email</h3>
                             <p>contatoretaste@outlook.com</p>
                         </article>
                         <article class="endereco-contato">
-                            <h3>Endereço</h3>
+                            <h3 aria-label="endereço">Endereço</h3>
                             <p>FIAP - Av. Paulista, 1106 - São Paulo/SP</p>
                         </article>
                         <article class="projeto-contato">
-                            <h3>Projeto</h3>
+                            <h3 aria-label="projeto">Projeto</h3>
                             <p>ReTaste - 2026</p>
-                            <a href="integrantes.html">integrantes</a>
+                            <a href="integrantes.html" aria-label="link para página de integrantes">integrantes</a>
                         </article>
                     </div>
                     
@@ -109,8 +110,8 @@ INTEGRANTES DO GRUPO
         </main>
         <br>
         <!-- RODAPÉ -->
-        <footer class="rodape">
-            <div class="chatbot">
+        <footer class="rodape" aria-label="rodapé">
+            <div class="chatbot" aria-label="chatbot de Assistente virtual">
                 <button class="botao" type="submit"><a href="https://web.telegram.org/k/#@retaste_assistente_bot">Assistente Virtual</a></button>
             </div>
             
@@ -123,7 +124,7 @@ INTEGRANTES DO GRUPO
                 </div>
                 <div class="informacoes-rodape">
                     <thead>
-                        <h3>Informações</h3>
+                        <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
                     </thead>
                     <tbody>
                     <tr>
@@ -142,7 +143,7 @@ INTEGRANTES DO GRUPO
             </div>
             <div class="informacoes-rodape">
                 <thead>
-                    <h3>Usuário</h3>
+                    <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
                 </thead>
                 <tbody>
                     <tr>
@@ -158,7 +159,7 @@ INTEGRANTES DO GRUPO
 
 
                 <div class="projeto-rodape">
-                    <h3>Projeto</h3>
+                    <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
                     <p>contatoretaste@outlook.com</p>
                     <p>FIAP - Av. Paulista, 1106</p>
                     <a href="integrantes.html">Integrantes</a>

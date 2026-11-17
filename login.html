@@ -32,8 +32,8 @@ INTEGRANTES DO GRUPO
 </head>
 
 <body class="body">
-    <header class="cabecalho" aria-label="Navegação principal">
-        <div class="cabecalho-container">
+    <header class="cabecalho">
+        <div class="cabecalho-esquerda" aria-label="Navegação principal">
             <img class="logo" src="img/logo.svg" alt="Início">
             <strong>Re<span>Taste</span></strong>
         </div>
@@ -55,15 +55,12 @@ INTEGRANTES DO GRUPO
         </article>
         <section>
             <div class="login-container">
-                <h1 id="titulo-doador">Tornar-se um<br><span class="destaque">doador</span></h1>
+                <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span class="destaque">doador</span></h1>
                 <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
                 <!-- Formulário de login do comerciante.
              action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
                 <div action="#" method="post">
-
-                    <br>
                     <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
-
                 </div>
                 <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
                      required: exige o preenchimento antes do envio.
@@ -94,7 +91,7 @@ INTEGRANTES DO GRUPO
                 </div>
                 <div class="checkbox-group">
                     <label class="checkbox">
-                        <input type="checkbox" name="manter_logado" value="logado" checked>
+                        <input type="checkbox" name="manter_logado" value="logado" aria-label="Botão de seleção manter logado">
                         <span class="texto">Manter logado</span>
 
                     </label>
@@ -106,7 +103,7 @@ INTEGRANTES DO GRUPO
                 <div class="entrar-login">
                     <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
                 </div>
-                <p class="termos">Ao continuar, você concorda com <a href="#">nossos termos</a>.</p>
+                <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você concorda com <a href="#">nossos termos</a>.</p>
             </div>
 
         </section>
@@ -115,63 +112,15 @@ INTEGRANTES DO GRUPO
 
     </main>
     <!-- RODAPÉ -->
-    <footer class="rodape">
-
-        <div class="rodape-conteudo">
-
-            <div>
-                <h2>ReTaste</h2>
-                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3>Informações</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="index.html">Home</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sobre.html">Sobre</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="faq.html">FAQ</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="contato.html">Contato</a></td>
-                    </tr>
-                </tbody>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3>Usuário</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="login.html">Login</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="perfil.html">Perfil</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
-                    </tr>
-                </tbody>
-
-
-                <div class="projeto-rodape">
-                    <h3>Projeto</h3>
-                    <a href="integrantes.html">Integrantes</a>
-                    <p>FIAP - Av. Paulista, 1106</p>
-                    <p>São Paulo - SP</p>
-                </div>
-
-            </div>
-
-            <div class="rodape-final">
-                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
-            </div>
-
+    <footer class="rodape-login" aria-label="menu de navegação">
+        <fieldset>
+            <legend>Menu</legend>
+            <a href="index.html"><img src="img/home.svg" alt="página home" aria-label="link para página home"/></a>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="estabelecimentos.html"><img src="img/estabelecimento.svg" alt="página de ofertas de estabelecimentos" aria-label="link para página de ofertas de estabelecimentos"/></a>
+            <a href="estabelecimentos.html">Estabelecimentos</a>
+        </fieldset>
     </footer>
 </body>
 
