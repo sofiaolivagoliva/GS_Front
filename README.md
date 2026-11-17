@@ -239,10 +239,10 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
 
 ---
 
-*Desenvolvido com 💙 para conectar tecnologia, impacto social e sorrisos.* ☀️
+*Transformando o excesso em oportunidade e levando esperança a quem mais precisa.* 🌱
 
 --- 
 
-*Link do repositório:  https://github.com/Ribeir0296/Sprint-Front
+*Link do repositório:  https://github.com/sofiaolivagoliva/GS_Front.git
 *Link do Site:         https://ribeir0296.github.io/Sprint-Front/
 
