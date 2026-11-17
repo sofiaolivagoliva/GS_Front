@@ -49,11 +49,12 @@ INTEGRANTES DO GRUPO
                 </ul>
             </nav>
         </div>
-        <!-- Moldura azul com a abertura da página -->
+        <!-- Moldura azul com a abertura da página
+         aria-hidden="true" diz que o elemento >x< não sera lido  pela assistencia de tela-->
         <div class="moldura">
             <div class="brilho" aria-hidden="true"></div>
-            <img class="sol-fundo" src="imagens/sol-fino.svg" alt="">
-            <section class="abertura abertura-simples container">
+            <img class="sol-fundo" src="img/quadrado-claro.svg" alt="">
+            <section class="titulo-contato-container">
                 <span class="selo">Contato</span>
                 <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
                 <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma
@@ -93,7 +94,7 @@ INTEGRANTES DO GRUPO
                             <option value="parceria">Parceria</option>
                             <option value="outro">Outro</option>
                         </select>
-                        <br><textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
+                        <br><textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" autocomplete="text" required></textarea>
                         
                         <br><button class="botao" type="submit">Enviar mensagem</button>
                         <!--um parágrafo para classe ser identificada pejo js e ser enviara uma mensagem
