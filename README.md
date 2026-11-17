@@ -2,21 +2,21 @@
 
 Este projeto consiste no desenvolvimento de um website para uma Iniciação Científica, como parte de uma atividade acadêmica da disciplina Front-End Design Engineering, da FIAP, em 2026.
 
-## Acessando o website através do repositório
+## ↗️ Acessando o website através do repositório
 <div align="center">
 
 <table>
   <tr>
     <td align="center" width="180">
-      <img src="img/rafael.jpeg" width="80" height="80" alt="imagem da tela do acesso à URL do repositório"/>
+      <img src="img/clone.png" width="80" height="80" alt="imagem da tela do acesso à URL do repositório"/>
       <br><br>
       <strong>Clone o repositório</strong>
       <br>
-      <sub>Copie e cole a URL em um terminal para obter o repositório no explorer</sub>
+      <sub>Copie e cole a URL em usm terminal para obter o repositório no explorer</sub>
     </td>
 
 <td align="center" width="180">
-  <img src="img/enrique.jpeg" width="80" height="80" alt="Enrique Trindade"/>
+  <img src="img/path.png" width="80" height="80" alt="Pelo terminal digite cd GS_Front para entrar no repositório e code . para acessar o VS Code."/>
   <br><br>
   <strong>Abrir no VS Code</strong>
   <br>
@@ -24,17 +24,14 @@ Este projeto consiste no desenvolvimento de um website para uma Iniciação Cien
   <br>
   <sub>em seguida digite "code ." no terminal, para acessar o VS Code.</sub>
   <br><br>
-  <a href="https://www.linkedin.com/in/enrique-trindade-46a0012b4/">LinkedIn</a>
-  ·
-  <a href="https://github.com/enriquetrindade">GitHub</a>
 </td>
 
 <td align="center" width="180">
-  <img src="img/pollo.jpeg" width="80" height="80" alt="Julio Bernardes"/>
+  <img src="img/live.png" width="80" height="80" alt="localização da opção open with live server."/>
   <br><br>
   <strong>Visualizar no browser</strong>
   <br>
-  <sub>Após selecionar "trust" em Workspace Trust, com o botão direito do mouse, selecione o arquivo "login.html" e escolha Open with live server.</sub>1
+  <sub>Após selecionar "trust" em Workspace Trust, com o botão direito do mouse, selecione o arquivo "login.html" e escolha Open with live server.</sub>
 </td>
   </tr>
 </table>
@@ -84,6 +81,9 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
     ├── pollo.jpeg
     ├── marina.jpeg
     ├── enrique.jpeg
+    ├── live.png
+    ├── clone.png
+    ├── path.png
     ├── retangulo-medio.svg
     ├── retangulo-escuro.svg
     ├── retangulo-claro.svg
