@@ -10,6 +10,56 @@
    CONFIGURAÇÕES GERAIS
 ============================== */
 
+/* ==============================
+FONTES
+============================== */
+.inria-serif-light {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inria-serif-bold {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inria-serif-light-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.inria-serif-regular-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.inria-serif-bold-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+/*instrument sans*/
+/* <weight>: Use a value from 400 to 700
+<uniquifier>: Use a unique and descriptive class name*/
+.instrument-sans {
+    font-family: "Instrument Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,31 +67,34 @@
 }
 
 :root {
-    --bege: #eadbd0;
-    --bege-claro: #f4e9dc;
-    --verde: #82966d;
-    --verde-escuro: #334a24;
-    --marrom: #46372e;
-    --marrom-claro: #786355;
+    --bege: #D4CDC0;
+    --bege-claro: #ECEEE2;
+    --verde-clarissimo: #9AAA89;
+    --verde-claro: #788B26;
+    --verde-medio: #45612A;
+    --verde-escuro: #2E4716;
+    --marrom: #2C070B;
+    --marrom-claro: #4e2125;
     --linha: rgba(190, 105, 94, 0.25);
+    --o-animation: translateY(-2px);
 }
 
 body {
     min-height: 100vh;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: serif, sans-serif, serif;
     color: var(--marrom);
-
+    
     background-color: var(--bege);
-
+    
     background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0,
-            transparent 17px,
-            var(--linha) 18px,
-            transparent 19px
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 17px,
+        var(--linha) 18px,
+        transparent 19px
         );
-}
+    }
 
 /* ==============================
    CABEÇALHO
