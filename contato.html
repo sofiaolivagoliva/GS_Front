@@ -39,7 +39,7 @@ INTEGRANTES DO GRUPO
             </nav>
         </div>
     </header>
-
+    
     <main>
         <div class="cabecalho-esquerda">
             <nav>
@@ -58,69 +58,73 @@ INTEGRANTES DO GRUPO
                 <h1>Fale com a <span class="destaque">ReTaste.</span></h1>
                 <p>Para retirada de dúvidas, curiosidades, sugestões ou apenas conversar sobre o projeto. Envie uma
                     mensagem.</p>
-            </section>
-        </div>
-
-        <!-- Informações + formulário -->
-        <section class="secao">
-            <div class="container contato revelar">
-                <div class="contato-info">
-                    <article class="cartao">
-                        <h3>Email</h3>
-                        <p>contatoretaste@outlook.com</p>
-                    </article>
-                    <article class="cartao">
-                        <h3>Endereço</h3>
-                        <p>FIAP - Av. Paulista, 1106 - São Paulo/SP</p>
-                    </article>
-                    <article class="cartao">
-                        <h3>Projeto</h3>
-                        <p>ReTaste - 2026</p>
-                        <a href="integrantes.html">integrantes</a>
-                    </article>
-                </div>
-
-                <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
-                <form class="contato-container" method="POST">
-                    <br><input type="text" name="nome" placeholder="Nome Completo" aria-label="Nome completo"
+                </section>
+            </div>
+            
+            <!-- Informações + formulário -->
+            <section class="secao">
+                <div class="infos-contato-container">
+                    <div class="contato-info">
+                        <article class="email-contato">
+                            <h3>Email</h3>
+                            <p>contatoretaste@outlook.com</p>
+                        </article>
+                        <article class="endereco-contato">
+                            <h3>Endereço</h3>
+                            <p>FIAP - Av. Paulista, 1106 - São Paulo/SP</p>
+                        </article>
+                        <article class="projeto-contato">
+                            <h3>Projeto</h3>
+                            <p>ReTaste - 2026</p>
+                            <a href="integrantes.html">integrantes</a>
+                        </article>
+                    </div>
+                    
+                    <!-- Os atributos "name" já deixam o formulário pronto para o back-end -->
+                    <form class="contato-container" method="POST">
+                        <br><input type="text" name="nome" placeholder="Nome Completo" aria-label="Nome completo"
                         autocomplete="name" required>
-                    <br><input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email"
+                        <br><input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email"
                         required>
-                    <br><select name="assunto" aria-label="Assunto" required>
-                        <option value="" disabled selected>Assunto</option>
-                        <option value="duvida">Dúvida</option>
-                        <option value="sugestao">Sugestão</option>
-                        <option value="parceria">Parceria</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                    <br><textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
-
-                    <br><button class="botao" type="submit">Enviar mensagem</button>
-                    <!--um parágrafo para classe ser identificada pejo js e ser enviara uma mensagem
-                    role status= aos leitores de tela que aquela área é de status
-                    aria-live="polite"= permite que leitores de terra leiam coisas novas que surgem na tela ou alterações na tela.
-                    polite= permite que o leitor termine o que está lendo para dar as informações.
-                    -->
-                    <p class="aviso" role="status" aria-live="polite"></p>
-                </form>
+                        <br><select name="assunto" aria-label="Assunto" required>
+                            <option value="" disabled selected>Assunto</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="parceria">Parceria</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <br><textarea name="mensagem" placeholder="Sua mensagem" aria-label="Sua mensagem" required></textarea>
+                        
+                        <br><button class="botao" type="submit">Enviar mensagem</button>
+                        <!--um parágrafo para classe ser identificada pejo js e ser enviara uma mensagem
+                        role status= aos leitores de tela que aquela área é de status
+                        aria-live="polite"= permite que leitores de terra leiam coisas novas que surgem na tela ou alterações na tela.
+                        polite= permite que o leitor termine o que está lendo para dar as informações.
+                        -->
+                        <p class="aviso" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <br>
+        <!-- RODAPÉ -->
+        <footer class="rodape">
+            <div class="chatbot">
+                <button class="botao" type="submit"><a href="https://web.telegram.org/k/#@retaste_assistente_bot">Assistente Virtual</a></button>
             </div>
-        </section>
-    </main>
-    <br>
-    <!-- RODAPÉ -->
-    <footer class="rodape">
-
-        <div class="rodape-conteudo">
-
-            <div>
-                <h2>ReTaste</h2>
-                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3>Informações</h3>
-                </thead>
-                <tbody>
+            
+            
+            <div class="rodape-conteudo">
+                
+                <div>
+                    <h2>ReTaste</h2>
+                    <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+                </div>
+                <div class="informacoes-rodape">
+                    <thead>
+                        <h3>Informações</h3>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td><a href="index.html">Home</a></td>
                     </tr>
