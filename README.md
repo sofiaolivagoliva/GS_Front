@@ -167,7 +167,7 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
       <br><br>
       <strong>Rafael Madeira</strong>
       <br>
-      <sub>Front-end</sub>
+      <sub>Banco de Dados</sub>
       <br>
       <sub>RM 575635 · 1TDSPA</sub>
       <br><br>
@@ -181,7 +181,7 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
   <br><br>
   <strong>Enrique Trindade</strong>
   <br>
-  <sub>Back-end e Banco de Dados</sub>
+  <sub>ChatBot</sub>
   <br>
   <sub>RM 576314 · 1TDSPA</sub>
   <br><br>
@@ -209,7 +209,7 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
   <br><br>
   <strong>Marina Queiroz</strong>
   <br>
-  <sub>Tester</sub>
+  <sub>Entregas e regras de negócio</sub>
   <br>
   <sub>RM 574491 · 1TDSPA</sub>
   <br><br>
@@ -223,7 +223,7 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
   <br><br>
   <strong>Sofia Oliveira Gonçalves</strong>
   <br>
-  <sub>Designer</sub>
+  <sub>Front-end e design</sub>
   <br>
   <sub>RM 576524 · 1TDSPA</sub>
   <br><br>
