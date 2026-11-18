@@ -179,7 +179,8 @@ textos
 }
 .login-container h1 {
     text-align: center;
-    font-size: clamp(1rem, 2.5vw, 2rem);
+    word-spacing: 15%;
+    font-size: clamp(1rem, 5vw, 4rem);
     margin-bottom: 0.5rem;
     z-index: 10;
 }
