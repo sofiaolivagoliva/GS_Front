@@ -61,7 +61,7 @@ FONTES
    CONFIGURAÇÕES GERAIS
    ============================== */
 
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,6 +89,7 @@ body {
     min-height: 100vh;
     font-family: serif, sans-serif, serif;
     color: var(--marrom);
+    
     background-color: var(--bege);
     background-image:
     repeating-linear-gradient(to bottom,
@@ -102,22 +103,269 @@ body {
 /* ==============================
    login
 ============================== */
-.body-login {
+ .body-login {
     min-height: 100vh;
     font-family: serif, sans-serif, serif;
     color: var(--marrom);
-
-    background-color: var(--bege);
-    background-image: none
 }
 /* display: flex; posiciona lado a lado e
 align-items: center; centraliza verticalmente
 transform: translateY(-5px) pra cima e numero positivo p baixo*/
-.cabecalho-esquerda{
+
+.body-login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 440px;
+    overflow: hidden;
+
+    background-color: var(--bege-claro);
+    background-image: none;
+}
+
+/* ÁREA PRINCIPAL */
+.body-login main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ÁREA DE FUNDO DOS ASSETS */
+.body-login main > article {
+    position: absolute;
+    inset: 55px 25px 14px;
+
+    background-color: var(--bege);
+    z-index: 1;
+}
+
+/* CONTAINER DAS IMAGENS */
+.assets-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* =================================
+   PLANTAS - CAMADA DE FUNDO
+================================= */
+
+.plant-escura {
+    position: absolute;
+    width: 35%;
+    top: -3%;
+    left: 30%;
+    z-index: 1;
+}
+
+.plant-medium-superior {
+    position: absolute;
+    width: 22%;
+    top: 2%;
+    right: 25%;
+    z-index: 1;
+}
+
+.planta-media {
+    position: absolute;
+    width: 31%;
+    bottom: 0;
+    left: 33%;
+    z-index: 1;
+}
+
+.plant-medium-inferior {
+    position: absolute;
+    width: 26%;
+    bottom: 3%;
+    right: 22%;
+    z-index: 1;
+}
+
+.planta-clarissima {
+    position: absolute;
+    width: 21%;
+    bottom: 19%;
+    left: 17%;
+    z-index: 1;
+}
+
+/* =================================
+   ALIMENTOS - AO REDOR DO PRATO
+================================= */
+
+.melancia {
+    position: absolute;
+    width: 13%;
+    top: 25%;
+    left: 18%;
+    z-index: 2;
+}
+
+.cenoura {
+    position: absolute;
+    width: 13%;
+    top: 25%;
+    right: 17%;
+    z-index: 2;
+}
+
+/* =================================
+   PRATO - NA FRENTE DAS DECORAÇÕES
+================================= */
+
+.prato {
+    position: absolute;
+    width: 180%;
+    height: 80%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 5;
+}
+
+/* =================================
+   FORMULÁRIO - SOBRE O PRATO
+================================= */
+
+.body-login main > section {
+    position: absolute;
+    inset: 55px 25px 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 0;
+    z-index: 6;
+}
+
+.login-container {
+    position: relative;
+    width: min(320px, 80%);
+    text-align: center;
+
+    transform: translateY(-10px);
+}
+
+/* =================================
+   CABEÇALHO - CANTO SUPERIOR DIREITO
+================================= */
+
+.cabecalho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: auto;
+    min-height: 0;
+    padding: 10px 18px;
+
+    background: rgba(212, 205, 192, 0.85);
+    border: none;
+    border-radius: 0 0 0 38px;
+}
+
+.cabecalho-direita {
     display: flex;
     align-items: center;
-    
+    gap: 6px;
+
+    margin-left: auto;
 }
+
+.logo {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    transform: none;
+    object-fit: contain;
+}
+
+/* =================================
+   RODAPÉ - CANTO INFERIOR ESQUERDO
+================================= */
+
+.rodape-login {
+    position: absolute;
+    left: 25px;
+    bottom: 14px;
+    z-index: 10;
+
+    width: 110px;
+    min-height: 148px;
+    padding: 10px 7px;
+
+    background: var(--bege-claro);
+    border-radius: 0 40px 0 0;
+}
+
+/* ORGANIZAÇÃO DOS LINKS */
+.rodape-login fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2px;
+
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+}
+
+.rodape-login legend {
+    display: none;
+}
+
+.rodape-login br {
+    display: none;
+}
+
+/* LINKS DO RODAPÉ */
+.rodape-login a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    color: var(--marrom);
+    font-size: 0.65rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+/* DIMENSÕES CONTROLADAS DOS DOIS SVGs */
+.rodape-login a img {
+    display: block;
+
+    width: 82px;
+    height: 40px;
+    max-width: 100%;
+
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* ESPAÇO ENTRE OS DOIS ITENS DO MENU */
+.rodape-login a:nth-of-type(3) {
+    margin-top: 7px;
+}
+
 /* ==============================
 CABEÇALHO
 ============================== */
