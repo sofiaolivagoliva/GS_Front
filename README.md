@@ -219,7 +219,7 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
 </td>
 
 <td align="center" width="180">
-  <img src="img/sofia.jpg" width="80" height="80" alt="Sofia Oliveira Gonçalves"/>
+  <img src="img/sofia.jpeg" width="80" height="80" alt="Sofia Oliveira Gonçalves"/>
   <br><br>
   <strong>Sofia Oliveira Gonçalves</strong>
   <br>
