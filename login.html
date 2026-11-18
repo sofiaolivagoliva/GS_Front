@@ -41,81 +41,92 @@ INTEGRANTES DO GRUPO
     <main>
         <article>
             <div class="assets-container">
-                <!--ordem dos assetss de planta-->
-                <img class="prato" src="img/prato.svg" alt="">
-                <img class="plant-escura" src="img/plant-escura.svg" alt="">
-                <img class="plant-medium" src="img/plant-medium.svg" alt="">
-                <img class="planta-media" src="img/planta-media.svg" alt="">
-                <img src="img/plant-medium.svg" alt="">
-                <img class="planta-clarissima" src="img/planta-clarissima.svg" alt="">
-                <!--comidas-->
-                <img class="cenoura" src="img/cenoura.svg" alt="">
-                <img class="melancia" src="img/melancia.svg" alt="">
+                <div class="composicao">
+                    <!--ordem dos assetss de planta-->
+                    <img class="prato" src="img/prato.svg" alt="">
+                    <img class="planta-media-superior" src="img/planta-media.svg" alt="">
+                    <img class="plant-escura" src="img/plant-escura.svg" alt="">
+                    <img class="plant-medium-superior" src="img/plant-medium.svg" alt="">
+                    <img class="planta-media" src="img/planta-media.svg" alt="">
+                    <img class="plant-medium-inferior" src="img/plant-medium.svg" alt="">
+                    <img class="plant-escura-inferior" src="img/plant-escura.svg" alt="">
+                    <img class="planta-clarissima" src="img/planta-clarissima.svg" alt="">
+                    <!--comidas-->
+                    <img class="cenoura" src="img/cenoura.svg" alt="">
+                    <img class="coxa" src="img/coxa.svg" alt="">
+                    <section>
+                        <div class="login-container">
+                            <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span
+                                    class="destaque">doador</span></h1>
+                            <form>
+                                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
+                                <!-- Formulário de login do comerciante.
+                                    action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
+                                <div action="#" method="post">
+                                    <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
+                                </div>
+                                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
+                                    required: exige o preenchimento antes do envio.
+                                    autocomplete="postal-code" sujere o CEP ou preenche o camp -->
+
+                                <div class="botao-login">
+                                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                                        autocomplete="name" aria-label="Nome do estabelecimento" required>
+                                </div>
+
+                                <div class="botao-login">
+                                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                                        autocomplete="street-address" aria-label="Endereço" required>
+                                </div>
+
+                                <div class="botao-login">
+                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
+                                        aria-label="CNPJ" maxlength="18">
+                                </div>
+
+                                <div class="botao-login">
+                                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
+                                        aria-label="Email" required>
+                                </div>
+                                <div class="botao-login">
+                                    <input type="password" name="senha" id="senha" placeholder="Senha"
+                                        autocomplete="current-password" aria-label="Senha" required>
+                                </div>
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="manter_logado" value="logado"
+                                            aria-label="Botão de seleção manter logado">
+                                        <span class="texto">Manter logado</span>
+
+                                    </label>
+                                </div>
+                                <div class="termos-tenhoConta">
+                                    <a href="perfil.html" class="texto">Ja tenho uma conta</a>
+                                </div>
+
+                                <div class="entrar-login">
+                                    <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
+                                </div>
+                                <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você
+                                    concorda com <a href="#">nossos termos</a>.</p>
+                        </div>
+                        </form>
+                    </section>
+                </div>
             </div>
         </article>
-        <section>
-            <div class="login-container">
-                <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span class="destaque">doador</span></h1>
-                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
-                <!-- Formulário de login do comerciante.
-             action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
-                <div action="#" method="post">
-                    <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
-                </div>
-                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
-                     required: exige o preenchimento antes do envio.
-                     autocomplete="postal-code" sujere o CEP ou preenche o camp -->
-
-                <div class="botao-login">
-                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento" autocomplete="name"
-                        aria-label="Nome do estabelecimento" required>
-                </div>
-
-                <div class="botao-login">
-                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
-                        autocomplete="street-address" aria-label="Endereço" required>
-                </div>
-
-                <div class="botao-login">
-                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off" aria-label="CNPJ"
-                        maxlength="18">
-                </div>
-
-                <div class="botao-login">
-                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
-                        aria-label="Email" required>
-                </div>
-                <div class="botao-login">
-                    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="current-password"
-                        aria-label="Senha" required>
-                </div>
-                <div class="checkbox-group">
-                    <label class="checkbox">
-                        <input type="checkbox" name="manter_logado" value="logado" aria-label="Botão de seleção manter logado">
-                        <span class="texto">Manter logado</span>
-
-                    </label>
-                </div>
-                <div class="termos-tenhoConta">
-                    <a href="perfil.html" class="texto">Ja tenho uma conta</a>
-                </div>
-
-                <div class="entrar-login">
-                    <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
-                </div>
-                <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você concorda com <a href="#">nossos termos</a>.</p>
-            </div>
-
-        </section>
     </main>
     <!-- RODAPÉ -->
     <footer class="rodape-login" aria-label="menu de navegação">
         <fieldset>
             <legend>Menu</legend>
-            <a class="home-imagem-login" href="index.html"><img src="img/home.svg" alt="página home" aria-label="link para página home"/></a>
+            <a class="home-imagem-login" href="index.html"><img src="img/home.svg" alt="página home"
+                    aria-label="link para página home" /></a>
             <a class="home-login" href="index.html">Home</a>
             <br>
-            <a class="estab-imagem-login" href="estabelecimentos.html"><img src="img/estabelecimento.svg" alt="página de ofertas de estabelecimentos" aria-label="link para página de ofertas de estabelecimentos"/></a>
+            <a class="estab-imagem-login" href="estabelecimentos.html"><img src="img/estabelecimento.svg"
+                    alt="página de ofertas de estabelecimentos"
+                    aria-label="link para página de ofertas de estabelecimentos" /></a>
             <a class="estabelecimento-login" href="estabelecimentos.html">Estabelecimentos</a>
         </fieldset>
     </footer>

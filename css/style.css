@@ -110,7 +110,8 @@ body {
 }
 /* display: flex; posiciona lado a lado e
 align-items: center; centraliza verticalmente
-transform: translateY(-5px) pra cima e numero positivo p baixo*/
+transform: translateY(-5px) pra cima e numero positivo p baixo
+Importante: para o z-index funcionar como esperado, o elemento precisa participar de um contexto de empilhamento. position: absolute já permite utilizar essa propriedade.*/
 
 .body-login {
     position: relative;
@@ -130,13 +131,33 @@ transform: translateY(-5px) pra cima e numero positivo p baixo*/
     height: 100%;
 }
 
-/* ÁREA DE FUNDO DOS ASSETS */
+/* ÁREA DE FUNDO DOS ASSETS
+inset: 55px 25px 14px;
+É uma abreviação de top, right, bottom, left
+z-index: 1;
+Define a ordem de sobreposição do elemento. Quanto maior o valor, mais à frente*/
+
+
 .body-login main > article {
     position: absolute;
     inset: 55px 25px 14px;
-
     background-color: var(--bege);
     z-index: 1;
+    overflow: hidden;
+}
+
+
+.composicao {
+    position: relative;
+    width: min(100%, 750px);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+
+/* TODAS AS IMAGENS */
+.composicao img {
+    position: absolute;
+    height: auto;
 }
 
 /* CONTAINER DAS IMAGENS */
@@ -145,48 +166,106 @@ transform: translateY(-5px) pra cima e numero positivo p baixo*/
     width: 100%;
     height: 100%;
 }
-
 /* =================================
-   PLANTAS - CAMADA DE FUNDO
+textos
+================================= */
+.login-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    z-index: 10;
+}
+.login-container h1 {
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    margin-bottom: 0.5rem;
+    z-index: 10;
+}
+
+.botao-login{
+    margin: 2%;
+}
+
+/* manter logado */
+.checkbox-group{
+    margin: 2%;
+}
+.termos-tenhoConta{
+    margin: 3%;
+    margin-top: 2%;
+}
+.entrar-login{
+    margin: 5%;
+}
+.termos{
+    margin: 5%;
+}
+/* =================================
+PLANTAS - CAMADA DE FUNDO
 ================================= */
 
 .plant-escura {
-    position: absolute;
-    width: 35%;
-    top: -3%;
-    left: 30%;
+    
+    width: 40%;
+    top: -1%;
+    left: 5%;
+    transform:rotate(58deg) scaleY(-1);
+    z-index: 1;
+}
+
+.plant-escura-inferior{
+    
+    width: 23%;
+    bottom: 12%;
+    right: 8%;
+    transform:rotate(45deg) scaleX(-1);
     z-index: 1;
 }
 
 .plant-medium-superior {
-    position: absolute;
-    width: 22%;
-    top: 2%;
-    right: 25%;
+    
+    width: 35%;
+    top: 1%;
+    right: 1%;
+    transform:rotate(-25deg) ;
+    z-index: 1;
+}
+
+.planta-media-superior{
+    
+    width: 35%;
+    top: -7%;
+    right: 30%;
+    transform:rotate(-95deg) scale(-1);
     z-index: 1;
 }
 
 .planta-media {
-    position: absolute;
-    width: 31%;
-    bottom: 0;
-    left: 33%;
+    
+    width: 30%;
+    bottom: 11%;
+    left: 2%;
+    transform:rotate(-46deg);
     z-index: 1;
 }
 
 .plant-medium-inferior {
-    position: absolute;
+    
     width: 26%;
-    bottom: 3%;
-    right: 22%;
+    bottom: -1.5%;
+    right: 26%;
+    transform:rotate(30deg) scaleY(-1);
     z-index: 1;
 }
 
 .planta-clarissima {
-    position: absolute;
-    width: 21%;
-    bottom: 19%;
-    left: 17%;
+    
+    width: 24%;
+    bottom: 1%;
+    left: 26%;
+    transform:rotate(-4deg) scaleY(-1);
     z-index: 1;
 }
 
@@ -194,19 +273,52 @@ transform: translateY(-5px) pra cima e numero positivo p baixo*/
    ALIMENTOS - AO REDOR DO PRATO
 ================================= */
 
-.melancia {
-    position: absolute;
-    width: 13%;
-    top: 25%;
-    left: 18%;
+.coxa {
+    
+    width: 37%;
+    top: 30%;
+    left: -3%;
+    transform:rotate(20deg) scaleX(-1);
     z-index: 2;
 }
 
+/* transform:rotate();
+VALORES:
+center	Centro
+top	Centro superior
+bottom	Centro inferior
+left	Centro esquerdo
+right	Centro direito
+top left	Canto superior esquerdo
+top right	Canto superior direito
+bottom left	Canto inferior esquerdo
+bottom right	Canto inferior direito
+
+OU:
+transform-origin: 0% 0% =transform-origin: eixo-horizontal eixo-vertical;
+VALORES:
+0% 0%	Superior esquerdo
+50% 50%	Centro
+100% 0%	Superior direito
+0% 100%	Inferior esquerdo
+100% 100%	Inferior direito
+
+OU:
+transform-origin: 20px 30px;
+20px: distância horizontal a partir da esquerda.
+30px: distância vertical a partir do topo.
+
+ESPELHAR:
+scaleX(-1): espelha horizontalmente.
+scaleY(-1): espelha verticalmente.
+scale(-1): espelha nos dois sentidos.*/
+
 .cenoura {
-    position: absolute;
-    width: 13%;
-    top: 25%;
-    right: 17%;
+    
+    width: 35%;
+    top: 30%;
+    right: -7%;
+    transform:rotate(7deg);
     z-index: 2;
 }
 
@@ -215,8 +327,8 @@ transform: translateY(-5px) pra cima e numero positivo p baixo*/
 ================================= */
 
 .prato {
-    position: absolute;
-    width: 180%;
+    
+    width: 80%;
     height: 80%;
 
     top: 50%;
@@ -241,7 +353,8 @@ transform: translateY(-5px) pra cima e numero positivo p baixo*/
     min-height: 0;
     z-index: 6;
 }
-
+/* width: min(320px, 80%);
+A função min() compara dois valores e utiliza o menor deles, e não ultrapassará 320 nem 80% de px do elemento pai, mas escolhe como set principal o menor valor. */
 .login-container {
     position: relative;
     width: min(320px, 80%);
