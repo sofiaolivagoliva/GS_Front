@@ -1,0 +1,574 @@
+
+@import url("./break-point.css");
+@import url("./style.css");
+
+/* ==============================
+FONTES
+============================== */
+.inria-serif-light {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.inria-serif-regular {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inria-serif-bold {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.inria-serif-light-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.inria-serif-regular-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.inria-serif-bold-italic {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/*instrument sans*/
+/* <weight>: Use a value from 400 to 700
+<uniquifier>: Use a unique and descriptive class name*/
+.instrument-sans {
+    font-family: "Instrument Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bege: #D4CDC0;
+    --bege-claro: #ECEEE2;
+    --verde-clarissimo: #9AAA89;
+    --verde-claro: #788B26;
+    --verde-medio: #45612A;
+    --verde-escuro: #2E4716;
+    --marrom: #2C070B;
+    --marrom-claro: #4e2125;
+    --linha: rgba(190, 105, 94, 0.25);
+    --o-animation: translateY(-2px);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    font-family: serif, sans-serif, serif;
+    color: var(--marrom);
+
+    background-color: var(--bege);
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 17px,
+            var(--linha) 18px,
+            transparent 19px
+        );
+}
+
+/* =================================
+   PÁGINA DE LOGIN
+================================= */
+ .body-login {
+    min-height: 100vh;
+    font-family: serif, sans-serif, serif;
+    color: var(--marrom);
+}
+.body-login {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+
+    overflow: hidden;
+
+    background-color: var(--bege-claro);
+    background-image: none;
+}
+
+/* ÁREA PRINCIPAL */
+
+.body-login main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ÁREA DO PRATO E DOS ASSETS */
+
+.body-login main > article {
+    position: absolute;
+    inset: 55px 25px 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--bege);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* =================================
+   CONTAINER GERAL DOS ASSETS
+================================= */
+
+.assets-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* =================================
+   COMPOSIÇÃO COMPLETA
+   Prato + assets + formulário
+================================= */
+
+.composicao {
+    position: relative;
+
+    width: min(100%, 82vh, 750px);
+    aspect-ratio: 1 / 1;
+
+    flex-shrink: 0;
+
+    /* Permite dimensionar textos pela largura da composição */
+    container-type: inline-size;
+}
+
+/* TODAS AS IMAGENS */
+
+.composicao img {
+    position: absolute;
+    height: auto;
+}
+
+/* =================================
+   PLANTAS - CAMADA DE FUNDO
+================================= */
+
+.plant-escura {
+    width: 40%;
+    top: -1%;
+    left: 5%;
+
+    transform: rotate(58deg) scaleY(-1);
+    z-index: 1;
+}
+
+.plant-escura-inferior {
+    width: 23%;
+    bottom: 12%;
+    right: 8%;
+
+    transform: rotate(45deg) scaleX(-1);
+    z-index: 1;
+}
+
+.plant-medium-superior {
+    width: 35%;
+    top: 1%;
+    right: 1%;
+
+    transform: rotate(-25deg);
+    z-index: 1;
+}
+
+.planta-media-superior {
+    width: 35%;
+    top: -7%;
+    right: 30%;
+
+    transform: rotate(-95deg) scale(-1);
+    z-index: 1;
+}
+
+.planta-media {
+    width: 30%;
+    bottom: 11%;
+    left: 2%;
+
+    transform: rotate(-46deg);
+    z-index: 1;
+}
+
+.plant-medium-inferior {
+    width: 26%;
+    bottom: -1.5%;
+    right: 26%;
+
+    transform: rotate(30deg) scaleY(-1);
+    z-index: 1;
+}
+
+.planta-clarissima {
+    width: 24%;
+    bottom: 1%;
+    left: 26%;
+
+    transform: rotate(-4deg) scaleY(-1);
+    z-index: 1;
+}
+
+/* =================================
+   ALIMENTOS
+================================= */
+
+.coxa {
+    width: 37%;
+    top: 30%;
+    left: -3%;
+
+    transform: rotate(20deg) scaleX(-1);
+    z-index: 2;
+}
+
+.cenoura {
+    width: 35%;
+    top: 30%;
+    right: -7%;
+
+    transform: rotate(7deg);
+    z-index: 2;
+}
+
+/* =================================
+   PRATO
+================================= */
+
+.prato {
+    width: 80%;
+    height: 80%;
+    
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+/* =================================
+CABEÇALHO
+================================= */
+
+.cabecalho-login {
+    position: absolute;
+    top: 0;
+    right: 1.55rem;
+    z-index: 10;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    width: auto;
+    min-height: 0;
+    padding: 10px 18px;
+    
+    background: rgba(212, 205, 192, 0.85);
+    border: none;
+    border-radius: 0 0 0 38px;
+}
+
+.cabecalho-direita {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    
+    margin-left: auto;
+    max-height: 30px;
+    
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho-direita a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho-direita a:hover{
+    color: var(--verde-escuro);
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    
+    width: 24px;
+    height: 24px;
+    
+    max-width: none;
+    max-height: none;
+    
+    margin: 0;
+    transform: none;
+    object-fit: contain;
+}
+/* =================================
+FORMULÁRIO CENTRAL
+================================= */
+
+.login-container {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 48%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    z-index: 6;
+}
+
+/* TÍTULO */
+
+.login-container h1 {
+    width: 100%;
+
+    margin-bottom: 1cqw;
+
+    font-size: clamp(12px, 4cqw, 24px);
+    line-height: 1.05;
+
+    text-align: center;
+    word-spacing: 0.05em;
+}
+
+
+/* =================================
+CAMPOS DO FORMULÁRIO
+================================= */
+
+.dados-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    gap: 0.8cqw;
+}
+
+/* CAMPOS DE ENTRADA */
+
+.botao-login {
+    width: 100%;
+    margin: 0;
+}
+
+.botao-login input {
+    display: block;
+    
+    width: 100%;
+    height: 3%;
+    
+    padding: 2%;
+    
+    font-size: clamp(7px, 2cqw, 12px);
+    
+    box-sizing: border-box;
+}
+
+/* =================================
+CHECKBOX
+================================= */
+
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    padding: 10%;
+    
+    font-size: clamp(8px, 2.3cqw, 14px);
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1.5cqw;
+}
+
+.checkbox input {
+    width: 2.5cqw;
+    height: 2.5cqw;
+    
+    flex-shrink: 0;
+}
+
+/* =================================
+JÁ TENHO UMA CONTA
+================================= */
+
+.termos-tenhoConta {
+    width: 100%;
+    padding: 5%;
+    
+    font-size: clamp(8px, 2.3cqw, 14px);
+}
+/* formatacao do link do "ja tenho conta". */
+.termos-tenhoConta a {
+    color: var(--marrom);
+    text-decoration: none;
+}
+
+
+.termos-tenhoConta a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
+/* =================================
+BOTÃO ENTRAR
+================================= */
+
+.entrar-login {
+    width: 100%;
+}
+
+.entrar-login button {
+    width: 40%;
+    min-height: 5%;
+    
+    padding: 1%;
+    
+    font-size: clamp(8px, 2.5cqw, 15px);
+    cursor: pointer;
+}
+
+/* =================================
+TERMOS
+================================= */
+
+.termos {
+    width: 100%;
+    margin: 0;
+    
+    font-size: clamp(7px, 1.9cqw, 12px);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.termos a {
+    color: inherit;
+}
+.termos a:hover{
+    color: var(--verde-escuro);
+}
+
+/* =================================
+RODAPÉ
+================================= */
+
+.rodape-login {
+    position: absolute;
+    left: 5px;
+    bottom: 14px;
+    z-index: 10;
+    
+    width: 110px;
+    min-height: 20%;
+    padding: 10px 7px;
+    
+    background: var(--bege-claro);
+    border-radius: 0 40px 0 0;
+}
+
+/* ORGANIZAÇÃO DOS LINKS */
+
+.rodape-login fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+    width: 100%;
+    max-width: 100%;
+    
+    border-radius: 20%;
+}
+
+/* LINKS DO RODAPÉ */
+
+.rodape-login a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    
+    color: var(--marrom);
+    font-size: 0.65rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+/* SVGs DO RODAPÉ */
+
+.rodape-login a img {
+    display: block;
+    
+    width: 82px;
+    height: 40px;
+    max-width: 100%;
+    
+    object-fit: contain;
+    margin-bottom: -12%;
+}
+
+.estab-imagem-login {
+    display: flex;
+    margin-bottom: -42%;
+}
+
+/* ESPAÇO ENTRE OS ITENS */
+
+.rodape-login a:nth-of-type(3) {
+    margin-top: -65%;
+}

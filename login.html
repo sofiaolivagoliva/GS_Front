@@ -32,10 +32,10 @@ INTEGRANTES DO GRUPO
 </head>
 
 <body class="body-login">
-    <header class="cabecalho">
+    <header class="cabecalho-login">
         <div class="cabecalho-direita" aria-label="Navegação principal">
-            <img class="logo" src="img/logo.svg" alt="Início">
-            <strong>Re<span>Taste</span></strong>
+            <a href="index.html"><img  class="logo" src="img/logo.svg" alt="Início"></a>
+            <a href="index.html"><strong>Re<span>Taste</span></strong></a>
         </div>
     </header>
     <main>
@@ -59,38 +59,40 @@ INTEGRANTES DO GRUPO
                             <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span
                                     class="destaque">doador</span></h1>
                             <form>
-                                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
-                                <!-- Formulário de login do comerciante.
+                                <div class="dados-login">
+                                    <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
+                                    <!-- Formulário de login do comerciante.
                                     action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
-                                <div action="#" method="post">
-                                    <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
-                                </div>
-                                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
-                                    required: exige o preenchimento antes do envio.
-                                    autocomplete="postal-code" sujere o CEP ou preenche o camp -->
+                                    <div action="#" method="post">
+                                        <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
+                                    </div>
+                                    <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
+                                        required: exige o preenchimento antes do envio.
+                                        autocomplete="postal-code" sujere o CEP ou preenche o camp -->
 
-                                <div class="botao-login">
-                                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
-                                        autocomplete="name" aria-label="Nome do estabelecimento" required>
-                                </div>
+                                    <div class="botao-login">
+                                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                                            autocomplete="name" aria-label="Nome do estabelecimento" required>
+                                    </div>
 
-                                <div class="botao-login">
-                                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
-                                        autocomplete="street-address" aria-label="Endereço" required>
-                                </div>
+                                    <div class="botao-login">
+                                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                                            autocomplete="street-address" aria-label="Endereço" required>
+                                    </div>
 
-                                <div class="botao-login">
-                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
-                                        aria-label="CNPJ" maxlength="18">
-                                </div>
+                                    <div class="botao-login">
+                                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
+                                            aria-label="CNPJ" maxlength="18">
+                                    </div>
 
-                                <div class="botao-login">
-                                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
-                                        aria-label="Email" required>
-                                </div>
-                                <div class="botao-login">
-                                    <input type="password" name="senha" id="senha" placeholder="Senha"
-                                        autocomplete="current-password" aria-label="Senha" required>
+                                    <div class="botao-login">
+                                        <input type="email" name="email" id="email" placeholder="Email"
+                                            autocomplete="email" aria-label="Email" required>
+                                    </div>
+                                    <div class="botao-login">
+                                        <input type="password" name="senha" id="senha" placeholder="Senha"
+                                            autocomplete="current-password" aria-label="Senha" required>
+                                    </div>
                                 </div>
                                 <div class="checkbox-group">
                                     <label class="checkbox">
@@ -108,7 +110,7 @@ INTEGRANTES DO GRUPO
                                     <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
                                 </div>
                                 <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você
-                                    concorda com <a href="#">nossos termos</a>.</p>
+                                    concorda com <br><a href="#">nossos termos</a>.</p>
                         </div>
                         </form>
                     </section>

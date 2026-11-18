@@ -2,6 +2,8 @@
 /* ==============================
    RESPONSIVIDADE
 ============================== */
+@import url("./style.css");
+@import url("./login.css");
 
 @media (min-width: 48rem) {
     .marca {
