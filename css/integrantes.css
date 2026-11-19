@@ -327,64 +327,532 @@ font-weight: bold; */
     letter-spacing: 2px;
     color: var(--marrom-claro);
 }
+/* =========================================
+   TELAS ATÉ 1440px
+========================================= */
 
-/* ==============================
-   RODAPÉ
-============================== */
+@media (max-width: 1440px) {
 
-.rodape {
-    padding: 40px 8% 15px;
+    .cabecalho nav ul {
+        gap: clamp(10px, 1.2vw, 20px);
+    }
 
-    background: rgba(51, 74, 36, 0.95);
-    color: var(--bege-claro);
+    .menu-principal {
+        gap: clamp(14px, 2vw, 28px);
+    }
+
+    .cartao-integrantes {
+        width: min(900px, 95%);
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
 }
 
-.rodape-conteudo {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
 
-    max-width: 1100px;
-    margin: auto;
+/* =========================================
+   TELAS ATÉ 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 8px 3%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 12px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 25px;
+        height: auto;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 90%;
+        margin: 40px auto 30px;
+    }
+
+    .apresentacao h1 {
+        font-size: clamp(24px, 4vw, 32px);
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* Cartão dos integrantes */
+
+    .secao-integrantes {
+        padding: 15px 4% 40px;
+    }
+
+    .cartao-integrantes {
+        width: 100%;
+        min-height: auto;
+        padding: 20px 24px 30px;
+        border-radius: 35px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 7px;
+        margin-bottom: 20px;
+    }
+
+    .integrante-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+
+    /* Ficha */
+
+    .ficha-integrante {
+        grid-template-columns: 30% 1fr;
+        gap: 18px;
+        max-height: none;
+    }
+
+    .foto-container {
+        min-height: 190px;
+    }
+
+    .foto-container img {
+        height: 190px;
+        max-height: 190px;
+    }
+
+    .campo {
+        min-height: 40px;
+        gap: 10px;
+    }
+
+    .campo-titulo {
+        font-size: 17px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 12px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 32px 5% 15px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .rodape h2 {
+        font-size: 22px;
+    }
 }
 
-.rodape h2 {
-    margin-bottom: 12px;
-    font-size: 25px;
+
+/* =========================================
+   OCULTAR AGRADECIMENTO ABAIXO DE 768px
+========================================= */
+
+@media (max-width: 767px) {
+
+    .agradecimento {
+        display: none;
+    }
 }
 
-.rodape h3 {
-    margin-bottom: 15px;
-    font-size: 16px;
+
+/* =========================================
+   TELAS ATÉ 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        justify-content: center;
+        gap: 10px;
+        padding: 8px 3%;
+    }
+
+    .cabecalho-esquerda,
+    .cabecalho-direita {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 11px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 22px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 90%;
+        margin: 30px auto 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: clamp(21px, 6vw, 27px);
+        margin-bottom: 12px;
+    }
+
+    .apresentacao p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* Cartão */
+
+    .secao-integrantes {
+        padding: 10px 4% 30px;
+    }
+
+    .cartao-integrantes {
+        padding: 18px 15px 25px;
+        border-radius: 28px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .integrante-btn {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+
+    /* Ficha */
+
+    .ficha-integrante {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-height: none;
+    }
+
+    .foto-container {
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .foto-container img {
+        width: 100%;
+        height: 180px;
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    .informacoes-integrante {
+        width: 100%;
+    }
+
+    .campo {
+        min-height: 38px;
+        gap: 8px;
+    }
+
+    .campo-titulo {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 11px;
+    }
+
+
+    /* Decoração */
+
+    .decoracao-flor {
+        right: 8%;
+        bottom: -15px;
+        font-size: 28px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 28px 6% 12px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape h2 {
+        font-size: 21px;
+    }
+
+    .rodape h3 {
+        font-size: 15px;
+    }
+
+    .rodape p,
+    .rodape a {
+        font-size: 12px;
+    }
 }
 
-.rodape p,
-.rodape a {
-    display: block;
-    margin-bottom: 9px;
 
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--bege-claro);
+/* =========================================
+   TELAS ATÉ 425px
+========================================= */
+
+@media (max-width: 425px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        padding: 7px 2%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        gap: 7px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 10px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao h1 {
+        font-size: 22px;
+    }
+
+    .apresentacao p {
+        font-size: 12px;
+    }
+
+
+    /* Cartão */
+
+    .cartao-integrantes {
+        padding: 16px 12px 22px;
+        border-radius: 25px;
+    }
+
+    .integrante-btn {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+
+    /* Ficha */
+
+    .foto-container,
+    .foto-container img {
+        min-height: 160px;
+        height: 160px;
+        max-height: 160px;
+    }
+
+    .campo {
+        min-height: 36px;
+    }
+
+    .campo-titulo {
+        font-size: 14px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 10px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape-conteudo {
+        gap: 18px;
+    }
 }
 
-.rodape a {
-    text-decoration: none;
-    width: fit-content;
-}
 
-.rodape a:hover {
-    text-decoration: underline;
-}
+/* =========================================
+   TELAS ATÉ 320px
+========================================= */
 
-.rodape-final {
-    margin-top: 35px;
-    padding-top: 15px;
+@media (max-width: 320px) {
 
-    border-top: 1px solid rgba(244, 233, 220, 0.25);
-    text-align: center;
-}
+    /* Cabeçalho */
 
-.rodape-final p {
-    font-size: 11px;
+    .cabecalho {
+        gap: 7px;
+        padding: 6px 2%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        gap: 5px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 9px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 19px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 92%;
+        margin: 25px auto 20px;
+    }
+
+    .apresentacao h1 {
+        font-size: 20px;
+    }
+
+    .apresentacao p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* Cartão */
+
+    .secao-integrantes {
+        padding: 8px 3% 25px;
+    }
+
+    .cartao-integrantes {
+        padding: 14px 10px 20px;
+        border-radius: 20px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .integrante-btn {
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+
+    /* Foto */
+
+    .foto-container,
+    .foto-container img {
+        min-height: 140px;
+        height: 140px;
+        max-height: 140px;
+    }
+
+
+    /* Informações */
+
+    .campo {
+        min-height: 34px;
+        gap: 5px;
+    }
+
+    .campo-titulo {
+        font-size: 13px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 9px;
+    }
+
+
+    /* Decoração */
+
+    .decoracao-flor {
+        right: 6%;
+        bottom: -12px;
+        font-size: 23px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 23px 5% 10px;
+    }
+
+    .rodape h2 {
+        font-size: 19px;
+    }
+
+    .rodape h3 {
+        font-size: 14px;
+    }
+
+    .rodape p,
+    .rodape a {
+        font-size: 11px;
+    }
+
+    .rodape-final {
+        margin-top: 25px;
+        padding-top: 12px;
+    }
+
+    .rodape-final p {
+        font-size: 9px;
+    }
 }
