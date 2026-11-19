@@ -167,7 +167,7 @@
     position: relative;
     
     width: calc(100% - 40px);
-    min-height: 435px;
+    min-height: 900px;
     
     margin: 10px auto 0;
     
@@ -217,80 +217,73 @@ PLANTAS DECORATIVAS
 
 /* Primeira planta */
 .assets-container-index img:nth-child(1) {
-    width: 31%;
-    top: -3%;
-    left: 1%;
+    width: 1%;
+    top: 20%;
+    left: 52%;
     
-    transform: rotate(-12deg);
+    transform: rotate(115deg);
     z-index: 1;
 }
-
 /* Segunda planta */
 .assets-container-index img:nth-child(2) {
-    width: 20%;
-    top: -5%;
-    left: 15%;
+    width: 2%;
+    top: 7%;
+    left: 46%;
     
-    transform: rotate(25deg);
+    transform: rotate(80deg);
     z-index: 1;
 }
-
 /* Terceira planta */
 .assets-container-index img:nth-child(3) {
-    width: 18%;
-    top: 22%;
-    left: -2%;
+    width: 3%;
+    top: 2%;
+    left: 38%;
     
-    transform: rotate(-65deg);
+    transform: rotate(110deg) scaleX(-1);
     z-index: 1;
 }
-
 /* Quarta planta */
 .assets-container-index img:nth-child(4) {
-    width: 18%;
-    top: -7%;
-    left: 39%;
+    width: 8%;
+    top: -11%;
+    left: 27%;
     
-    transform: rotate(45deg);
+    transform: rotate(80deg);
     z-index: 1;
 }
 
 /* Planta mais clara ao fundo */
 .assets-container-index img:nth-child(5) {
-    width: 49%;
-    height: 100%;
+    width: 9%;
+    top: -5%;
+    left: 12%;
     
-    top: 0;
-    left: 0;
-    
-    opacity: 0.55;
+    transform: rotate(75deg);
     z-index: 0;
 }
+.assets-container-index img:nth-child(6) {
+    width: 8% ;
+    top: 33%;
+    left: 5%;
 
+    transform: rotate(40deg) ;
 
+    z-index: 0 ;
+}
+.assets-container-index img:nth-child(7) {
+    width: 12%;
+    top: 70%;
+    left: 0;
+    
+    transform: rotate(40deg) scaleX(-1);
+    z-index: 0;
+}
 /* ========================================
 ALIMENTOS DECORATIVOS
 ======================================== */
 
 /* Cenoura */
-.assets-container-index img:nth-child(6) {
-    width: 15%;
-    top: 48%;
-    left: 8%;
-    
-    transform: rotate(-20deg);
-    z-index: 2;
-}
 
-/* Melancia */
-.assets-container-index img:nth-child(7) {
-    width: 19%;
-    top: 61%;
-    left: 19%;
-    
-    transform: rotate(12deg);
-    z-index: 2;
-}
 
 
 /* ========================================
@@ -298,14 +291,7 @@ ASSETS DA REGIÃO INFERIOR
 ======================================== */
 
 /* Planta */
-.assets-container-index img:nth-child(8) {
-    width: 18%;
-    bottom: -7%;
-    left: 18%;
-    
-    transform: rotate(110deg);
-    z-index: 1;
-}
+
 
 /* Ovo */
 .assets-container-index img:nth-child(9) {
