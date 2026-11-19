@@ -263,61 +263,70 @@ PLANTAS DECORATIVAS
 }
 .assets-container-index img:nth-child(6) {
     width: 8% ;
-    top: 33%;
-    left: 5%;
+    top: 10%;
+    left: 3%;
 
     transform: rotate(40deg) ;
 
     z-index: 0 ;
 }
 .assets-container-index img:nth-child(7) {
-    width: 12%;
-    top: 70%;
-    left: 0;
+    width: 9%;
+    top: 27%;
+    left: -2%;
     
-    transform: rotate(40deg) scaleX(-1);
+    transform: rotate(4deg) scaleX(-1);
     z-index: 0;
 }
-/* ========================================
-ALIMENTOS DECORATIVOS
-======================================== */
+.melancia-index{
+    width: 10%;
+    top: 55%;
+    left: -1%;
+    
+    transform: rotate(15deg) scaleX(-1);
+    z-index: 0;
+}
 
-/* Cenoura */
-
-
-
-/* ========================================
-ASSETS DA REGIÃO INFERIOR
-======================================== */
-
-/* Planta */
-
-
-/* Ovo */
+.assets-container-index img:nth-child(8) {
+    width: 10%;
+    top: 70%;
+    right: 85%;
+    
+    transform: rotate(-60deg) scaleX(-1);
+    z-index: 0;
+}
 .assets-container-index img:nth-child(9) {
-    width: 7%;
-    bottom: 2%;
-    left: 42%;
+    width: 11%;
+    top: 75%;
+    right: 75%;
     
-    transform: rotate(15deg);
-    z-index: 2;
+    transform: rotate(-10deg) scaleX(-1);
+    z-index: 0;
 }
-
-/* Planta */
 .assets-container-index img:nth-child(10) {
-    width: 18%;
-    bottom: -5%;
-    left: 29%;
+    width: 12%;
+    top: 80%;
+    right: 60%;
     
-    transform: rotate(25deg);
-    z-index: 1;
+    transform: rotate(4deg) scaleX(-1);
+    z-index: 0;
 }
-
-
-/* ========================================
-   SEÇÃO PRINCIPAL
-======================================== */
-
+.cenoura-index {
+    width: 16%;
+    top: 80%;
+    right: 40%;
+    
+    transform: rotate(-80deg);
+    z-index: 0;
+}
+.cebolinha-index{
+    width: 4%;
+    bottom: 92%;
+    left: 27%;
+    
+    transform: rotate(80deg) scaleX(-1);
+    z-index: 0;
+}
 /* ========================================
    SEÇÃO PRINCIPAL
 ======================================== */
@@ -357,7 +366,7 @@ ASSETS DA REGIÃO INFERIOR
     position: absolute;
 
     top: -2cqw;
-    left: 2cqw;
+    right: 2cqw;
 
     width: 100%;
     height: 100%;
@@ -388,26 +397,26 @@ ASSETS DA REGIÃO INFERIOR
 .texto-container-index h1 {
     position: absolute;
 
-    top: -1cqw;
-    left: -70cqw;
+    top: 35%;
+    left: -90%;
+    right: auto;
 
-    width: auto;
-    margin: 0;
+    width: 100%;
 
     font-family: serif, sans-serif;
-    font-size: 13cqw;
+    font-size: clamp(2rem, 8rem, 8rem);
     font-weight: 400;
     line-height: 1;
 
     color: var(--marrom);
 
-    white-space: nowrap;
-
+    text-align: left;
     z-index: 3;
 }
 
-.texto-container-index .destaque {
-    color: inherit;
+
+.texto-container-index .destaque-index {
+    color:rgb(102, 37, 17);
 }
 
 /* ========================================
@@ -464,37 +473,118 @@ ASSETS DA REGIÃO INFERIOR
 /* ========================================
    RESPONSIVIDADE
 ======================================== */
+@media (max-width: 2560px) {
 
-@media (max-width: 700px) {
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        .texto-container-index h1 {
+        left: -150%;
+        right: auto;
+        text-align: right;
+        width: 100%;
+    }
 
-     .cabecalho-index {
+
+    .body-index {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .body-index main {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px auto 0;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 1440px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        .texto-container-index h1 {
+        left: -100%;
+        right: auto;
+        text-align: right;
+        width: 100%;
+    }
+
+
+    .body-index {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .body-index main {
+        width: calc(100% - 40px);
+        max-width: none;
+        margin: 10px auto 0;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    .cabecalho-index {
         justify-content: center;
         padding: 10px 3%;
         gap: 8px 14px;
+        box-sizing: border-box;
     }
 
     .cabecalho-index a {
         font-size: 12px;
     }
 
+    /* Área principal */
     .body-index main {
         width: calc(100% - 24px);
-        min-height: 620px;
+        min-height: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
     }
 
     .body-index main > section {
-        min-height: 620px;
+        position: relative;
+        width: 100%;
+        min-height: 750px;
+        box-sizing: border-box;
     }
 
- /* Composição dos quadrados */
+    /* Composição dos quadrados */
     .texto-container-index {
         top: 23%;
         right: 6%;
+        left: auto;
 
         width: 88%;
-        height: 70%;
+        max-width: none;
+        height: auto;
+        min-height: 600px;
+
+        aspect-ratio: auto;
+        overflow: visible;
     }
-     .quadrado-medio-index,
+
+    .quadrado-medio-index,
     .quadrado-escuro-index {
         width: 100%;
         height: 100%;
@@ -502,26 +592,45 @@ ASSETS DA REGIÃO INFERIOR
 
     /* Título */
     .texto-container-index h1 {
-        top: -15%;
-        left: 0;
+        position: absolute;
+
+        top: -10%;
+        left: -35%;
+        right: 0;
+
+        width: 100%;
 
         font-size: clamp(42px, 12vw, 66px);
-        white-space: normal;
+        line-height: 1.1;
+        text-align: right;
+        white-space: nowrap;
+
+        z-index: 3;
     }
 
+    /* Parágrafos */
     .texto-container-index p {
+        position: relative;
+        top: 0;
+
         width: 82%;
+        height: auto;
         max-width: 480px;
 
         font-size: clamp(10px, 2.8vw, 14px);
         line-height: 1.45;
 
-        margin-bottom: 17px;
+        margin: 0 auto 17px;
+        padding: 0;
+
+        box-sizing: border-box;
+        z-index: 2;
     }
 
     .texto-container-index p:first-of-type {
         margin-top: 55px;
     }
+
     /* Ajustes dos assets em telas menores */
     .assets-container-index img:nth-child(1) {
         width: 45%;
@@ -541,8 +650,122 @@ ASSETS DA REGIÃO INFERIOR
         top: 72%;
     }
 }
+@media (max-width: 425px) {
 
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
 
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Área principal */
+    .body-index main {
+        min-height: 850px;
+    }
+
+    .body-index main > section {
+        min-height: 850px;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+
+        width: 92%;
+        max-width: none;
+
+        height: auto;
+        min-height: 600px;
+
+        aspect-ratio: auto;
+        overflow: visible;
+    }
+
+    /* Quadrados acompanham a composição */
+    .quadrado-medio-index {
+        top: -2cqw;
+        right: 2cqw;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .quadrado-escuro-index {
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Título */
+    .texto-container-index h1 {
+        position: absolute;
+
+        top: -15%;
+        left: -5%;
+        right: auto;
+
+        width: 100%;
+
+        color: var(--marrom);
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: 1.1;
+
+        text-align: left;
+        white-space: nowrap;
+
+        z-index: 3;
+    }
+
+    /* Parágrafos */
+    .texto-container-index p {
+        position: relative;
+
+        top: 0;
+
+        width: 82%;
+        min-height: 0;
+
+        margin: 0 auto 17px;
+        padding: 0;
+
+        color: var(--bege-claro);
+
+        font-size: 12px;
+        line-height: 1.45;
+
+        overflow: visible;
+        z-index: 2;
+    }
+
+    /* Primeiro parágrafo */
+    .texto-container-index p:first-of-type {
+        margin-top: 18cqw;
+    }
+
+    /* Rodapé */
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}
 @media (max-width: 480px) {
 
     .cabecalho-index {
@@ -599,6 +822,125 @@ ASSETS DA REGIÃO INFERIOR
         margin-top: 45px;
     }
 
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}
+@media (max-width: 320px) {
+
+    html,
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .body-index {
+        width: 25rem;
+        margin: 3% 3% 3%;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .body-index main {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
+
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .body-index main > section {
+        position: relative;
+        width: 100%;
+        min-height: 850px;
+        box-sizing: border-box;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+        width: 92%;
+        max-width: none;
+        height: auto;
+        min-height: 600px;
+        aspect-ratio: auto;
+        overflow: visible;
+    }
+
+    /* Quadrados acompanham a composição */
+    .quadrado-medio-index {
+        top: -2cqw;
+        right: 2cqw;
+        width: 100%;
+        height: 100%;
+    }
+
+    .quadrado-escuro-index {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Título */
+    .texto-container-index h1 {
+        position: absolute;
+        top: -15%;
+        left: -5%;
+        right: auto;
+        width: 100%;
+        color: var(--marrom);
+        font-size: clamp(38px, 11vw, 54px);
+        line-height: 1.1;
+        text-align: left;
+        white-space: nowrap;
+        z-index: 3;
+    }
+
+    /* Parágrafos */
+    .texto-container-index p {
+        position: relative;
+        top: 0;
+        width: 82%;
+        min-height: 0;
+        margin: 0 auto 17px;
+        padding: 0;
+        color: var(--bege-claro);
+        font-size: 12px;
+        line-height: 1.45;
+        overflow: visible;
+        z-index: 2;
+    }
+
+    .texto-container-index p:first-of-type {
+        margin-top: 18cqw;
+    }
+
+    /* Rodapé */
     .rodape-conteudo-index {
         grid-template-columns: 1fr;
         gap: 20px;
