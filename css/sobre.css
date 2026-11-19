@@ -3,4 +3,1317 @@
 1TDSPA - RM576524 – SOFIA OLIVEIRA GONÇALVES
 1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
-1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
+1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA
+*/
+
+@import url("./break-point.css");
+@import url("./style.css");
+
+
+/* =========================================
+   PÁGINA SOBRE
+========================================= */
+
+.body-sobre {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: serif, sans-serif;
+    color: var(--marrom);
+
+    background-color: var(--bege-claro);
+    background-image: none;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.cabecalho-sobre {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 10px 3%;
+
+    box-sizing: border-box;
+}
+
+.cabecalho-esquerda-sobre,
+.cabecalho-direita-sobre {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-sobre nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(10px, 1.5vw, 24px);
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.cabecalho-sobre a {
+    color: var(--marrom);
+
+    font-family: sans-serif;
+    font-size: clamp(12px, 1vw, 17px);
+
+    text-decoration: none;
+}
+
+.logo-sobre {
+    display: block;
+
+    width: clamp(24px, 2vw, 38px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+.logo-perfil-sobre {
+    display: block;
+
+    width: clamp(24px, 2vw, 38px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   ÁREA PRINCIPAL E MARGEM
+========================================= */
+
+.body-sobre main {
+    position: relative;
+
+    width: calc(100% - 40px);
+    max-width: none;
+
+    min-height: 2200px;
+
+    margin: 10px auto 0;
+
+    background-color: var(--bege);
+
+    box-sizing: border-box;
+    /* linhas */
+    background-image:
+        repeating-linear-gradient(to bottom,
+            transparent 0,
+            transparent 17px,
+            var(--linha) 18px,
+            transparent 19px);
+}
+
+
+/* =========================================
+   CAMADA DE ASSETS DECORATIVOS
+========================================= */
+
+.body-sobre main>article {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.assets-dados-sobre {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Quadrados decorativos */
+/* RETANGULO DADOS */
+
+/* RETÂNGULO 1 */
+.retangulo-sobre {
+   position: absolute;
+
+   align-items: center;
+    width: 90%;
+    height: 40%;
+
+    top: -10%;
+    left: 5%;
+
+    transform: none;
+    z-index: 1;
+}
+
+/* RETÂNGULO 2 */
+.retangulo-sobre-tres {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+
+    transform: none;
+    z-index: 1;
+}
+
+/* =========================================
+   COMIDAS DECORATIVAS
+========================================= */
+
+.comidas-container-sobre {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Comidas da direita */
+
+.comidas-quentes-sobre {
+    position: absolute;
+
+    top: 35%;
+    right: 0;
+
+    width: 44%;
+    height: 27%;
+}
+
+.comidas-quentes-sobre img {
+    position: absolute;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* Melancia */
+
+.comidas-quentes-sobre img:nth-child(1) {
+    width: 50%;
+
+    left: -30%;
+    bottom: 0%;
+}
+
+/* Cenoura */
+
+.comidas-quentes-sobre img:nth-child(2) {
+    width: 30%;
+
+    left: 20%;
+    bottom: 10%;
+    transform: rotate(40deg) scaleX(-1);
+}
+
+/* Coxa */
+
+.comidas-quentes-sobre img:nth-child(3) {
+    width: 60%;
+
+    left: 40%;
+    top: 0;
+}
+
+/* Espetinho */
+
+.comidas-quentes-sobre img:nth-child(4) {
+    width: 30%;
+
+    left: 15%;
+    top: 30%;
+    transform: rotate(-20deg) scaleX(-1);
+}
+
+/* Picolé */
+
+.comidas-quentes-sobre img:nth-child(5) {
+    width: 22%;
+
+    right: 0;
+    top: 35%;
+}
+.comidas-quentes-sobre img:nth-child(6) {
+    width: 20%;
+
+    left: 40%;
+    top: 50%;
+}
+.comidas-quentes-sobre img:nth-child(7) {
+    width: 65%;
+
+    left: 40%;
+    top: 50%;
+    transform: rotate(20deg) scaleX(-1);
+}
+.comidas-quentes-sobre img:nth-child(8) {
+    width: 20%;
+
+    left: 50%;
+    top: 60%;
+    transform: rotate(-20deg) scaleX(-1);
+}
+/* Comidas da esquerda */
+
+.comidas-frias-sobre {
+    position: absolute;
+
+    top: 70%;
+    left: 0;
+
+    width: 45%;
+    height: 27%;
+}
+
+.comidas-frias-sobre img {
+    position: absolute;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* Nigiri */
+
+.comidas-frias-sobre img:nth-child(1) {
+    width: 35%;
+
+    left: 0;
+    top: 2%;
+}
+
+/* Cebolinha */
+
+.comidas-frias-sobre img:nth-child(2) {
+    width: 42%;
+
+    left: 35%;
+    top: 40%;
+    transform: rotate(-30deg);
+}
+
+/* Ovo */
+
+.comidas-frias-sobre img:nth-child(3) {
+    width: 25%;
+
+    left: 60%;
+    top: 40%;
+}
+
+/* Queijo */
+
+.comidas-frias-sobre img:nth-child(4) {
+    width: 35%;
+
+    left: 35%;
+    bottom: 3%;
+}
+
+/* Laranja */
+
+.comidas-frias-sobre img:nth-child(5) {
+    width: 35%;
+
+    left: 0;
+    bottom: 0;
+}
+
+/* Pizza */
+
+.comidas-frias-sobre img:nth-child(6) {
+    width: 30%;
+
+    right: 0;
+    bottom: 0;
+}
+.comidas-frias-sobre img:nth-child(7) {
+    width: 35%;
+
+    left: 0;
+    top: 35%;
+    transform: rotate(-40deg);
+}
+
+
+/* =========================================
+   ASSETS DO RODAPÉ DECORATIVO
+========================================= */
+
+.assets-rodape-sobre {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 8%;
+}
+
+.assets-rodape-sobre img {
+    position: absolute;
+
+    height: 100%;
+    width: auto;
+
+    object-fit: contain;
+}
+
+.assets-rodape-sobre img:nth-child(1) {
+    left: 5%;
+    bottom: 0;
+}
+
+.assets-rodape-sobre img:nth-child(2) {
+    left: 35%;
+    bottom: 0;
+}
+
+.assets-rodape-sobre img:nth-child(3) {
+    right: 15%;
+    bottom: 0;
+}
+
+.assets-rodape-sobre img:nth-child(4) {
+    right: 0;
+    bottom: 0;
+
+    width: 30%;
+}
+
+
+/* =========================================
+   PRIMEIRA SEÇÃO — DADOS
+========================================= */
+
+.body-sobre main>section:first-of-type {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    min-height: clamp(600px, 37vw, 850px);
+
+    margin: 0 0 clamp(80px, 7vw, 150px);
+
+    box-sizing: border-box;
+}
+
+
+/* Plantas decorativas */
+
+.body-sobre main>section:first-of-type>img {
+    position: absolute;
+
+    height: auto;
+
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* =========================================
+   QUADRADOS DA COMPOSIÇÃO DOS DADOS
+========================================= */
+
+
+
+/* =========================================
+   TÍTULOS DOS DADOS
+========================================= */
+
+.moral-sobre{
+    top: 90%;
+    text-align: center;
+    align-items: center;
+    color: var(--marrom-claro);
+    z-index: 3;
+}
+
+.dados-container-sobre h1,
+.dados-container-sobre h2 {
+    position: absolute;
+
+    width: 90%;
+    left: 5%;
+
+    text-align: center;
+
+    z-index: 2;
+}
+
+.dados-container-sobre h1 {
+    top: 8%;
+
+    margin: 0;
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(30px, 4vw, 65px);
+    font-weight: 400;
+
+    color: var(--bege-claro);
+}
+
+.dados-container-sobre h2 {
+    top: 17%;
+
+    margin: 0;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(18px, 2vw, 30px);
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    color: var(--bege-claro);
+}
+
+.destaque-sobre {
+    color: var(--verde-clarissimo);
+}
+
+
+/* =========================================
+   COLUNAS DOS DADOS
+========================================= */
+
+.primeiro-dados-sobre,
+.segundo-dados-sobre,
+.terceiro-dados {
+    position: absolute;
+
+    top: 38%;
+
+    width: 29%;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+/* Primeira coluna */
+
+.primeiro-dados-sobre {
+    left: 3%;
+}
+
+/* Segunda coluna */
+
+.segundo-dados-sobre {
+    left: 35.5%;
+}
+
+/* Terceira coluna */
+
+.terceiro-dados {
+    right: 3%;
+}
+
+
+/* Números */
+
+.um-dados-sobre,
+.dois-dados-sobre,
+.tres-dados {
+    margin: 0 0 20px;
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(28px, 3.5vw, 55px);
+    font-weight: 700;
+
+    color: var(--bege-claro);
+}
+
+
+/* Textos explicativos */
+
+.primeiro-dados-sobre p:not(.um-dados-sobre):not(.fonte-sobre),
+.segundo-dados-sobre p:not(.dois-dados-sobre):not(.fonte-sobre),
+.terceiro-dados p:not(.tres-dados):not(.fonte-sobre) {
+    margin: 0 auto 18px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(12px, 1.1vw, 17px);
+
+    line-height: 1.5;
+
+    color: var(--bege-claro);
+}
+
+
+/* Fontes dos dados */
+
+.fonte-sobre {
+    margin-top: 15px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(9px, 0.9vw, 13px);
+
+    line-height: 1.4;
+
+    color: var(--bege);
+}
+
+
+/* Texto abaixo dos dados */
+
+.body-sobre main>section:first-of-type>p {
+    position: absolute;
+
+    bottom: 2%;
+    left: 5%;
+
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0;
+
+    text-align: center;
+
+    font-family: sans-serif;
+    font-size: clamp(13px, 1.2vw, 18px);
+
+    line-height: 1.6;
+
+    color: var(--marrom-claro);
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   SEGUNDA SEÇÃO — PROPÓSITO
+========================================= */
+
+.texto-um-sobre {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    min-height: clamp(560px, 35vw, 800px);
+
+    margin-top: clamp(80px, 7vw, 150px);
+    padding: 8% 3%;
+
+    box-sizing: border-box;
+}
+
+.texto-um-sobre h2,
+.texto-um-sobre p {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+    max-width: 900px;
+}
+
+.texto-um-sobre h2 {
+    margin: 15% 0 35px;
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(30px, 4vw, 58px);
+    font-weight: 400;
+
+    color: var(--marrom);
+}
+
+.texto-um-sobre p {
+    margin: 0 0 22px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(14px, 1.2vw, 19px);
+
+    line-height: 1.7;
+
+    color: var(--marrom);
+}
+
+
+/* =========================================
+   TERCEIRA SEÇÃO — OBJETIVO
+========================================= */
+
+.texto-dois-sobre {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    min-height: clamp(560px, 35vw, 800px);
+
+    margin-top: clamp(80px, 7vw, 150px);
+    padding: 8% 3%;
+
+    box-sizing: border-box;
+}
+
+.texto-dois-sobre h2,
+.texto-dois-sobre p {
+    position: relative;
+
+    z-index: 2;
+
+    width: 55%;
+    max-width: 900px;
+
+    margin-left: auto;
+}
+
+.texto-dois-sobre h2 {
+    margin-top: 3%;
+    margin-bottom: 35px;
+
+    text-align: right;
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(30px, 4vw, 58px);
+    font-weight: 400;
+
+    color: var(--marrom);
+}
+
+.texto-dois-sobre p {
+    margin-bottom: 22px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(14px, 1.2vw, 19px);
+
+    line-height: 1.7;
+
+    color: var(--marrom);
+}
+
+
+/* =========================================
+   SOBRE — TELAS ATÉ 1440px
+========================================= */
+
+@media (max-width: 1440px) {
+
+    .body-sobre main>section:first-of-type {
+        min-height: clamp(500px, 48vw, 680px);
+    }
+
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        min-height: clamp(480px, 45vw, 650px);
+    }
+
+    .dados-container-sobre {
+        inset: 3%;
+
+        width: 94%;
+        height: 94%;
+    }
+
+    .comidas-quentes-sobre,
+    .comidas-frias-sobre {
+        width: 48%;
+    }
+
+    .texto-um-sobre h2,
+    .texto-um-sobre p,
+    .texto-dois-sobre h2,
+    .texto-dois-sobre p {
+        width: 58%;
+    }
+}
+
+
+/* =========================================
+   SOBRE — TELAS ATÉ 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .cabecalho-sobre {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        gap: 8px;
+        padding: 8px 2%;
+    }
+
+    .cabecalho-sobre nav ul {
+        gap: 8px;
+    }
+
+    .cabecalho-sobre a {
+        font-size: 11px;
+    }
+
+    .logo-sobre,
+    .logo-perfil-sobre {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    /* Plantas */
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(1) {
+        width: 25%;
+
+        top: 0;
+        right: 0;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(2) {
+        width: 18%;
+
+        top: 20%;
+        right: 8%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(3) {
+        width: 13%;
+
+        top: 40%;
+        right: 12%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(4) {
+        width: 12%;
+
+        top: 60%;
+        right: 2%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(5) {
+        width: 15%;
+
+        top: 5%;
+        left: 0;
+    }
+
+
+    /* Dados */
+
+    .body-sobre main>section:first-of-type {
+        min-height: clamp(320px, 70vw, 520px);
+
+        margin-bottom: 60px;
+    }
+
+    .dados-container-sobre {
+        inset: 3%;
+
+        width: 94%;
+        height: 94%;
+    }
+
+    .dados-container-sobre h1 {
+        top: 8%;
+
+        font-size: clamp(22px, 4vw, 34px);
+    }
+
+    .dados-container-sobre h2 {
+        top: 20%;
+
+        font-size: clamp(15px, 2.8vw, 22px);
+    }
+
+    .primeiro-dados-sobre {
+        top: 40%;
+        left: 2%;
+
+        width: 30%;
+    }
+
+    .segundo-dados-sobre {
+        top: 40%;
+        left: 35%;
+
+        width: 30%;
+    }
+
+    .terceiro-dados {
+        top: 40%;
+        right: 2%;
+
+        width: 30%;
+    }
+
+
+    /* Propósito e Objetivo */
+
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        min-height: clamp(320px, 70vw, 520px);
+
+        margin-top: 55px;
+        padding: 5% 3%;
+    }
+
+    .texto-um-sobre h2,
+    .texto-um-sobre p,
+    .texto-dois-sobre h2,
+    .texto-dois-sobre p {
+        width: 58%;
+    }
+
+    .texto-um-sobre h2 {
+        margin-top: 18%;
+    }
+
+    .texto-dois-sobre h2 {
+        margin-top: 4%;
+    }
+
+
+    /* Alimentos */
+
+    .comidas-quentes-sobre {
+        top: 35%;
+        right: 0;
+
+        width: 45%;
+        height: 25%;
+    }
+
+    .comidas-frias-sobre {
+        top: 70%;
+        left: 0;
+
+        width: 45%;
+        height: 25%;
+    }
+
+    .assets-rodape-sobre {
+        height: 7%;
+    }
+}
+
+
+/* =========================================
+   SOBRE — TELAS ATÉ 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* Cabeçalho */
+
+    .cabecalho-sobre {
+        gap: 4px;
+        padding: 6px 2%;
+    }
+
+    .cabecalho-sobre nav ul {
+        gap: 5px;
+    }
+
+    .cabecalho-sobre a {
+        font-size: 8px;
+    }
+
+    .logo-sobre,
+    .logo-perfil-sobre {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    /* Dados */
+
+    .body-sobre main>section:first-of-type {
+        min-height: clamp(190px, 70vw, 320px);
+
+        margin-bottom: 55px;
+    }
+
+    .dados-container-sobre {
+        inset: 3%;
+
+        width: 94%;
+        height: 94%;
+    }
+
+    .dados-container-sobre h1 {
+        top: 9%;
+
+        font-size: clamp(13px, 4.5vw, 22px);
+    }
+
+    .dados-container-sobre h2 {
+        top: 20%;
+
+        font-size: clamp(9px, 3vw, 14px);
+        line-height: 1.1;
+    }
+
+    .primeiro-dados-sobre {
+        top: 40%;
+        left: 2%;
+
+        width: 30%;
+    }
+
+    .segundo-dados-sobre {
+        top: 40%;
+        left: 35%;
+
+        width: 30%;
+    }
+
+    .terceiro-dados {
+        top: 40%;
+        right: 2%;
+
+        width: 30%;
+    }
+
+
+    /* Textos */
+
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        min-height: clamp(190px, 70vw, 320px);
+
+        margin-top: 55px;
+        padding: 5% 3%;
+    }
+
+    .texto-um-sobre h2,
+    .texto-um-sobre p,
+    .texto-dois-sobre h2,
+    .texto-dois-sobre p {
+        width: 58%;
+    }
+
+    .texto-um-sobre h2 {
+        margin-top: 17%;
+    }
+
+    .texto-dois-sobre h2 {
+        margin-top: 3%;
+    }
+
+
+    /* Alimentos */
+
+    .comidas-quentes-sobre {
+        top: 35%;
+
+        width: 46%;
+        height: 25%;
+    }
+
+    .comidas-frias-sobre {
+        top: 70%;
+
+        width: 46%;
+        height: 25%;
+    }
+
+    .assets-rodape-sobre {
+        height: 6%;
+    }
+}
+
+
+/* =========================================
+   SOBRE — TELAS ATÉ 425px
+========================================= */
+
+@media (max-width: 425px) {
+
+    .cabecalho-sobre nav ul {
+        gap: 4px;
+    }
+
+    .cabecalho-sobre a {
+        font-size: 7px;
+    }
+
+    .logo-sobre,
+    .logo-perfil-sobre {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* Dados */
+
+    .body-sobre main>section:first-of-type {
+        min-height: clamp(190px, 70vw, 300px);
+
+        margin-bottom: 48px;
+    }
+
+    .dados-container-sobre h1 {
+        top: 9%;
+
+        font-size: clamp(12px, 4.5vw, 19px);
+    }
+
+    .dados-container-sobre h2 {
+        top: 21%;
+
+        font-size: clamp(8px, 2.8vw, 12px);
+    }
+
+    .primeiro-dados-sobre,
+    .segundo-dados-sobre,
+    .terceiro-dados {
+        top: 40%;
+    }
+
+
+    /* Textos */
+
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        min-height: clamp(190px, 70vw, 300px);
+
+        margin-top: 48px;
+    }
+
+    .texto-um-sobre h2,
+    .texto-dois-sobre h2 {
+        font-size: clamp(12px, 3.8vw, 17px);
+    }
+
+    .texto-um-sobre p,
+    .texto-dois-sobre p {
+        font-size: clamp(6px, 1.8vw, 9px);
+
+        line-height: 1.25;
+    }
+
+
+    /* Alimentos */
+
+    .comidas-quentes-sobre,
+    .comidas-frias-sobre {
+        width: 46%;
+    }
+}
+
+
+/* =========================================
+   SOBRE — TELAS ATÉ 320px
+========================================= */
+
+@media (max-width: 320px) {
+
+    /* Cabeçalho */
+
+    .cabecalho-sobre {
+        padding: 5px 2%;
+    }
+
+    .cabecalho-sobre nav ul {
+        gap: 3px;
+    }
+
+    .cabecalho-sobre a {
+        font-size: 6px;
+    }
+
+    .logo-sobre,
+    .logo-perfil-sobre {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    /* Altura das seções */
+
+    .body-sobre main>section:first-of-type,
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        min-height: clamp(185px, 70vw, 225px);
+    }
+
+    .body-sobre main>section:first-of-type {
+        margin-bottom: 45px;
+    }
+
+    .texto-um-sobre,
+    .texto-dois-sobre {
+        margin-top: 45px;
+
+        padding: 4% 2%;
+    }
+
+
+    /* Dados */
+
+    .dados-container-sobre {
+        inset: 3%;
+
+        width: 94%;
+        height: 94%;
+    }
+
+    .dados-container-sobre h1 {
+        top: 9%;
+
+        font-size: 12px;
+    }
+
+    .dados-container-sobre h2 {
+        top: 21%;
+
+        font-size: 8px;
+        line-height: 1.1;
+    }
+
+    .primeiro-dados-sobre {
+        top: 40%;
+        left: 2%;
+
+        width: 30%;
+    }
+
+    .segundo-dados-sobre {
+        top: 40%;
+        left: 35%;
+
+        width: 30%;
+    }
+
+    .terceiro-dados {
+        top: 40%;
+        right: 2%;
+
+        width: 30%;
+    }
+
+
+    /* Plantas */
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(1) {
+        width: 24%;
+
+        top: 0;
+        right: 0;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(2) {
+        width: 17%;
+
+        top: 20%;
+        right: 7%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(3) {
+        width: 12%;
+
+        top: 40%;
+        right: 12%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(4) {
+        width: 10%;
+
+        top: 60%;
+        right: 2%;
+    }
+
+    .body-sobre main>section:first-of-type>img:nth-of-type(5) {
+        width: 14%;
+
+        top: 5%;
+        left: 0;
+    }
+
+
+    /* Títulos */
+
+    .texto-um-sobre h2,
+    .texto-dois-sobre h2 {
+        font-size: 12px;
+    }
+
+
+    /* Parágrafos */
+
+    .texto-um-sobre p,
+    .texto-dois-sobre p {
+        width: 58%;
+
+        font-size: 6px;
+        line-height: 1.2;
+    }
+
+
+    /* Alimentos */
+
+    .comidas-quentes-sobre {
+        top: 35%;
+        right: 0;
+
+        width: 46%;
+        height: 25%;
+    }
+
+    .comidas-frias-sobre {
+        top: 70%;
+        left: 0;
+
+        width: 46%;
+        height: 25%;
+    }
+
+    .assets-rodape-sobre {
+        height: 5%;
+    }
+}
+
+
+/* =========================================
+   MARGEM RESPONSIVA — NÃO ALTERAR
+========================================= */
+
+/* Acima de 768px: margem lateral de 20px */
+
+.body-sobre main {
+    width: calc(100% - 40px);
+    margin: 10px auto 0;
+
+    background-color: var(--bege);
+
+    box-sizing: border-box;
+}
+
+
+/* Até 768px: margem lateral de 12px */
+
+@media (max-width: 768px) {
+
+    .body-sobre main {
+        width: calc(100% - 24px);
+        margin: 10px auto 0;
+    }
+
+}
