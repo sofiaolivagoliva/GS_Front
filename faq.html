@@ -25,7 +25,6 @@ INTEGRANTES DO GRUPO
 
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="script" href="js/script.js">
     <script src="js/script.js" defer></script>
 </head>
 
@@ -69,140 +68,141 @@ INTEGRANTES DO GRUPO
             </div>
         </article>
 
-        <main>
-            <!-- Moldura azul com a abertura da página -->
-            <div class="moldura">
-                <div class="brilho" aria-hidden="true"></div>
-                <img class="sol-fundo" src="imagens/sol-fino.svg" alt="">
-                <section class="abertura abertura-simples container">
-                    <span class="selo">FAQ</span>
-                    <h1>Perguntas <span class="destaque">frequentes.</span></h1>
-                    <p>Respostas rápidas sobre a Turma do Bem e sobre o nosso projeto.</p>
-                </section>
+        <!-- Moldura azul com a abertura da página -->
+        <div class="moldura">
+            <div class="brilho" aria-hidden="true"></div>
+            <img class="sol-fundo" src="imagens/sol-fino.svg" alt="">
+            <section class="abertura abertura-simples container">
+                <span class="selo">FAQ</span>
+                <h1>Perguntas <span class="destaque">frequentes.</span></h1>
+                <p>Respostas rápidas sobre a Turma do Bem e sobre o nosso projeto.</p>
+            </section>
+        </div>
+
+        <!-- Lista de perguntas -->
+        <section class="secao" aria-label="Listas expansivas de perguntas com respostas.">
+            <div class="container">
+                <div class="faq revelar">
+                    <details>
+                        <summary>Quem pode exibir produtos da área de cadastro?</summary>
+                        <p>Grandes empresas, micro empresas e pessoas comuns podem fazer seu cadastro em <a
+                                href="login.html">login</a>. Caso o cadastro seja por uma pessoa civil, coloque um
+                            endereço seguro para o encontro entre cliente e vendedor não sendo necessário colocar
+                            cnpj e cadastrar seus produtos em <a href="perfil.html">perfil</a></p>
+                    </details>
+
+                    <details>
+                        <summary>O que é realmente gratuito?</summary>
+                        <p>Você pode navegar pelas ofertas dos restaurantes participantes da ReTaste em <a
+                                href="estabelecimentos.html">Estabelecimentos</a> e checar se há alguma oferta de
+                            doação, se caracterizando como gratuita.</p>
+                    </details>
+
+                    <details>
+                        <summary>O que o site oferece em sua navegação?</summary>
+                        <p>O site aborda assuntos da fome e desperdício de alimentos no Brasil e no mundo, trazendo
+                            dados e questionamentos para o público. Além disso em nossa navegação é indentificável
+                            área de login para empresas e pessoas comuns, área de contato com nosso assistente
+                            virtual, FAQ para perguntas e respostas e uma área dedicada à apresentação com meios de
+                            comunicação com os membros do projeto ReTaste.</p>
+                    </details>
+
+                    <details>
+                        <summary>Como faço para adquirir as ofertas?</summary>
+                        <p>Para adiquirir as ofertas, basta ir até o local dito na lista junto do produto desejado.
+                            Entretanto, caso haja dúvidas sobre o produto ou localização, basta contatar o
+                            estabelecimento em questão por meio do contato fornecido junto à oferta do produto.</p>
+                    </details>
+
+                    <details>
+                        <summary>Como me cadastro para públicar minhas ofertas?</summary>
+                        <p>Para se cadastrar basta completar os campos necessários, (não sendo obrigatório o de
+                            CNPJ) na página de <a href="login.html">login</a> e na página de <a
+                                href="perfil.html">perfil.</a></p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada final -->
+        <section class="moldura chamada-final" aria-labelledby="titulo-cta">
+            <div class="brilho" aria-hidden="true"></div>
+            <h2 id="titulo-cta">Não encontrou sua dúvida?</h2>
+            <p>Envie uma mensagem e a nossa equipe responde.</p>
+            <div class="grupo-botoes">
+                <a class="botao" href="contato.html">Ir para contato</a>
+            </div>
+        </section>
+    </main>
+    <br>
+    <!-- RODAPÉ -->
+    <footer class="rodape" aria-label="rodapé">
+        <div class="chatbot">
+            <a class="botao" href="https://web.telegram.org/k/#@retaste_assistente_bot">
+                Assistente Virtual
+            </a>
+        </div>
+        <div class="chatbot" aria-label="chatbot de Assistente virtual">
+            <button class="botao" type="submit"><a href="https://web.telegram.org/k/#@retaste_assistente_bot">Assistente
+                    Virtual</a></button>
+        </div>
+        <div class="rodape-conteudo">
+
+            <div>
+                <h2>ReTaste</h2>
+                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="index.html">Home</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="sobre.html">Sobre</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="faq.html">FAQ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="contato.html">Contato</a></td>
+                    </tr>
+                </tbody>
+            </div>
+            <div class="informacoes-rodape">
+                <thead>
+                    <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="login.html">Login</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="perfil.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
+                    </tr>
+                </tbody>
+
+
+                <div class="projeto-rodape">
+                    <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
+                    <p>contatoretaste@outlook.com</p>
+                    <p>FIAP - Av. Paulista, 1106</p>
+                    <a href="integrantes.html">Integrantes</a>
+                    <p>São Paulo - SP</p>
+                </div>
+
             </div>
 
-            <!-- Lista de perguntas -->
-            <section class="secao" aria-label="Listas expansivas de perguntas com respostas.">
-                <div class="container">
-                    <div class="faq revelar">
-                        <details>
-                            <summary>Quem pode exibir produtos da área de cadastro?</summary>
-                            <p>Grandes empresas, micro empresas e pessoas comuns podem fazer seu cadastro em <a
-                                    href="login.html">login</a>. Caso o cadastro seja por uma pessoa civil, coloque um
-                                endereço seguro para o encontro entre cliente e vendedor não sendo necessário colocar
-                                cnpj e cadastrar seus produtos em <a href="perfil.html">perfil</a></p>
-                        </details>
+            <div class="rodape-final">
+                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+            </div>
 
-                        <details>
-                            <summary>O que é realmente gratuito?</summary>
-                            <p>Você pode navegar pelas ofertas dos restaurantes participantes da ReTaste em <a
-                                    href="estabelecimentos.html">Estabelecimentos</a> e checar se há alguma oferta de
-                                doação, se caracterizando como gratuita.</p>
-                        </details>
-
-                        <details>
-                            <summary>O que o site oferece em sua navegação?</summary>
-                            <p>O site aborda assuntos da fome e desperdício de alimentos no Brasil e no mundo, trazendo
-                                dados e questionamentos para o público. Além disso em nossa navegação é indentificável
-                                área de login para empresas e pessoas comuns, área de contato com nosso assistente
-                                virtual, FAQ para perguntas e respostas e uma área dedicada à apresentação com meios de
-                                comunicação com os membros do projeto ReTaste.</p>
-                        </details>
-
-                        <details>
-                            <summary>Como faço para adquirir as ofertas?</summary>
-                            <p>Para adiquirir as ofertas, basta ir até o local dito na lista junto do produto desejado.
-                                Entretanto, caso haja dúvidas sobre o produto ou localização, basta contatar o
-                                estabelecimento em questão por meio do contato fornecido junto à oferta do produto.</p>
-                        </details>
-
-                        <details>
-                            <summary>Como me cadastro para públicar minhas ofertas?</summary>
-                            <p>Para se cadastrar basta completar os campos necessários, (não sendo obrigatório o de
-                                CNPJ) na página de <a href="login.html">login</a> e na página de <a
-                                    href="perfil.html">perfil.</a></p>
-                        </details>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Chamada final -->
-            <section class="moldura chamada-final" aria-labelledby="titulo-cta">
-                <div class="brilho" aria-hidden="true"></div>
-                <h2 id="titulo-cta">Não encontrou sua dúvida?</h2>
-                <p>Envie uma mensagem e a nossa equipe responde.</p>
-                <div class="grupo-botoes">
-                    <a class="botao" href="contato.html">Ir para contato</a>
-                </div>
-            </section>
-        </main>
-        <br>
-            <!-- RODAPÉ -->
-            <footer class="rodape" aria-label="rodapé">
-                <div class="chatbot" aria-label="chatbot de Assistente virtual">
-                    <button class="botao" type="submit"><a
-                            href="https://web.telegram.org/k/#@retaste_assistente_bot">Assistente Virtual</a></button>
-                </div>
-                <div class="rodape-conteudo">
-
-                    <div>
-                        <h2>ReTaste</h2>
-                        <p>Compartilhar alimentos é multiplicar possibilidades.</p>
-                    </div>
-                    <div class="informacoes-rodape">
-                        <thead>
-                            <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="index.html">Home</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="sobre.html">Sobre</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="faq.html">FAQ</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="contato.html">Contato</a></td>
-                            </tr>
-                        </tbody>
-                    </div>
-                    <div class="informacoes-rodape">
-                        <thead>
-                            <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="login.html">Login</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="perfil.html">Perfil</a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
-                            </tr>
-                        </tbody>
-
-
-                        <div class="projeto-rodape">
-                            <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
-                            <p>contatoretaste@outlook.com</p>
-                            <p>FIAP - Av. Paulista, 1106</p>
-                            <a href="integrantes.html">Integrantes</a>
-                            <p>São Paulo - SP</p>
-                        </div>
-
-                    </div>
-
-                    <div class="rodape-final">
-                        <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
-                    </div>
-
-            </footer>
-        </body>
-
-        </html>
+    </footer>
 </body>
 
 </html>

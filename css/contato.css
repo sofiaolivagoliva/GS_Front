@@ -4,3 +4,1056 @@
 1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
+@import url("./break-point.css");
+@import url("./style.css");
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+
+    background-color: var(--bege-claro, #ECEEE2);
+    color: var(--marrom, #2C070B);
+
+    font-family: serif, sans-serif;
+
+    overflow-x: hidden;
+}
+
+.body img {
+    max-width: 100%;
+}
+
+.body main {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+.cabecalho {
+    position: relative;
+    z-index: 10;
+
+    width: 100%;
+    min-height: 85px;
+    padding: 10px 5%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    gap: 25px;
+
+    background-color: var(--bege-claro, #ECEEE2);
+}
+
+/* Organiza os dois grupos do cabeçalho */
+
+.cabecalho-direita,
+.cabecalho-esquerda {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+/* Navegação */
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Mantém os links na mesma linha */
+
+.cabecalho nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(15px, 2vw, 30px);
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+/* Links e imagens */
+
+.cabecalho li {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho a {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: var(--marrom, #2C070B);
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(11px, 1.1vw, 14px);
+    font-weight: 400;
+
+    line-height: 1;
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.cabecalho a:hover {
+    color: var(--verde-escuro, #2E4716);
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.cabecalho a:focus-visible {
+    outline: 2px solid var(--verde-medio, #45612A);
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+/* Logo */
+
+.logo {
+    width: 55px;
+    height: auto;
+
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* Ícone de perfil */
+
+.logo-perfil {
+    width: 38px;
+    height: 38px;
+
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* =========================================
+   3. ASSETS DECORATIVOS
+========================================= */
+
+.body main > article {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.assets-container {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.assets-container img {
+    position: absolute;
+
+    height: auto;
+    object-fit: contain;
+
+    opacity: 0.75;
+}
+
+/* Posicionamento dos assets */
+
+.assets-container img:nth-child(1) {
+    width: 12%;
+    top: 12%;
+    left: -3%;
+}
+
+.assets-container img:nth-child(2) {
+    width: 9%;
+    top: 30%;
+    right: -2%;
+}
+
+.assets-container img:nth-child(3) {
+    width: 11%;
+    top: 52%;
+    left: -3%;
+}
+
+.assets-container img:nth-child(4) {
+    width: 10%;
+    top: 68%;
+    right: -2%;
+}
+
+.assets-container img:nth-child(5) {
+    width: 12%;
+    bottom: 12%;
+    left: 8%;
+}
+
+.assets-container img:nth-child(6) {
+    width: 11%;
+    bottom: 2%;
+    right: 20%;
+}
+
+.assets-container img:nth-child(7) {
+    width: 8%;
+    bottom: 0;
+    left: 40%;
+}
+
+.assets-container img:nth-child(8) {
+    width: 12%;
+    bottom: 3%;
+    right: 3%;
+}
+
+
+/* =========================================
+   4. MOLDURA DE APRESENTAÇÃO
+========================================= */
+
+.moldura {
+    position: relative;
+    isolation: isolate;
+
+    width: min(90%, 1200px);
+    min-height: 300px;
+
+    margin: 35px auto 0;
+    padding: 55px 7%;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 28px;
+
+    background-color: var(--verde-escuro, #2E4716);
+    color: var(--bege-claro, #ECEEE2);
+
+    overflow: hidden;
+}
+
+/* Efeito decorativo */
+
+.brilho {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(154, 170, 137, 0.25),
+        transparent 70%
+    );
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Conteúdo da apresentação */
+
+.apresentacao {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+}
+
+.h1-contato {
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Identificação da página */
+
+.selo {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border: 1px solid var(--verde-clarissimo, #9AAA89);
+    border-radius: 30px;
+
+    color: var(--bege-claro, #ECEEE2);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Título */
+
+.h1-contato h1 {
+    margin: 0;
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.destaque {
+    color: var(--verde-clarissimo, #9AAA89);
+    font-style: italic;
+}
+
+/* Texto de apresentação */
+
+.h1-contato p {
+    max-width: 650px;
+    margin: 0;
+
+    color: var(--bege-claro, #ECEEE2);
+
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   5. ÁREA DE INFORMAÇÕES E FORMULÁRIO
+========================================= */
+
+.infos-contato-container {
+    position: relative;
+    z-index: 1;
+
+    width: min(90%, 1100px);
+    margin: 65px auto 80px;
+}
+
+/* Organização das duas colunas */
+
+.infos-contato-container > div {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 45px;
+}
+
+
+/* =========================================
+   6. INFORMAÇÕES DE CONTATO
+========================================= */
+
+.contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Cartões de informação */
+
+.email-contato,
+.endereco-contato,
+.projeto-contato {
+    padding: 25px;
+
+    border: 1px solid rgba(69, 97, 42, 0.25);
+    border-radius: 16px;
+
+    background-color: #F7F5EF;
+
+    box-shadow: 0 3px 12px rgba(44, 7, 11, 0.05);
+}
+
+/* Títulos das informações */
+
+.contato-info h3 {
+    margin: 0 0 12px;
+
+    color: var(--verde-escuro, #2E4716);
+
+    font-family: "Inria Serif", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Textos */
+
+.contato-info p {
+    margin: 0;
+
+    color: var(--marrom, #2C070B);
+
+    font-size: 0.98rem;
+    line-height: 1.7;
+
+    overflow-wrap: anywhere;
+}
+
+/* Link para integrantes */
+
+.projeto-contato a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--verde-medio, #45612A);
+
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: color 0.3s ease;
+}
+
+.projeto-contato a:hover {
+    color: var(--verde-claro, #788B26);
+}
+
+.projeto-contato a:focus-visible {
+    outline: 2px solid var(--verde-medio, #45612A);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   7. FORMULÁRIO DE CONTATO
+========================================= */
+
+.contato-container {
+    width: 100%;
+    min-width: 0;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    border: 1px solid rgba(69, 97, 42, 0.25);
+    border-radius: 18px;
+
+    background-color: #F7F5EF;
+
+    box-shadow: 0 4px 15px rgba(44, 7, 11, 0.06);
+}
+
+.contato-container label {
+    margin-bottom: -12px;
+
+    color: var(--verde-escuro, #2E4716);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Campos de texto e seleção */
+
+.contato-container input,
+.contato-container select,
+.contato-container textarea {
+    width: 100%;
+    min-width: 0;
+
+    padding: 15px 17px;
+
+    border: 1px solid rgba(69, 97, 42, 0.35);
+    border-radius: 10px;
+
+    background-color: var(--bege-claro, #ECEEE2);
+    color: var(--marrom, #2C070B);
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Placeholder */
+
+.contato-container input::placeholder,
+.contato-container textarea::placeholder {
+    color: #665D56;
+    opacity: 1;
+}
+
+/* Campo de assunto */
+
+.contato-container select {
+    cursor: pointer;
+}
+
+/* Área da mensagem */
+
+.contato-container textarea {
+    min-height: 170px;
+
+    line-height: 1.6;
+
+    resize: vertical;
+}
+
+/* Efeito ao selecionar um campo */
+
+.contato-container input:focus,
+.contato-container select:focus,
+.contato-container textarea:focus {
+    border-color: var(--verde-medio, #45612A);
+
+    box-shadow: 0 0 0 3px rgba(69, 97, 42, 0.15);
+}
+
+/* Foco acessível */
+
+.contato-container input:focus-visible,
+.contato-container select:focus-visible,
+.contato-container textarea:focus-visible {
+    outline: 2px solid var(--verde-medio, #45612A);
+    outline-offset: 2px;
+}
+
+/* Campos inválidos sinalizados pelo JavaScript */
+
+.contato-container .invalido {
+    border: 2px solid #A52A36;
+
+    background-color: #FFF1F0;
+}
+
+.contato-container .invalido:focus {
+    box-shadow: 0 0 0 3px rgba(165, 42, 54, 0.15);
+}
+
+
+/* =========================================
+   8. BOTÃO DE ENVIO
+========================================= */
+
+.contato-container .botao {
+    width: fit-content;
+    min-width: 190px;
+    min-height: 48px;
+
+    align-self: flex-start;
+
+    padding: 13px 25px;
+
+    border: 2px solid var(--verde-escuro, #2E4716);
+    border-radius: 30px;
+
+    background-color: var(--verde-escuro, #2E4716);
+    color: var(--bege-claro, #ECEEE2);
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contato-container .botao:hover {
+    background-color: var(--verde-medio, #45612A);
+
+    transform: translateY(-2px);
+}
+
+.contato-container .botao:focus-visible {
+    outline: 3px solid var(--verde-claro, #788B26);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   9. MENSAGEM DE FEEDBACK DO FORMULÁRIO
+========================================= */
+
+.aviso {
+    width: 100%;
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Quando não há mensagem */
+
+.aviso:empty {
+    display: none;
+}
+
+/* Mensagem de erro */
+
+.aviso.erro {
+    padding: 12px 15px;
+
+    border: 1px solid #D99A9A;
+    border-radius: 8px;
+
+    background-color: #FFF1F0;
+    color: #8B1E2D;
+}
+
+/* Mensagem de sucesso */
+
+.aviso.sucesso {
+    padding: 12px 15px;
+
+    border: 1px solid #9AAA89;
+    border-radius: 8px;
+
+    background-color: #E8F0E3;
+    color: var(--verde-escuro, #2E4716);
+}
+
+/* =========================================
+   11. RESPONSIVIDADE — DESKTOP
+========================================= */
+
+@media (max-width: 1440px) {
+
+    .cabecalho {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .moldura {
+        width: 92%;
+    }
+
+    .infos-contato-container {
+        width: 90%;
+    }
+
+}
+
+
+/* =========================================
+   12. RESPONSIVIDADE — TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        min-height: auto;
+        padding: 18px 4%;
+    }
+
+    .cabecalho nav ul {
+        gap: 18px;
+    }
+
+    .logo {
+        width: 48px;
+    }
+
+    .logo-perfil {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* Moldura */
+
+    .moldura {
+        width: 94%;
+        min-height: 260px;
+
+        margin-top: 25px;
+        padding: 45px 6%;
+
+        border-radius: 22px;
+    }
+
+    .h1-contato h1 {
+        font-size: clamp(2.3rem, 6vw, 3.5rem);
+    }
+
+    /* Informações e formulário */
+
+    .infos-contato-container {
+        width: 90%;
+        margin: 50px auto 60px;
+    }
+
+    .infos-contato-container > div {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contato-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .projeto-contato {
+        grid-column: 1 / -1;
+    }
+
+    .contato-container {
+        padding: 30px;
+    }
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 30px 5% 20px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+    }
+
+    .rodape-final {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================
+   13. RESPONSIVIDADE — MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        min-height: auto;
+        padding: 15px 5%;
+    }
+
+    .cabecalho nav ul {
+        gap: 12px;
+    }
+
+    .cabecalho a {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 43px;
+    }
+
+    .logo-perfil {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Assets */
+
+    .assets-container img {
+        opacity: 0.4;
+    }
+
+    .assets-container img:nth-child(1),
+    .assets-container img:nth-child(3),
+    .assets-container img:nth-child(5) {
+        width: 17%;
+    }
+
+    .assets-container img:nth-child(2),
+    .assets-container img:nth-child(4),
+    .assets-container img:nth-child(6),
+    .assets-container img:nth-child(8) {
+        width: 15%;
+    }
+
+    /* Moldura de apresentação */
+
+    .moldura {
+        width: 94%;
+        min-height: 230px;
+
+        margin-top: 18px;
+        padding: 35px 7%;
+
+        border-radius: 18px;
+    }
+
+    .h1-contato {
+        gap: 12px;
+    }
+
+    .h1-contato h1 {
+        font-size: clamp(2rem, 9vw, 2.7rem);
+    }
+
+    .h1-contato p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .selo {
+        padding: 6px 14px;
+        font-size: 0.75rem;
+    }
+
+    /* Informações */
+
+    .infos-contato-container {
+        width: 92%;
+        margin: 40px auto 45px;
+    }
+
+    .infos-contato-container > div {
+        gap: 20px;
+    }
+
+    .contato-info {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .projeto-contato {
+        grid-column: auto;
+    }
+
+    .email-contato,
+    .endereco-contato,
+    .projeto-contato {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    .contato-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .contato-info p {
+        font-size: 0.92rem;
+    }
+
+    /* Formulário */
+
+    .contato-container {
+        padding: 22px 17px;
+        gap: 15px;
+
+        border-radius: 14px;
+    }
+
+    .contato-container input,
+    .contato-container select,
+    .contato-container textarea {
+        padding: 13px 14px;
+        font-size: 0.92rem;
+    }
+
+    .contato-container textarea {
+        min-height: 145px;
+    }
+
+    .contato-container .botao {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 28px 6% 18px;
+    }
+
+    .chatbot {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .rodape-conteudo h2 {
+        font-size: 1.8rem;
+    }
+
+    .rodape-conteudo h3 {
+        font-size: 1.2rem;
+    }
+
+    .rodape-final {
+        margin-top: 10px;
+    }
+
+}
+
+
+/* =========================================
+   14. TELAS MENORES
+========================================= */
+
+@media (max-width: 425px) {
+
+    .cabecalho {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .cabecalho nav ul {
+        gap: 10px;
+    }
+
+    .h1-contato h1 {
+        font-size: 2.2rem;
+    }
+
+    .moldura {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    .contato-container {
+        padding: 20px 15px;
+    }
+
+}
+
+
+/* =========================================
+   15. SMARTPHONES PEQUENOS
+========================================= */
+
+@media (max-width: 320px) {
+
+    .cabecalho {
+        padding: 12px 3%;
+    }
+
+    .cabecalho a {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        width: 38px;
+    }
+
+    .logo-perfil {
+        width: 27px;
+        height: 27px;
+    }
+
+    .moldura {
+        width: 96%;
+        min-height: 210px;
+
+        padding: 28px 6%;
+
+        border-radius: 15px;
+    }
+
+    .h1-contato h1 {
+        font-size: 1.9rem;
+    }
+
+    .h1-contato p {
+        font-size: 0.87rem;
+    }
+
+    .selo {
+        font-size: 0.7rem;
+    }
+
+    .infos-contato-container {
+        width: 94%;
+    }
+
+    .email-contato,
+    .endereco-contato,
+    .projeto-contato {
+        padding: 17px;
+    }
+
+    .contato-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .contato-info p {
+        font-size: 0.87rem;
+    }
+
+    .contato-container {
+        padding: 17px 13px;
+        gap: 13px;
+    }
+
+    .contato-container input,
+    .contato-container select,
+    .contato-container textarea {
+        padding: 12px;
+        font-size: 0.87rem;
+    }
+
+    .contato-container .botao {
+        padding: 12px;
+        font-size: 0.88rem;
+    }
+
+    .rodape-conteudo p,
+    .informacoes-rodape a,
+    .projeto-rodape a {
+        font-size: 0.87rem;
+        overflow-wrap: anywhere;
+    }
+
+    .rodape-final p {
+        font-size: 0.78rem;
+    }
+
+}

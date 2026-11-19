@@ -56,71 +56,111 @@ INTEGRANTES DO GRUPO
     </header>
 
     <main>
-        <article>
-            <div class="assets-container">
-                <!--ordem dos assetss de planta-->
-                <img src="img/plant-escura.svg" alt="">
-                <img src="img/plant-medium.svg" alt="">
-                <img src="img/planta-media.svg" alt="">
-                <img src="img/plant-medium.svg" alt="">
-                <img src="img/planta-clarissima.svg" alt="">
-                <!--comidas-->
-                <img src="img/cenoura.svg" alt="">
-                <img src="img/melancia.svg" alt="">
-                <!--Assets do rodape-->
-                <img src="img/plant-medium.svg" alt="">
-                <img src="img/ovo.svg" alt="">
-                <img src="img/planta-media.svg" alt="">
-            </div>
-        </article>
 
         <!-- TABELA DE ESTABELECIMENTOS -->
-        <section class="secao-integrantes" aria-label="Apresentação dos estabelecimentos, endereço, contato, descrição e ofertas de cada um">
+
+        <section class="secao-integrantes" aria-label="Estabelecimentos, endereços, contatos, descrições e ofertas">
 
             <table class="cartao-integrantes">
 
                 <thead>
                     <tr class="titulos-estabelecimentos">
-                        <th>Estabelecimento</th>
-                        <th>Endereço</th>
-                        <th>Contato</th>
-                        <th>Descrição</th>
-                        <th id="ofertas">Ofertas</th>
+                        <th scope="col">Estabelecimento</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Contato</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Ofertas</th>
+                        <th scope="col">Tipo de embalagem</th>
+                        <th scope="col">Descrição da embalagem</th>
+                        <th scope="col">Peso</th>
+                        <th scope="col">Selecionar</th>
                     </tr>
                 </thead>
 
                 <tbody id="lista-estabelecimentos">
 
+                    <!-- PADARIA -->
                     <tr id="padaria">
-                        <td>Padaria Pão Quente</td>
+                        <th scope="row">Padaria Pão Quente</th>
                         <td>Rua das Flores, 123</td>
                         <td>(11) 1234-5678</td>
                         <td>Caseiros e industriais. Contém glúten, lactose e alguns contêm nozes</td>
                         <td>Descontos em pães e bolos frescos</td>
+                        <td>Plástico</td>
+                        <td>Embalagem com alças, não biodegradável</td>
+                        <td>10g</td>
+
+                        <td>
+                            <div class="checkbox-group">
+                                <label class="checkbox" for="pedido-padaria">
+                                    <input type="checkbox" name="pedidos[]" id="pedido-padaria" value="padaria">
+                                    <span class="texto">Adicionar</span>
+                                </label>
+                            </div>
+                        </td>
                     </tr>
 
+                    <!-- RESTAURANTE -->
                     <tr id="restaurante">
-                        <td>Restaurante Sabor Caseiro</td>
+                        <th scope="row">Restaurante Sabor Caseiro</th>
                         <td>Avenida Central, 456</td>
                         <td>(11) 9876-5432</td>
                         <td>Pratos variados, veganos e não veganos</td>
                         <td>Promoções em pratos do dia</td>
+                        <td>Plástico</td>
+                        <td>Embalagem sem alças, biodegradável</td>
+                        <td>10g</td>
+
+                        <td>
+                            <div class="checkbox-group">
+                                <label class="checkbox" for="pedido-restaurante">
+                                    <input type="checkbox" name="pedidos[]" id="pedido-restaurante" value="restaurante">
+                                    <span class="texto">Adicionar</span>
+                                </label>
+                            </div>
+                        </td>
                     </tr>
 
+                    <!-- MERCADO -->
                     <tr id="mercado">
-                        <td>Mercado Verde</td>
+                        <th scope="row">Mercado Verde</th>
                         <td>Rua das Palmeiras, 789</td>
                         <td>(11) 2468-1357</td>
                         <td>Produtos com e sem glúten e lactose</td>
                         <td>Doações de alimentos</td>
+                        <td>Plástico</td>
+                        <td>Isopor, não biodegradável</td>
+                        <td>5g</td>
+
+                        <td>
+                            <div class="checkbox-group">
+                                <label class="checkbox" for="pedido-mercado">
+                                    <input type="checkbox" name="pedidos[]" id="pedido-mercado" value="mercado">
+                                    <span class="texto">Adicionar</span>
+                                </label>
+                            </div>
+                        </td>
                     </tr>
 
+                    <!-- DONA SILMARA -->
                     <tr id="silmara">
-                        <td>Dona Silmara</td>
+                        <th scope="row">Dona Silmara</th>
                         <td>Rua das Flores, 123</td>
                         <td>(11) 1244-5557</td>
                         <td>Produtos caseiros</td>
                         <td>Descontos em bolos de pote</td>
+                        <td>Plástico</td>
+                        <td>Embalagem com alças, não biodegradável</td>
+                        <td>8g</td>
+
+                        <td>
+                            <div class="checkbox-group">
+                                <label class="checkbox" for="pedido-silmara">
+                                    <input type="checkbox" name="pedidos[]" id="pedido-silmara" value="silmara">
+                                    <span class="texto">Adicionar</span>
+                                </label>
+                            </div>
+                        </td>
                     </tr>
 
                 </tbody>
@@ -128,6 +168,7 @@ INTEGRANTES DO GRUPO
             </table>
 
         </section>
+
 
 
         <!-- FILTRO DE ESTADOS -->
@@ -153,65 +194,65 @@ INTEGRANTES DO GRUPO
     </main>
     <!-- RODAPÉ -->
     <footer class="rodape" aria-label="rodapé">
-        <div class="chatbot" aria-label="chatbot de Assistente virtual">
-            <button class="botao" type="submit"><a href="https://web.telegram.org/k/#@retaste_assistente_bot">Assistente
-                    Virtual</a></button>
+        <div class="chatbot">
+            <a class="botao" href="https://web.telegram.org/k/#@retaste_assistente_bot">
+                Assistente Virtual
+            </a>
         </div>
-        <div class="rodape-conteudo">
 
-            <div>
-                <h2>ReTaste</h2>
-                <p>Compartilhar alimentos é multiplicar possibilidades.</p>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="index.html">Home</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sobre.html">Sobre</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="faq.html">FAQ</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="contato.html">Contato</a></td>
-                    </tr>
-                </tbody>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="login.html">Login</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="perfil.html">Perfil</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
-                    </tr>
-                </tbody>
+        <div>
+            <h2>ReTaste</h2>
+            <p>Compartilhar alimentos é multiplicar possibilidades.</p>
+        </div>
+        <div class="informacoes-rodape">
+            <thead>
+                <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="index.html">Home</a></td>
+                </tr>
+                <tr>
+                    <td><a href="sobre.html">Sobre</a></td>
+                </tr>
+                <tr>
+                    <td><a href="faq.html">FAQ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="contato.html">Contato</a></td>
+                </tr>
+            </tbody>
+        </div>
+        <div class="informacoes-rodape">
+            <thead>
+                <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="login.html">Login</a></td>
+                </tr>
+                <tr>
+                    <td><a href="perfil.html">Perfil</a></td>
+                </tr>
+                <tr>
+                    <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
+                </tr>
+            </tbody>
 
 
-                <div class="projeto-rodape">
-                    <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
-                    <p>contatoretaste@outlook.com</p>
-                    <p>FIAP - Av. Paulista, 1106</p>
-                    <a href="integrantes.html">Integrantes</a>
-                    <p>São Paulo - SP</p>
-                </div>
-
+            <div class="projeto-rodape">
+                <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
+                <p>contatoretaste@outlook.com</p>
+                <p>FIAP - Av. Paulista, 1106</p>
+                <a href="integrantes.html">Integrantes</a>
+                <p>São Paulo - SP</p>
             </div>
 
-            <div class="rodape-final">
-                <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
-            </div>
+        </div>
+
+        <div class="rodape-final">
+            <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
+        </div>
 
     </footer>
 </body>

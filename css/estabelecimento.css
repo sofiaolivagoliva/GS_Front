@@ -4,3 +4,857 @@
 1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
+
+@import url("./break-point.css");
+@import url("./style.css");
+
+
+
+/* ==============================
+CABEÇALHO integrantes
+============================== */
+.cabecalho {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 10px 3%;
+
+    background: rgba(244, 233, 220, 0.65);
+    border-bottom: 1px solid rgba(120, 99, 85, 0.2);
+
+    box-sizing: border-box;
+}
+
+.cabecalho-esquerda,
+.cabecalho-direita {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: clamp(10px, 1.5vw, 24px);
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.cabecalho a {
+    color: var(--marrom);
+
+    font-family: "Inria Serif", serif;
+    font-size: clamp(11px, 1.1vw, 14px);
+
+    text-decoration: none;
+}
+
+.logo-sobre {
+    display: block;
+
+    width: clamp(24px, 2vw, 38px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+.logo-perfil {
+    display: block;
+
+    width: clamp(24px, 2vw, 38px);
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* display: flex;
+align-items: center;
+gap: 8px;
+
+text-decoration: none;
+color: var(--marrom);
+
+font-size: 20px;
+font-weight: bold; */
+
+
+.logo {
+    max-height: 3vh;
+    max-width: 3vw;
+    top: -7;
+    transform: translateY(-2px);
+    margin: 5px;
+}
+
+.logo-simbolo {
+    font-size: 27px;
+    color: var(--verde-escuro);
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--marrom);
+
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu-principal a:hover,
+.menu-principal a.ativo {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* ==============================
+   APRESENTAÇÃO
+============================== */
+
+.apresentacao {
+    width: min(750px, 85%);
+    margin: 55px auto 35px;
+    text-align: center;
+}
+
+.apresentacao h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+
+.apresentacao p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--marrom-claro);
+}
+
+/* ==============================
+   CARTÃO DOS INTEGRANTES
+============================== */
+
+.secao-integrantes {
+    width: 100%;
+    padding: 15px 5% 60px;
+}
+
+.cartao-integrantes {
+    position: relative;
+
+    width: min(900px, 100%);
+    min-height: 340px;
+
+    margin: auto;
+    padding: 20px 35px 35px;
+
+    background: rgba(130, 150, 109, 0.68);
+
+    border-radius: 55px 35px 50px 35px;
+
+    box-shadow:
+        12px 12px 0 rgba(120, 135, 95, 0.12),
+        inset 0 0 25px rgba(255, 255, 255, 0.12);
+}
+
+/* ==============================
+   ABAS DOS INTEGRANTES
+============================== */
+
+.lista-integrantes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.integrante-btn {
+    border: 1px solid rgba(70, 55, 46, 0.15);
+    border-radius: 20px;
+
+    padding: 9px 15px;
+
+    background: var(--bege-claro);
+    color: var(--marrom);
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.integrante-btn:hover {
+    background: #d8c8b6;
+    transform: translateY(-2px);
+}
+
+.integrante-btn.ativo {
+    background: var(--verde-escuro);
+    color: var(--bege-claro);
+    border-color: var(--verde-escuro);
+}
+
+/* ==============================
+   FICHA DE APRESENTAÇÃO
+============================== */
+
+.ficha-integrante {
+    display: grid;
+    grid-template-columns: 32% 1fr;
+    align-items: stretch;
+    gap: 25px;
+
+    max-height: 220px;
+}
+
+/* FOTO */
+
+.foto-container {
+    min-height: 220px;
+    overflow: hidden;
+
+    background: var(--verde-escuro);
+
+    border: 2px solid rgba(51, 74, 36, 0.2);
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    max-height: 220px;
+
+    display: block;
+    object-fit: cover;
+
+    transition: opacity 0.3s;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes-integrante {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.campo {
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-bottom: 1px solid rgba(70, 55, 46, 0.35);
+}
+
+.campo:last-child {
+    border-bottom: none;
+}
+
+.campo-titulo {
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.campo-valor {
+    font-size: 13px;
+    text-align: right;
+}
+
+.campo-link {
+    font-size: 13px;
+    color: var(--verde-escuro);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.campo-link:hover {
+    text-decoration: underline;
+    color: #172b10;
+}
+
+/* ==============================
+   DECORAÇÃO
+============================== */
+
+.decoracao-flor {
+    position: absolute;
+    right: 11%;
+    bottom: -17px;
+
+    font-size: 35px;
+    color: #a64e43;
+
+    transform: rotate(-15deg);
+}
+
+/* ==============================
+   AGRADECIMENTO
+============================== */
+
+.agradecimento {
+    width: min(650px, 85%);
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.agradecimento p {
+    font-size: 18px;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.agradecimento span {
+    display: block;
+    margin-top: 15px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--marrom-claro);
+}
+/* =========================================
+   TELAS ATÉ 1440px
+========================================= */
+
+@media (max-width: 1440px) {
+
+    .cabecalho nav ul {
+        gap: clamp(10px, 1.2vw, 20px);
+    }
+
+    .menu-principal {
+        gap: clamp(14px, 2vw, 28px);
+    }
+
+    .cartao-integrantes {
+        width: min(900px, 95%);
+    }
+
+    .rodape-conteudo {
+        gap: 30px;
+    }
+}
+
+
+/* =========================================
+   TELAS ATÉ 768px
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 8px 3%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 12px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 25px;
+        height: auto;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 90%;
+        margin: 40px auto 30px;
+    }
+
+    .apresentacao h1 {
+        font-size: clamp(24px, 4vw, 32px);
+    }
+
+    .apresentacao p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* Cartão dos integrantes */
+
+    .secao-integrantes {
+        padding: 15px 4% 40px;
+    }
+
+    .cartao-integrantes {
+        width: 100%;
+        min-height: auto;
+        padding: 20px 24px 30px;
+        border-radius: 35px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 7px;
+        margin-bottom: 20px;
+    }
+
+    .integrante-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+
+    /* Ficha */
+
+    .ficha-integrante {
+        grid-template-columns: 30% 1fr;
+        gap: 18px;
+        max-height: none;
+    }
+
+    .foto-container {
+        min-height: 190px;
+    }
+
+    .foto-container img {
+        height: 190px;
+        max-height: 190px;
+    }
+
+    .campo {
+        min-height: 40px;
+        gap: 10px;
+    }
+
+    .campo-titulo {
+        font-size: 17px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 12px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 32px 5% 15px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .rodape h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   OCULTAR AGRADECIMENTO ABAIXO DE 768px
+========================================= */
+
+@media (max-width: 767px) {
+
+    .agradecimento {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   TELAS ATÉ 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        justify-content: center;
+        gap: 10px;
+        padding: 8px 3%;
+    }
+
+    .cabecalho-esquerda,
+    .cabecalho-direita {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        justify-content: center;
+        gap: 9px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 11px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 22px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 90%;
+        margin: 30px auto 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: clamp(21px, 6vw, 27px);
+        margin-bottom: 12px;
+    }
+
+    .apresentacao p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* Cartão */
+
+    .secao-integrantes {
+        padding: 10px 4% 30px;
+    }
+
+    .cartao-integrantes {
+        padding: 18px 15px 25px;
+        border-radius: 28px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .integrante-btn {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+
+
+    /* Ficha */
+
+    .ficha-integrante {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-height: none;
+    }
+
+    .foto-container {
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .foto-container img {
+        width: 100%;
+        height: 180px;
+        max-height: 180px;
+        object-fit: cover;
+    }
+
+    .informacoes-integrante {
+        width: 100%;
+    }
+
+    .campo {
+        min-height: 38px;
+        gap: 8px;
+    }
+
+    .campo-titulo {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 11px;
+    }
+
+
+    /* Decoração */
+
+    .decoracao-flor {
+        right: 8%;
+        bottom: -15px;
+        font-size: 28px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 28px 6% 12px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rodape h2 {
+        font-size: 21px;
+    }
+
+    .rodape h3 {
+        font-size: 15px;
+    }
+
+    .rodape p,
+    .rodape a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   TELAS ATÉ 425px
+========================================= */
+
+@media (max-width: 425px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        padding: 7px 2%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        gap: 7px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 10px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao h1 {
+        font-size: 22px;
+    }
+
+    .apresentacao p {
+        font-size: 12px;
+    }
+
+
+    /* Cartão */
+
+    .cartao-integrantes {
+        padding: 16px 12px 22px;
+        border-radius: 25px;
+    }
+
+    .integrante-btn {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+
+    /* Ficha */
+
+    .foto-container,
+    .foto-container img {
+        min-height: 160px;
+        height: 160px;
+        max-height: 160px;
+    }
+
+    .campo {
+        min-height: 36px;
+    }
+
+    .campo-titulo {
+        font-size: 14px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 10px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape-conteudo {
+        gap: 18px;
+    }
+}
+
+
+/* =========================================
+   TELAS ATÉ 320px
+========================================= */
+
+@media (max-width: 320px) {
+
+    /* Cabeçalho */
+
+    .cabecalho {
+        gap: 7px;
+        padding: 6px 2%;
+    }
+
+    .cabecalho nav ul,
+    .menu-principal {
+        gap: 5px;
+    }
+
+    .cabecalho a,
+    .menu-principal a {
+        font-size: 9px;
+    }
+
+    .logo-sobre,
+    .logo-perfil {
+        width: 19px;
+    }
+
+
+    /* Apresentação */
+
+    .apresentacao {
+        width: 92%;
+        margin: 25px auto 20px;
+    }
+
+    .apresentacao h1 {
+        font-size: 20px;
+    }
+
+    .apresentacao p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* Cartão */
+
+    .secao-integrantes {
+        padding: 8px 3% 25px;
+    }
+
+    .cartao-integrantes {
+        padding: 14px 10px 20px;
+        border-radius: 20px;
+    }
+
+
+    /* Abas */
+
+    .lista-integrantes {
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .integrante-btn {
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+
+    /* Foto */
+
+    .foto-container,
+    .foto-container img {
+        min-height: 140px;
+        height: 140px;
+        max-height: 140px;
+    }
+
+
+    /* Informações */
+
+    .campo {
+        min-height: 34px;
+        gap: 5px;
+    }
+
+    .campo-titulo {
+        font-size: 13px;
+    }
+
+    .campo-valor,
+    .campo-link {
+        font-size: 9px;
+    }
+
+
+    /* Decoração */
+
+    .decoracao-flor {
+        right: 6%;
+        bottom: -12px;
+        font-size: 23px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 23px 5% 10px;
+    }
+
+    .rodape h2 {
+        font-size: 19px;
+    }
+
+    .rodape h3 {
+        font-size: 14px;
+    }
+
+    .rodape p,
+    .rodape a {
+        font-size: 11px;
+    }
+
+    .rodape-final {
+        margin-top: 25px;
+        padding-top: 12px;
+    }
+
+    .rodape-final p {
+        font-size: 9px;
+    }
+}
