@@ -4,9 +4,17 @@
 1TDSPA - RM575649 – JÚLIO BERNARDES DA SILVA
 1TDSPA - RM575635 – RAFAEL MADEIRA GOMES RIBEIRO
 1TDSPA - RM576314 – ENRIQUE TRINDADE FERREIRA SILVA */
-@import url("./break-point.css");
+
+/* conexão com os outros css: */
+@import url("sobre.css");
+@import url("perfil.css");
 @import url("./login.css");
 @import url("./integrantes.css");
+@import url("index.css");
+@import url("faq.css");
+@import url("estabelecimento.css");
+@import url("contato.css");
+@import url("./break-point.css");
 
 /* ==============================
 FONTES
