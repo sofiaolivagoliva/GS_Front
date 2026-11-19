@@ -710,6 +710,7 @@
 }
 
 
+
 /* =========================================
    SOBRE — TELAS ATÉ 1440px
 ========================================= */
@@ -727,7 +728,6 @@
 
     .dados-container-sobre {
         inset: 3%;
-
         width: 94%;
         height: 94%;
     }
@@ -757,7 +757,6 @@
     .cabecalho-sobre {
         flex-wrap: wrap;
         justify-content: space-between;
-
         gap: 8px;
         padding: 8px 2%;
     }
@@ -773,7 +772,65 @@
     .logo-sobre,
     .logo-perfil-sobre {
         width: 23px;
-        height: 23px;
+        height: auto;
+    }
+
+
+    /* Primeira seção — dados */
+
+    .body-sobre main>section:first-of-type {
+        min-height: clamp(450px, 70vw, 600px);
+        margin-bottom: 60px;
+    }
+
+    .dados-container-sobre {
+        inset: 3%;
+        width: 94%;
+        height: 94%;
+    }
+
+    .dados-container-sobre h1 {
+        top: 8%;
+        font-size: clamp(22px, 4vw, 34px);
+    }
+
+    .dados-container-sobre h2 {
+        top: 20%;
+        font-size: clamp(15px, 2.8vw, 22px);
+    }
+
+    .primeiro-dados-sobre {
+        top: 40%;
+        left: 2%;
+        width: 30%;
+    }
+
+    .segundo-dados-sobre {
+        top: 40%;
+        left: 35%;
+        width: 30%;
+    }
+
+    .terceiro-dados {
+        top: 40%;
+        right: 2%;
+        width: 30%;
+    }
+
+    .um-dados-sobre,
+    .dois-dados-sobre,
+    .tres-dados {
+        font-size: clamp(24px, 3.5vw, 40px);
+    }
+
+    .primeiro-dados-sobre p:not(.um-dados-sobre):not(.fonte-sobre),
+    .segundo-dados-sobre p:not(.dois-dados-sobre):not(.fonte-sobre),
+    .terceiro-dados p:not(.tres-dados):not(.fonte-sobre) {
+        font-size: clamp(11px, 1.6vw, 14px);
+    }
+
+    .body-sobre main>section:first-of-type>p {
+        font-size: clamp(11px, 1.6vw, 14px);
     }
 
 
@@ -781,95 +838,40 @@
 
     .body-sobre main>section:first-of-type>img:nth-of-type(1) {
         width: 25%;
-
         top: 0;
         right: 0;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(2) {
         width: 18%;
-
         top: 20%;
         right: 8%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(3) {
         width: 13%;
-
         top: 40%;
         right: 12%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(4) {
         width: 12%;
-
         top: 60%;
         right: 2%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(5) {
         width: 15%;
-
         top: 5%;
         left: 0;
     }
 
 
-    /* Dados */
-
-    .body-sobre main>section:first-of-type {
-        min-height: clamp(320px, 70vw, 520px);
-
-        margin-bottom: 60px;
-    }
-
-    .dados-container-sobre {
-        inset: 3%;
-
-        width: 94%;
-        height: 94%;
-    }
-
-    .dados-container-sobre h1 {
-        top: 8%;
-
-        font-size: clamp(22px, 4vw, 34px);
-    }
-
-    .dados-container-sobre h2 {
-        top: 20%;
-
-        font-size: clamp(15px, 2.8vw, 22px);
-    }
-
-    .primeiro-dados-sobre {
-        top: 40%;
-        left: 2%;
-
-        width: 30%;
-    }
-
-    .segundo-dados-sobre {
-        top: 40%;
-        left: 35%;
-
-        width: 30%;
-    }
-
-    .terceiro-dados {
-        top: 40%;
-        right: 2%;
-
-        width: 30%;
-    }
-
-
-    /* Propósito e Objetivo */
+    /* Propósito e objetivo */
 
     .texto-um-sobre,
     .texto-dois-sobre {
-        min-height: clamp(320px, 70vw, 520px);
-
+        min-height: clamp(450px, 65vw, 600px);
         margin-top: 55px;
         padding: 5% 3%;
     }
@@ -882,7 +884,7 @@
     }
 
     .texto-um-sobre h2 {
-        margin-top: 18%;
+        margin-top: 12%;
     }
 
     .texto-dois-sobre h2 {
@@ -895,7 +897,6 @@
     .comidas-quentes-sobre {
         top: 35%;
         right: 0;
-
         width: 45%;
         height: 25%;
     }
@@ -903,7 +904,6 @@
     .comidas-frias-sobre {
         top: 70%;
         left: 0;
-
         width: 45%;
         height: 25%;
     }
@@ -938,98 +938,108 @@
     .logo-sobre,
     .logo-perfil-sobre {
         width: 19px;
-        height: 19px;
+        height: auto;
     }
 
 
     /* Dados */
 
     .body-sobre main>section:first-of-type {
-        min-height: clamp(190px, 70vw, 320px);
-
+        min-height: 390px;
         margin-bottom: 55px;
     }
 
-    .dados-container-sobre {
-        inset: 3%;
-
-        width: 94%;
-        height: 94%;
-    }
-
     .dados-container-sobre h1 {
-        top: 9%;
-
-        font-size: clamp(13px, 4.5vw, 22px);
+        top: 8%;
+        font-size: clamp(17px, 4.5vw, 22px);
     }
 
     .dados-container-sobre h2 {
         top: 20%;
-
-        font-size: clamp(9px, 3vw, 14px);
-        line-height: 1.1;
+        font-size: clamp(11px, 3vw, 14px);
+        line-height: 1.2;
     }
 
     .primeiro-dados-sobre {
         top: 40%;
         left: 2%;
-
         width: 30%;
     }
 
     .segundo-dados-sobre {
         top: 40%;
         left: 35%;
-
         width: 30%;
     }
 
     .terceiro-dados {
         top: 40%;
         right: 2%;
-
         width: 30%;
     }
 
+    .um-dados-sobre,
+    .dois-dados-sobre,
+    .tres-dados {
+        font-size: clamp(22px, 5vw, 28px);
+        margin-bottom: 12px;
+    }
 
-    /* Textos */
+    .primeiro-dados-sobre p:not(.um-dados-sobre):not(.fonte-sobre),
+    .segundo-dados-sobre p:not(.dois-dados-sobre):not(.fonte-sobre),
+    .terceiro-dados p:not(.tres-dados):not(.fonte-sobre) {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    .fonte-sobre {
+        font-size: 8px;
+    }
+
+    .body-sobre main>section:first-of-type>p {
+        bottom: 2%;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* Propósito e objetivo */
 
     .texto-um-sobre,
     .texto-dois-sobre {
-        min-height: clamp(190px, 70vw, 320px);
-
-        margin-top: 55px;
+        min-height: 390px;
+        margin-top: 45px;
         padding: 5% 3%;
     }
 
     .texto-um-sobre h2,
-    .texto-um-sobre p,
-    .texto-dois-sobre h2,
-    .texto-dois-sobre p {
-        width: 58%;
+    .texto-dois-sobre h2 {
+        font-size: clamp(20px, 5vw, 25px);
     }
 
     .texto-um-sobre h2 {
-        margin-top: 17%;
+        margin-top: 12%;
     }
 
     .texto-dois-sobre h2 {
-        margin-top: 3%;
+        margin-top: 4%;
+    }
+
+    .texto-um-sobre p,
+    .texto-dois-sobre p {
+        font-size: 11px;
+        line-height: 1.4;
     }
 
 
     /* Alimentos */
 
     .comidas-quentes-sobre {
-        top: 35%;
-
         width: 46%;
         height: 25%;
     }
 
     .comidas-frias-sobre {
-        top: 70%;
-
         width: 46%;
         height: 25%;
     }
@@ -1046,6 +1056,8 @@
 
 @media (max-width: 425px) {
 
+    /* Cabeçalho */
+
     .cabecalho-sobre nav ul {
         gap: 4px;
     }
@@ -1057,34 +1069,45 @@
     .logo-sobre,
     .logo-perfil-sobre {
         width: 17px;
-        height: 17px;
+        height: auto;
     }
 
 
     /* Dados */
 
     .body-sobre main>section:first-of-type {
-        min-height: clamp(190px, 70vw, 300px);
-
+        min-height: 410px;
         margin-bottom: 48px;
     }
 
     .dados-container-sobre h1 {
-        top: 9%;
-
-        font-size: clamp(12px, 4.5vw, 19px);
+        top: 8%;
+        font-size: clamp(16px, 4.5vw, 19px);
     }
 
     .dados-container-sobre h2 {
-        top: 21%;
-
-        font-size: clamp(8px, 2.8vw, 12px);
+        top: 20%;
+        font-size: clamp(10px, 2.8vw, 12px);
     }
 
     .primeiro-dados-sobre,
     .segundo-dados-sobre,
     .terceiro-dados {
         top: 40%;
+        width: 30%;
+    }
+
+    .um-dados-sobre,
+    .dois-dados-sobre,
+    .tres-dados {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .primeiro-dados-sobre p:not(.um-dados-sobre):not(.fonte-sobre),
+    .segundo-dados-sobre p:not(.dois-dados-sobre):not(.fonte-sobre),
+    .terceiro-dados p:not(.tres-dados):not(.fonte-sobre) {
+        font-size: 10px;
     }
 
 
@@ -1092,21 +1115,19 @@
 
     .texto-um-sobre,
     .texto-dois-sobre {
-        min-height: clamp(190px, 70vw, 300px);
-
-        margin-top: 48px;
+        min-height: 410px;
+        margin-top: 42px;
     }
 
     .texto-um-sobre h2,
     .texto-dois-sobre h2 {
-        font-size: clamp(12px, 3.8vw, 17px);
+        font-size: 19px;
     }
 
     .texto-um-sobre p,
     .texto-dois-sobre p {
-        font-size: clamp(6px, 1.8vw, 9px);
-
-        line-height: 1.25;
+        font-size: 10px;
+        line-height: 1.35;
     }
 
 
@@ -1142,7 +1163,7 @@
     .logo-sobre,
     .logo-perfil-sobre {
         width: 15px;
-        height: 15px;
+        height: auto;
     }
 
 
@@ -1151,62 +1172,71 @@
     .body-sobre main>section:first-of-type,
     .texto-um-sobre,
     .texto-dois-sobre {
-        min-height: clamp(185px, 70vw, 225px);
+        min-height: 430px;
     }
 
     .body-sobre main>section:first-of-type {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
     }
 
     .texto-um-sobre,
     .texto-dois-sobre {
-        margin-top: 45px;
-
+        margin-top: 40px;
         padding: 4% 2%;
     }
 
 
     /* Dados */
 
-    .dados-container-sobre {
-        inset: 3%;
-
-        width: 94%;
-        height: 94%;
-    }
-
     .dados-container-sobre h1 {
-        top: 9%;
-
-        font-size: 12px;
+        top: 8%;
+        font-size: 14px;
     }
 
     .dados-container-sobre h2 {
-        top: 21%;
-
-        font-size: 8px;
+        top: 20%;
+        font-size: 9px;
         line-height: 1.1;
     }
 
     .primeiro-dados-sobre {
         top: 40%;
         left: 2%;
-
         width: 30%;
     }
 
     .segundo-dados-sobre {
         top: 40%;
         left: 35%;
-
         width: 30%;
     }
 
     .terceiro-dados {
         top: 40%;
         right: 2%;
-
         width: 30%;
+    }
+
+    .um-dados-sobre,
+    .dois-dados-sobre,
+    .tres-dados {
+        font-size: 19px;
+        margin-bottom: 8px;
+    }
+
+    .primeiro-dados-sobre p:not(.um-dados-sobre):not(.fonte-sobre),
+    .segundo-dados-sobre p:not(.dois-dados-sobre):not(.fonte-sobre),
+    .terceiro-dados p:not(.tres-dados):not(.fonte-sobre) {
+        font-size: 9px;
+        line-height: 1.25;
+    }
+
+    .fonte-sobre {
+        font-size: 7px;
+    }
+
+    .body-sobre main>section:first-of-type>p {
+        font-size: 9px;
     }
 
 
@@ -1214,55 +1244,46 @@
 
     .body-sobre main>section:first-of-type>img:nth-of-type(1) {
         width: 24%;
-
         top: 0;
         right: 0;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(2) {
         width: 17%;
-
         top: 20%;
         right: 7%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(3) {
         width: 12%;
-
         top: 40%;
         right: 12%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(4) {
         width: 10%;
-
         top: 60%;
         right: 2%;
     }
 
     .body-sobre main>section:first-of-type>img:nth-of-type(5) {
         width: 14%;
-
         top: 5%;
         left: 0;
     }
 
 
-    /* Títulos */
+    /* Propósito e objetivo */
 
     .texto-um-sobre h2,
     .texto-dois-sobre h2 {
-        font-size: 12px;
+        font-size: 15px;
     }
-
-
-    /* Parágrafos */
 
     .texto-um-sobre p,
     .texto-dois-sobre p {
         width: 58%;
-
-        font-size: 6px;
+        font-size: 8px;
         line-height: 1.2;
     }
 
@@ -1272,7 +1293,6 @@
     .comidas-quentes-sobre {
         top: 35%;
         right: 0;
-
         width: 46%;
         height: 25%;
     }
@@ -1280,7 +1300,6 @@
     .comidas-frias-sobre {
         top: 70%;
         left: 0;
-
         width: 46%;
         height: 25%;
     }
@@ -1300,9 +1319,7 @@
 .body-sobre main {
     width: calc(100% - 40px);
     margin: 10px auto 0;
-
     background-color: var(--bege);
-
     box-sizing: border-box;
 }
 
