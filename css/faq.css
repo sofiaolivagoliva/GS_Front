@@ -22,19 +22,21 @@ html {
     min-height: 100vh;
     margin: 0;
 
-    background-color: var(--bege-claro, 0 #ECEEE2);
+    background-color: var(--bege-claro, #ECEEE2);
     color: var(--marrom, #2C070B);
 
-    font-family: serif, sans-serif;
+    font-family: "Instrument Sans", sans-serif;
 
     overflow-x: hidden;
-    background-color: var(--bege);
+
     background-image:
-        repeating-linear-gradient(to bottom,
+        repeating-linear-gradient(
+            to bottom,
             transparent 0,
             transparent 17px,
             var(--linha) 18px,
-            transparent 19px);
+            transparent 19px
+        );
 }
 
 .body img {

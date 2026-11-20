@@ -348,4 +348,19 @@ document.addEventListener("click", function (evento) {
 });
 //EXPLICAÇÃO PERFIL: 1- a constante botoesExcluir pegará todos os seletores da
 //O evento só procura botões com data-excluir. Isso evita que o botão Adicionar, que também utiliza a classe .btn-excluir, seja confundido com um botão de exclusão
-//
+
+//BOTÃO INTEGRANTES, Apos adição de id=aba-sofia aria control= ..integrantes
+//Isso estabelece a relação entre a aba selecionada e o conteúdo apresentado.
+const nomesAbas = [
+    "aba-rafael",
+    "aba-enrique",
+    "aba-julio",
+    "aba-sofia",
+    "aba-marina"
+];
+
+const painel = document.getElementById("painel-integrante");
+
+if (painel && nomesAbas[indice]) {
+    painel.setAttribute("aria-labelledby", nomesAbas[indice]);
+}
