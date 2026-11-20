@@ -230,12 +230,57 @@
 
     color: var(--verde-escuro);
 }
+/* =========================================
+   CARTÕES DE PRODUTOS E CARRINHO
+========================================= */
 
-.body fieldset tbody {
-    display: block;
+.produto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    padding: 22px;
+
+    background-color: var(--bege-claro);
+    border: 1px solid var(--linha);
+    border-radius: 15px;
 }
 
-.body fieldset tr {
+.produto-card h3 {
+    margin: 0 0 8px;
+
+    color: var(--verde-escuro);
+    font-family: "Inria Serif", serif;
+    font-size: 21px;
+}
+
+.produto-card p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.produto-card #destaque {
+    padding: 12px;
+
+    color: var(--verde-escuro);
+    font-weight: 600;
+
+    background-color: rgba(120, 139, 38, 0.12);
+    border-radius: 10px;
+}
+
+.produto-card .btn-excluir {
+    align-self: flex-start;
+}
+/* .body fieldset tbody {
+    display: block;
+} */
+
+/* .body fieldset tr {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -245,14 +290,14 @@
     background-color: var(--bege-claro);
     border: 1px solid var(--linha);
     border-radius: 15px;
-}
-
+} */
+/* 
 .body fieldset td {
     display: block;
 
     font-size: 14px;
     line-height: 1.5;
-}
+} */
 
 #destaque {
     padding: 12px;

@@ -149,72 +149,47 @@ INTEGRANTES DO GRUPO
 
         </section>
         <!--PRODUTOSS-->
-        <section>
-            <form>
-                <fieldset aria-label="meus produtos cadastrados">
-                    <legend>Produtos</legend>
-                    <thead role="table">
-                        <br>
-                        <h2>Pães e Bolos</h2>
-                    </thead>
-                    <tbody>
-                        <br>
-                        <tr id="mercado">
-                            <td>Mercado Verde</td>
-                            <br>
-                            <td>Rua das Palmeiras, 789</td>
-                            <br>
-                            <td>(11) 2468-1357</td>
-                            <br>
-                            <td>Produtos com e sem glúten e lactose</td>
-                            <br>
-                            <td>Doações de alimentos</td>
-                            <br>
-                            <td>
-                                <button type="button" class="btn-excluir" data-id="mercado"
-                                    aria-label="botão de excluir">Excluir
-                                </button>
-                            </td>
-                        </tr>
+        <!-- PRODUTOS -->
+        <section aria-labelledby="titulo-produtos">
+            <h2 id="titulo-produtos">Produtos</h2>
 
-                    </tbody>
-                </fieldset>
-            </form>
+            <article class="produto-card" id="produto-mercado">
+                <h3>Pães e Bolos</h3>
+
+                <p><strong>Estabelecimento:</strong> Mercado Verde</p>
+                <p><strong>Endereço:</strong> Rua das Palmeiras, 789</p>
+                <p><strong>Contato:</strong> (11) 2468-1357</p>
+                <p><strong>Descrição:</strong> Produtos com e sem glúten e lactose</p>
+                <p><strong>Oferta:</strong> Doações de alimentos</p>
+
+                <button type="button" class="btn-excluir" data-excluir data-id="produto-mercado"
+                    aria-label="Excluir produto do Mercado Verde">
+                    Excluir
+                </button>
+            </article>
         </section>
-        <!--CARRINHO-->
-        <section>
-            <form>
-                <fieldset aria-label="meus produtos cadastrados">
-                    <legend>Carrinho</legend>
-                    <thead role="table">
-                        <br>
-                        <h2>Pães e Bolos</h2>
-                    </thead>
-                    <tbody>
-                        <br>
-                        <tr id="mercado">
-                            <td>Mercado Verde</td>
-                            <br>
-                            <td>Rua das Palmeiras, 789</td>
-                            <br>
-                            <td>(11) 2468-1357</td>
-                            <br>
-                            <td>Produtos com e sem glúten e lactose</td>
-                            <br>
-                            <td>Doações de alimentos</td>
-                            <br>
-                            <td id="destaque" aria-labelledby="destaque">Ligue para o vendedor para realizar a compra ou
-                                a retirada de doações</td>
-                            <td>
-                                <button type="button" class="btn-excluir" data-id="mercado"
-                                    aria-label="botão de excluir">Excluir
-                                </button>
-                            </td>
-                        </tr>
+        <!-- CARRINHO -->
+        <section aria-labelledby="titulo-carrinho">
+            <h2 id="titulo-carrinho">Carrinho</h2>
 
-                    </tbody>
-                </fieldset>
-            </form>
+            <article class="produto-card" id="carrinho-mercado">
+                <h3>Pães e Bolos</h3>
+
+                <p><strong>Estabelecimento:</strong> Mercado Verde</p>
+                <p><strong>Endereço:</strong> Rua das Palmeiras, 789</p>
+                <p><strong>Contato:</strong> (11) 2468-1357</p>
+                <p><strong>Descrição:</strong> Produtos com e sem glúten e lactose</p>
+                <p><strong>Oferta:</strong> Doações de alimentos</p>
+
+                <p id="destaque">
+                    Ligue para o vendedor para realizar a compra ou a retirada de doações.
+                </p>
+
+                <button type="button" class="btn-excluir" data-excluir data-id="carrinho-mercado"
+                    aria-label="Excluir produto do carrinho">
+                    Excluir
+                </button>
+            </article>
         </section>
     </main>
     <!-- RODAPÉ -->
@@ -232,60 +207,46 @@ INTEGRANTES DO GRUPO
                 <h2>ReTaste</h2>
                 <p>Compartilhar alimentos é multiplicar possibilidades.</p>
             </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3 aria-label="navegação com informações sobre o projeto e contato">Informações</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="index.html">Home</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="sobre.html">Sobre</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="faq.html">FAQ</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="contato.html">Contato</a></td>
-                    </tr>
-                </tbody>
-            </div>
-            <div class="informacoes-rodape">
-                <thead>
-                    <h3 aria-label="Área de navegação para login, perfil e estabelecimento">Usuário</h3>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="login.html">Login</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="perfil.html">Perfil</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="estabelecimentos.html">Estabelecimentos</a></td>
-                    </tr>
-                </tbody>
 
+            <div class="informacoes-rodape">
+                <h3>Informações</h3>
+
+                <nav aria-label="Informações sobre o projeto">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="informacoes-rodape">
+                <h3>Usuário</h3>
+
+                <nav aria-label="Área do usuário">
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="perfil.html">Perfil</a></li>
+                        <li><a href="estabelecimentos.html">Estabelecimentos</a></li>
+                    </ul>
+                </nav>
 
                 <div class="projeto-rodape">
-                    <h3 aria-label="dados para contato com os integrantes">Projeto</h3>
+                    <h3>Projeto</h3>
                     <p>contatoretaste@outlook.com</p>
                     <p>FIAP - Av. Paulista, 1106</p>
                     <a href="integrantes.html">Integrantes</a>
                     <p>São Paulo - SP</p>
                 </div>
-
             </div>
 
             <div class="rodape-final">
                 <p>© 2026 ReTaste. Projeto acadêmico FIAP - 1TDSPA.</p>
             </div>
 
+        </div>
     </footer>
-</body>
-
-</html>
 </body>
 
 </html>
