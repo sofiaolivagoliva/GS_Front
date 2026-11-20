@@ -145,13 +145,13 @@
 }
 
 .logo-perfil-index {
-    max-height: 1.9rem;
-    max-width: 1.9rem;
-    padding: -3rem;
+    display: block;
 
-    left: 40rem;
+    width: 1.9rem;
+    height: 1.9rem;
 
-    display: flex;
+    padding: 0;
+
     object-fit: contain;
     border-radius: 50%;
 
@@ -649,6 +649,71 @@ PLANTAS DECORATIVAS
         top: 72%;
     }
 }
+@media (max-width: 480px) {
+    
+    .cabecalho-index {
+        gap: 8px 10px;
+    }
+
+    .cabecalho-index a {
+        font-size: 11px;
+    }
+
+    .logo-index {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .logo-perfil-index {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .body-index main {
+        min-height: 680px;
+    }
+    
+    .body-index main > section {
+        min-height: 680px;
+    }
+
+    /* Composição dos quadrados */
+    .texto-container-index {
+        top: 24%;
+        right: 4%;
+        
+        width: 92%;
+        height: 68%;
+    }
+    
+    /* Título */
+    .texto-container-index h1 {
+        top: -15%;
+        left: 0;
+        
+        font-size: clamp(38px, 11vw, 54px);
+    }
+    
+    
+    /* Parágrafos */
+    .texto-container-index p {
+        width: 82%;
+        font-size: 12px;
+    }
+    
+    .texto-container-index p:first-of-type {
+        margin-top: 45px;
+    }
+    
+    .rodape-conteudo-index {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .rodape-final-index {
+        grid-column: 1;
+    }
+}
 @media (max-width: 425px) {
 
     .cabecalho-index {
@@ -765,71 +830,6 @@ PLANTAS DECORATIVAS
         grid-column: 1;
     }
 }
-@media (max-width: 480px) {
-
-    .cabecalho-index {
-        gap: 8px 10px;
-    }
-
-    .cabecalho-index a {
-        font-size: 11px;
-    }
-
-     .logo-index {
-        width: 23px;
-        height: 23px;
-    }
-
-    .logo-perfil-index {
-        width: 20px;
-        height: 20px;
-    }
-
-    .body-index main {
-        min-height: 680px;
-    }
-
-    .body-index main > section {
-        min-height: 680px;
-    }
-
-    /* Composição dos quadrados */
-    .texto-container-index {
-        top: 24%;
-        right: 4%;
-
-        width: 92%;
-        height: 68%;
-    }
-
-    /* Título */
-    .texto-container-index h1 {
-        top: -15%;
-        left: 0;
-
-        font-size: clamp(38px, 11vw, 54px);
-    }
-
-    
-    /* Parágrafos */
-    .texto-container-index p {
-        width: 82%;
-        font-size: 12px;
-    }
-
-    .texto-container-index p:first-of-type {
-        margin-top: 45px;
-    }
-
-    .rodape-conteudo-index {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .rodape-final-index {
-        grid-column: 1;
-    }
-}
 @media (max-width: 320px) {
 
     html,
@@ -838,12 +838,12 @@ PLANTAS DECORATIVAS
         margin: 0;
         padding: 0;
     }
-
+    
     .body-index {
         width: 100%;
         min-height: 100vh;
         height: auto;
-
+        
         margin: 0;
         padding: 0;
 

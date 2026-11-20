@@ -265,23 +265,30 @@ const linhas = document.querySelectorAll(
 );
 
 
-// FUNÇÃO PARA ATUALIZAR A TABELA
+// Atualiza as linhas da tabela de acordo com o estado
 
 function atualizarTabela(estado) {
 
-    // Buscar os estabelecimentos do estado selecionado
-    const dados = estabelecimentos[estado];
+    const dados = estabelecimentos[estado] ?? estabelecimentos[""];
 
-    // Percorrer as linhas da tabela
     linhas.forEach((linha, indice) => {
 
-        // Buscar os dados correspondentes à linha
-        const estabelecimento = dados[indice];
+        // Se não houver estabelecimento correspondente,
+        // oculta a linha para evitar erros.
 
-        // Selecionar todas as células da linha
+        if (!estabelecimento) {
+            linha.hidden = true;
+            return;
+        }
+
+        linha.hidden = false;
+
         const celulas = linha.querySelectorAll("td");
 
-        // Atualizar o conteúdo das células
+        if (celulas.length < 5) {
+            return;
+        }
+
         celulas[0].textContent = estabelecimento.nome;
         celulas[1].textContent = estabelecimento.endereco;
         celulas[2].textContent = estabelecimento.contato;
@@ -293,53 +300,52 @@ function atualizarTabela(estado) {
 }
 
 
-// EVENTO DE MUDANÇA DO SELECT
+// O evento só é registrado se o filtro existir nesta página.
 
-filtroEstados.addEventListener("change", function() {
+if (filtroEstados) {
 
-    // Capturar o estado selecionado
-    const estadoSelecionado = filtroEstados.value;
+    filtroEstados.addEventListener("change", function () {
 
-    // Atualizar os dados da tabela
-    atualizarTabela(estadoSelecionado);
+        const estadoSelecionado = filtroEstados.value;
+
+        atualizarTabela(estadoSelecionado);
+
+    });
+
+    // Carrega os estabelecimentos do estado inicial.
+    atualizarTabela(filtroEstados.value);
+
+}
+
+// ========================================
+// EXCLUIR PRODUTOS- pagina perfil
+// ========================================
+
+document.addEventListener("click", function (evento) {
+
+    const botao = evento.target.closest("[data-excluir]");
+
+    if (!botao) {
+        return;
+    }
+
+    const idProduto = botao.dataset.id;
+
+    const produto = document.getElementById(idProduto);
+
+    if (!produto) {
+        return;
+    }
+
+    const confirmar = confirm(
+        "Deseja realmente excluir este item?"
+    );
+
+    if (confirmar) {
+        produto.remove();
+    }
 
 });
-
-// PERFIL
-
-// Selecionar todos os botões de excluir
-// const botoesExcluir = document.querySelectorAll(".btn-excluir");
-
-// // Adicionar um evento de clique para cada botão
-// botoesExcluir.forEach((botao) => {
-
-//     botao.addEventListener("click", function() {
-
-//         // Obter o ID do produto
-//         const idProduto = botao.dataset.id;
-
-//         // Localizar o produto na página
-//         const produto = document.getElementById(idProduto);
-
-//         // Solicitar confirmação
-//         const confirmar = confirm(
-//             "Deseja realmente excluir este produto do catálogo?"
-//         );
-
-//         // Excluir o produto se houver confirmação
-//         if (confirmar) {
-//             produto.remove();
-
-//             alert("Produto excluído com sucesso!");
-//         }
-
-//     });
-
-// });
 //EXPLICAÇÃO PERFIL: 1- a constante botoesExcluir pegará todos os seletores da
-//
-//
-//
-//
-//
+//O evento só procura botões com data-excluir. Isso evita que o botão Adicionar, que também utiliza a classe .btn-excluir, seja confundido com um botão de exclusão
 //
