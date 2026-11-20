@@ -8,7 +8,7 @@ INTEGRANTES DO GRUPO
 -->
 
 <!DOCTYPE html>
-<html lang=" pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -40,8 +40,9 @@ INTEGRANTES DO GRUPO
     <main>
         <article>
             <div class="assets-container">
+
                 <div class="composicao">
-                    <!--ordem dos assetss de planta-->
+
                     <img class="prato" src="../img/prato.svg" alt="">
                     <img class="planta-media-superior" src="../img/planta-media.svg" alt="">
                     <img class="plant-escura" src="../img/plant-escura.svg" alt="">
@@ -50,70 +51,96 @@ INTEGRANTES DO GRUPO
                     <img class="plant-medium-inferior" src="../img/plant-medium.svg" alt="">
                     <img class="plant-escura-inferior" src="../img/plant-escura.svg" alt="">
                     <img class="planta-clarissima" src="../img/planta-clarissima.svg" alt="">
-                    <!--comidas-->
+
                     <img class="cenoura" src="../img/cenoura.svg" alt="">
                     <img class="coxa" src="../img/coxa.svg" alt="">
+
+                    <!-- O formulário fica dentro da composição -->
+                    <section aria-labelledby="titulo-doador">
+                        <div class="login-container">
+
+                            <h1 id="titulo-doador">
+                                Tornar-se um<br>
+                                <span class="destaque">doador</span>
+                            </h1>
+
+                            <form method="post">
+
+                                <div class="dados-login">
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="nome">
+                                            Nome do estabelecimento
+                                        </label>
+                                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                                            autocomplete="organization" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="endereco">
+                                            Endereço
+                                        </label>
+                                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                                            autocomplete="street-address" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="cnpj">
+                                            CNPJ
+                                        </label>
+                                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
+                                            maxlength="18">
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="email-login">
+                                            E-mail
+                                        </label>
+                                        <input type="email" name="email" id="email-login" placeholder="Email"
+                                            autocomplete="email" required>
+                                    </div>
+
+                                    <div class="botao-login">
+                                        <label class="visually-hidden" for="senha">
+                                            Senha
+                                        </label>
+                                        <input type="password" name="senha" id="senha" placeholder="Senha"
+                                            autocomplete="current-password" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="checkbox-group">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="manter_logado" value="logado">
+                                        <span class="texto">Manter logado</span>
+                                    </label>
+                                </div>
+
+                                <div class="termos-tenhoConta">
+                                    <a href="perfil.html" class="texto">
+                                        Já tenho uma conta
+                                    </a>
+                                </div>
+
+                                <div class="entrar-login">
+                                    <button type="submit" class="texto">
+                                        Entrar
+                                    </button>
+                                </div>
+
+                                <p class="termos">
+                                    Ao continuar, você concorda com <br>
+                                    <a href="#">nossos termos</a>.
+                                </p>
+
+                            </form>
+
+                        </div>
+                    </section>
+
                 </div>
-                <section>
-                    <div class="login-container">
-                        <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span
-                                class="destaque">doador</span></h1>
-                        <form>
-                            <div class="dados-login">
-                                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
-                                <!-- Formulário de login do comerciante.
-                                    action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
-                                <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
 
-                                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
-                                        required: exige o preenchimento antes do envio.
-                                        autocomplete="postal-code" sujere o CEP ou preenche o camp -->
-
-                                <div class="botao-login">
-                                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
-                                        autocomplete="name" aria-label="Nome do estabelecimento" required>
-                                </div>
-
-                                <div class="botao-login">
-                                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
-                                        autocomplete="street-address" aria-label="Endereço" required>
-                                </div>
-
-                                <div class="botao-login">
-                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
-                                        aria-label="CNPJ" maxlength="18">
-                                </div>
-
-                                <div class="botao-login">
-                                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
-                                        aria-label="Email" required>
-                                </div>
-                                <div class="botao-login">
-                                    <input type="password" name="senha" id="senha" placeholder="Senha"
-                                        autocomplete="current-password" aria-label="Senha" required>
-                                </div>
-                            </div>
-                            <div class="checkbox-group">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="manter_logado" value="logado"
-                                        aria-label="Botão de seleção manter logado">
-                                    <span class="texto">Manter logado</span>
-
-                                </label>
-                            </div>
-                            <div class="termos-tenhoConta">
-                                <a href="perfil.html" class="texto">Ja tenho uma conta</a>
-                            </div>
-
-                            <div class="entrar-login">
-                                <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
-                            </div>
-                            <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você
-                                concorda com <br><a href="#">nossos termos</a>.</p>
-                    </div>
-                    </form>
-                </section>
-            </div>
             </div>
         </article>
     </main>

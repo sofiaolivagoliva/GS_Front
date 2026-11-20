@@ -269,4 +269,27 @@ footer a:hover{
     color: rgba(236, 238, 226, 0.75);
     font-size: 0.85rem;
 }
+/* ADIÇOES */
+/* =========================================
+   LISTAS DO RODAPÉ
+========================================= */
 
+.informacoes-rodape ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.informacoes-rodape li {
+    margin: 0;
+}
+
+.informacoes-rodape nav a {
+    display: inline-block;
+    margin: 0;
+}
