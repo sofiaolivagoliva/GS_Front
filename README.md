@@ -71,8 +71,19 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
 
 ```text
 📁 GS_Front/
+├── 📁 .vscode/
+    └──settings.json
 ├── 📁 css/
-│   └── style.css        # estilos de todas as páginas
+    └── style.css        # estilos de todas as páginas
+    ├── contato.css
+    ├── estabelecimentos.css
+    ├── faq.css
+    ├── index.css
+    ├── integrantes.css
+    ├── login.css
+    ├── perfil.css
+    ├── sobre.css
+
 ├── 📁 js/
 │   └── script.js          # interações de todas as páginas
 ├── 📁 img/
@@ -111,15 +122,16 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
     ├── coxa.svg
     ├── cebolinha.svg
     └── cenoura.svg
-│             
-├── contato.html
-├── estabelecimentos.html
-├── faq.html
-├── index.html
-├── integrantes.html
-├── login.html
-├── perfil.html
-├── sobre.html
+├── 📁 projeto/             
+    └── contato.html
+    ├── estabelecimentos.html
+    ├── faq.html
+    ├── index.html
+    ├── integrantes.html
+    ├── login.html
+    ├── perfil.html
+    ├── sobre.html
+└── identificacao.txt
 └── README.md
 ```
 
@@ -243,6 +255,10 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
 
 --- 
 
+## 🌱 Contato
+- **Email:** contatoretaste@outlook.com
+
+--- 
+
 *Link do repositório:  https://github.com/sofiaolivagoliva/GS_Front.git
-*Link do Site:         https://ribeir0296.github.io/Sprint-Front/
 
