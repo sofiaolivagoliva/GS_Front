@@ -26,7 +26,7 @@ INTEGRANTES DO GRUPO
         rel="stylesheet">
 
     <!-- Estilos do site -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="script" href="../js/script.js">
     <script src="../js/script.js" defer></script>
 </head>
@@ -34,7 +34,7 @@ INTEGRANTES DO GRUPO
 <body class="body-login">
     <header class="cabecalho-login">
         <div class="cabecalho-direita" aria-label="Navegação principal">
-            <a href="index.html"><img  class="logo" src="../img/logo.svg" alt="Início"></a>
+            <a href="index.html"><img class="logo" src="../img/logo.svg" alt="Início"></a>
             <a href="index.html"><strong>Re<span>Taste</span></strong></a>
         </div>
     </header>
@@ -55,66 +55,66 @@ INTEGRANTES DO GRUPO
                     <img class="cenoura" src="../img/cenoura.svg" alt="">
                     <img class="coxa" src="../img/coxa.svg" alt="">
                 </div>
-                    <section>
-                        <div class="login-container">
-                            <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span
-                                    class="destaque">doador</span></h1>
-                            <form>
-                                <div class="dados-login">
-                                    <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
-                                    <!-- Formulário de login do comerciante.
+                <section>
+                    <div class="login-container">
+                        <h1 id="titulo-doador" aria-labelledby="titulo-doador">Tornar-se um<br><span
+                                class="destaque">doador</span></h1>
+                        <form>
+                            <div class="dados-login">
+                                <!-- O coração funcional da página: envia os dados de forma segura (POST) -->
+                                <!-- Formulário de login do comerciante.
                                     action é onde as informaçoes vão ser enviadas. method="POST" é a maneira de transportar os dados, ( servidor pega o tipo "name" do campo ).-->
-                                        <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
+                                <!-- checkbox: bolinha com a função de: seleciona e desseleciona. (manter logado)-->
 
-                                    <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
+                                <!-- Campos de entrada de dados do usuário (obrigatórios para o envio)
                                         required: exige o preenchimento antes do envio.
                                         autocomplete="postal-code" sujere o CEP ou preenche o camp -->
 
-                                    <div class="botao-login">
-                                        <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
-                                            autocomplete="name" aria-label="Nome do estabelecimento" required>
-                                    </div>
-
-                                    <div class="botao-login">
-                                        <input type="text" name="endereco" id="endereco" placeholder="Endereço"
-                                            autocomplete="street-address" aria-label="Endereço" required>
-                                    </div>
-
-                                    <div class="botao-login">
-                                        <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
-                                            aria-label="CNPJ" maxlength="18">
-                                    </div>
-
-                                    <div class="botao-login">
-                                        <input type="email" name="email" id="email" placeholder="Email"
-                                            autocomplete="email" aria-label="Email" required>
-                                    </div>
-                                    <div class="botao-login">
-                                        <input type="password" name="senha" id="senha" placeholder="Senha"
-                                            autocomplete="current-password" aria-label="Senha" required>
-                                    </div>
-                                </div>
-                                <div class="checkbox-group">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="manter_logado" value="logado"
-                                            aria-label="Botão de seleção manter logado">
-                                        <span class="texto">Manter logado</span>
-
-                                    </label>
-                                </div>
-                                <div class="termos-tenhoConta">
-                                    <a href="perfil.html" class="texto">Ja tenho uma conta</a>
+                                <div class="botao-login">
+                                    <input type="text" name="nome" id="nome" placeholder="Nome do estabelecimento"
+                                        autocomplete="name" aria-label="Nome do estabelecimento" required>
                                 </div>
 
-                                <div class="entrar-login">
-                                    <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
+                                <div class="botao-login">
+                                    <input type="text" name="endereco" id="endereco" placeholder="Endereço"
+                                        autocomplete="street-address" aria-label="Endereço" required>
                                 </div>
-                                <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você
-                                    concorda com <br><a href="#">nossos termos</a>.</p>
-                        </div>
-                        </form>
-                    </section>
-                </div>
+
+                                <div class="botao-login">
+                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" autocomplete="off"
+                                        aria-label="CNPJ" maxlength="18">
+                                </div>
+
+                                <div class="botao-login">
+                                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="email"
+                                        aria-label="Email" required>
+                                </div>
+                                <div class="botao-login">
+                                    <input type="password" name="senha" id="senha" placeholder="Senha"
+                                        autocomplete="current-password" aria-label="Senha" required>
+                                </div>
+                            </div>
+                            <div class="checkbox-group">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="manter_logado" value="logado"
+                                        aria-label="Botão de seleção manter logado">
+                                    <span class="texto">Manter logado</span>
+
+                                </label>
+                            </div>
+                            <div class="termos-tenhoConta">
+                                <a href="perfil.html" class="texto">Ja tenho uma conta</a>
+                            </div>
+
+                            <div class="entrar-login">
+                                <button type="submit" class="texto" aria-label="Continuar">Entrar</button>
+                            </div>
+                            <p class="termos" aria-label="ao continuar concorda com os termos">Ao continuar, você
+                                concorda com <br><a href="#">nossos termos</a>.</p>
+                    </div>
+                    </form>
+                </section>
+            </div>
             </div>
         </article>
     </main>
