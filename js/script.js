@@ -273,6 +273,9 @@ function atualizarTabela(estado) {
 
     linhas.forEach((linha, indice) => {
 
+        const estabelecimento = dados[indice];
+
+
         // Se não houver estabelecimento correspondente,
         // oculta a linha para evitar erros.
 
