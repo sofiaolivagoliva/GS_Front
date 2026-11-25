@@ -261,3 +261,9 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
 
 **Link do repositório:** https://github.com/sofiaolivagoliva/GS_Front
 
+---
+
+## 🌐 Site publicado
+
+Acesse o projeto online: **[gsretaste.netlify.app/projeto](https://gsretaste.netlify.app/projeto/)**
+
