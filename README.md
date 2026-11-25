@@ -12,7 +12,7 @@ Este projeto consiste no desenvolvimento de um website para uma Iniciação Cien
       <br><br>
       <strong>Clone o repositório</strong>
       <br>
-      <sub>Copie e cole a URL em usm terminal para obter o repositório no explorer</sub>
+      <sub>Copie e cole a URL em um terminal para obter o repositório no explorer</sub>
     </td>
 
 <td align="center" width="180">
@@ -55,13 +55,13 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
 - Aplicar os fundamentos de HTML5, CSS3 e JavaScript.
 - Conscientizar sobre os impactos sociais e ambientais do desperdício de alimentos.
 - Incentivar a doação e o aproveitamento de alimentos próprios para consumo.
-- Demonstrar, por meio de uma solução digital, como a tecnologia pode contribuir para     enfrentar problemas sociais.
+- Demonstrar, por meio de uma solução digital, como a tecnologia pode contribuir para enfrentar problemas sociais.
 - Praticar versionamento de código com Git e GitHub.
 
 ## 🛠️ Tecnologias utilizadas
 
 - **HTML5:** estruturação e organização das páginas.
-- **CSS3:** estilização, layout e identidade visual (uma única folha de estilos).
+- **CSS3:** estilização, layout e identidade visual (o style.css com os estilos gerais e uma folha de estilos para cada página).
 - **JavaScript:** implementação de interações, validações e funcionalidades dinâmicas.
 - **Git:** controle de versão do projeto.
 - **GitHub:** armazenamento e gerenciamento do repositório.
@@ -72,66 +72,65 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
 ```text
 📁 GS_Front/
 ├── 📁 .vscode/
-    └──settings.json
+│   └── settings.json
 ├── 📁 css/
-    └── style.css        # estilos de todas as páginas
-    ├── contato.css
-    ├── estabelecimentos.css
-    ├── faq.css
-    ├── index.css
-    ├── integrantes.css
-    ├── login.css
-    ├── perfil.css
-    ├── sobre.css
-
-├── 📁 js/
-│   └── script.js          # interações de todas as páginas
+│   ├── style.css            # estilos gerais (compartilhados)
+│   ├── contato.css
+│   ├── estabelecimento.css
+│   ├── faq.css
+│   ├── index.css
+│   ├── integrantes.css
+│   ├── login.css
+│   ├── perfil.css
+│   └── sobre.css
 ├── 📁 img/
-    └── sofia.jpeg
-    ├── rafael.jpeg
-    ├── pollo.jpeg
-    ├── marina.jpeg
-    ├── enrique.jpeg
-    ├── live.png
-    ├── clone.png
-    ├── path.png
-    ├── retangulo-medio.svg
-    ├── retangulo-escuro.svg
-    ├── retangulo-claro.svg
-    ├── queijo.svg
-    ├── quadrado-medio.svg
-    ├── quadrado-escuro.svg
-    ├── quadrado-claro.svg
-    ├── prato.svg
-    ├── plant-medium.svg
-    ├── plant-escura.svg
-    ├── planta-media.svg
-    ├── planta-clarissima.svg
-    ├── pizza.svg
-    ├── picole.svg
-    ├── perfil.svg
-    ├── ovo-real.svg
-    ├── ovo.svg
-    ├── nigiri.svg
-    ├── melancia.svg
-    ├── logo.svg
-    ├── laranja.svg
-    ├── home.svg
-    ├── estabelecimento.svg
-    ├── espetinho.svg
-    ├── coxa.svg
-    ├── cebolinha.svg
-    └── cenoura.svg
-├── 📁 projeto/             
-    └── contato.html
-    ├── estabelecimentos.html
-    ├── faq.html
-    ├── index.html
-    ├── integrantes.html
-    ├── login.html
-    ├── perfil.html
-    ├── sobre.html
-└── identificacao.txt
+│   ├── cebolinha.svg
+│   ├── cenoura.svg
+│   ├── clone.png
+│   ├── coxa.svg
+│   ├── enrique.jpeg
+│   ├── espetinho.svg
+│   ├── estabelecimento.svg
+│   ├── home.svg
+│   ├── laranja.svg
+│   ├── live.png
+│   ├── logo.svg
+│   ├── marina.jpeg
+│   ├── melancia.svg
+│   ├── nigiri.svg
+│   ├── ovo-real.svg
+│   ├── ovo.svg
+│   ├── path.png
+│   ├── perfil.svg
+│   ├── picole.svg
+│   ├── pizza.svg
+│   ├── plant-escura.svg
+│   ├── plant-medium.svg
+│   ├── planta-clarissima.svg
+│   ├── planta-media.svg
+│   ├── pollo.jpeg
+│   ├── prato.svg
+│   ├── quadrado-claro.svg
+│   ├── quadrado-escuro.svg
+│   ├── quadrado-medio.svg
+│   ├── queijo.svg
+│   ├── rafael.jpeg
+│   ├── retangulo-claro.svg
+│   ├── retangulo-escuro.svg
+│   ├── retangulo-medio.svg
+│   └── sofia.jpeg
+├── 📁 js/
+│   └── script.js            # interações de todas as páginas
+├── 📁 projeto/
+│   ├── contato.html
+│   ├── estabelecimentos.html
+│   ├── faq.html
+│   ├── index.html
+│   ├── integrantes.html
+│   ├── login.html
+│   ├── perfil.html
+│   └── sobre.html
+├── identificacao.txt
 └── README.md
 ```
 
@@ -144,12 +143,12 @@ O website apresenta o conceito da plataforma, seus objetivos, funcionalidades, i
 - **Doações e ofertas:** proposta de cadastro e divulgação de alimentos disponíveis para doação ou oferta.
 - **Estabelecimentos:** espaço destinado à apresentação de estabelecimentos e ofertas de participantes da iniciativa.
 - **FAQ:** perguntas frequentes para orientar os usuários.
-- **Integrantes:**apresentação dos integrantes responsáveis pelo projeto.
-- **Perfil:** àrea de verificação de dados e produtos cadastrado, com a simulação da possibilidade de adicionar ou retirar produtos do catálogo.
+- **Integrantes:** apresentação dos integrantes responsáveis pelo projeto.
+- **Perfil:** área de verificação de dados e produtos cadastrados, com a simulação da possibilidade de adicionar ou retirar produtos do catálogo.
 
 ## 📕 Aprendizados
 
-O desenvolvimento do ReTaste proporcionou a aplicação prática dos conhecimentos adquiridos na disciplina de Front-End Design Engineering, sendo elas:
+O desenvolvimento do ReTaste proporcionou a aplicação prática dos conhecimentos adquiridos na disciplina de Front-End Design Engineering, sendo eles:
 - Estruturação semântica de páginas com HTML5.
 - Organização de estilos utilizando CSS3.
 - Manipulação de elementos com JavaScript.
@@ -260,5 +259,5 @@ Além dos conhecimentos técnicos, o projeto permitiu explorar a relação entre
 
 --- 
 
-*Link do repositório:  https://github.com/sofiaolivagoliva/GS_Front.git
+**Link do repositório:** https://github.com/sofiaolivagoliva/GS_Front
 
